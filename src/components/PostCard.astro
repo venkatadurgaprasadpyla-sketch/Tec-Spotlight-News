@@ -1,0 +1,88 @@
+---
+import { formatDate } from '../data/posts';
+interface Props {
+  href: string;
+  title: string;
+  description: string;
+  date: Date;
+  category: string;
+  categoryHref: string;
+  draft?: boolean;
+  isNew?: boolean;
+}
+const { href, title, description, date, category, categoryHref, draft, isNew } = Astro.props;
+---
+<article class="card">
+  <div class="meta">
+    <a class="eyebrow" href={categoryHref}>{category}</a>
+    {isNew && <span class="new">New</span>}
+    {draft && <span class="draft">Draft</span>}
+  </div>
+  <h3><a href={href}>{title}</a></h3>
+  <p>{description}</p>
+  <time datetime={date.toISOString()} class="muted">{formatDate(date)}</time>
+</article>
+
+<style>
+  .card {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: border-color 0.15s;
+  }
+  .card:hover {
+    border-color: var(--violet);
+  }
+  .meta {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .meta a {
+    position: relative;
+    z-index: 2;
+  }
+  h3 {
+    margin: 0;
+    font-size: 1.08rem;
+  }
+  h3 a {
+    color: var(--heading);
+    text-decoration: none;
+  }
+  h3 a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+  p {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  time {
+    font-size: 0.82rem;
+    margin-top: auto;
+  }
+  .new,
+  .draft {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 2px 8px;
+    border-radius: 999px;
+  }
+  .new {
+    background: var(--amber);
+    color: var(--ink);
+  }
+  .draft {
+    border: 1px dashed var(--amber);
+    color: var(--text-muted);
+  }
+</style>

@@ -1,0 +1,32 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { SITE } from '../data/site';
+---
+<PageLayout title="Privacy Policy" description="What information TechSpotlight News collects, why, and your choices." updated="14 October 2026">
+  <p>This policy explains what happens to your information when you visit {SITE.url.replace('https://', '')}. The short version: I collect as little as possible, and I don't sell anything about you.</p>
+
+  <h2>What I collect</h2>
+  <ul>
+    <li><strong>No accounts, no sign-ups.</strong> You can read everything without giving me any personal details.</li>
+    <li><strong>Messages you send.</strong> If you email me, I'll have your email address and message, and use them only to reply.</li>
+  </ul>
+
+  <h2>What other services see</h2>
+  <ul>
+    <li><strong>Hosting (Cloudflare).</strong> The site runs on Cloudflare, which processes basic technical data such as your IP address to deliver pages and protect the site from attacks. Cloudflare also tells the page which country you're in, so I can show the right shop links (for example Amazon.in in India, Amazon.ae in the UAE). This country check happens in your browser and isn't stored by me.</li>
+    <li><strong>Affiliate partners.</strong> When you click an affiliate link, the partner (for example a software company, PartnerStack, Amazon or Flipkart) may set cookies to know you came from this site. Their own privacy policies apply once you're on their site.</li>
+    <li><strong>Ads (future).</strong> If I turn on Google AdSense, Google may use cookies to show ads. I'll update this page and ask for consent where the law requires it before that happens.</li>
+  </ul>
+
+  <h2>Things stored in your browser</h2>
+  <p>If you switch between light and dark mode, your browser remembers your choice. This stays on your device and is never sent to me.</p>
+
+  <h2>Your rights</h2>
+  <p>Depending on where you live, including under India's Digital Personal Data Protection Act and the UAE's personal data protection law, you can ask what information I hold about you and ask me to correct or delete it. Email me and I'll respond.</p>
+
+  <h2>Children</h2>
+  <p>This site is meant for a general audience and isn't directed at children under 13.</p>
+
+  <h2>Changes and contact</h2>
+  <p>If this policy changes, the date at the top will change too. Questions? Email <strong>{SITE.contactEmail}</strong>.</p>
+</PageLayout>

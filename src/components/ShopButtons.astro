@@ -1,0 +1,60 @@
+---
+// Country-aware shop buttons for gadget posts.
+// India sees Amazon.in and Flipkart, the UAE sees Amazon.ae, and Flipkart is
+// never shown to UAE visitors. Prices are never shown: "Check latest price".
+import { AFFILIATE_REL } from '../lib/affiliates';
+interface Props {
+  amazonIn?: string;
+  flipkart?: string;
+  amazonAe?: string;
+}
+const { amazonIn, flipkart, amazonAe } = Astro.props;
+---
+<div class="shop" data-shop>
+  {amazonIn && <a class="btn" data-region="in" href={amazonIn} rel={AFFILIATE_REL} target="_blank">Check latest price on Amazon.in</a>}
+  {flipkart && <a class="btn btn-ghost" data-region="in-only" href={flipkart} rel={AFFILIATE_REL} target="_blank" hidden>Check latest price on Flipkart</a>}
+  {amazonAe && <a class="btn" data-region="ae" href={amazonAe} rel={AFFILIATE_REL} target="_blank">Check latest price on Amazon.ae</a>}
+</div>
+
+<script>
+  // Cloudflare tells the page which country the visitor is in. If that fails,
+  // both Amazon stores show and Flipkart stays hidden.
+  async function country(): Promise<string | null> {
+    try {
+      const res = await fetch('/cdn-cgi/trace');
+      if (!res.ok) return null;
+      const m = (await res.text()).match(/^loc=([A-Z]{2})$/m);
+      return m ? m[1] : null;
+    } catch {
+      return null;
+    }
+  }
+
+  const boxes = document.querySelectorAll<HTMLElement>('[data-shop]');
+  if (boxes.length) {
+    country().then((cc) => {
+      boxes.forEach((box) => {
+        const show = (region: string, on: boolean) =>
+          box.querySelectorAll<HTMLElement>(`[data-region="${region}"]`).forEach((a) => (a.hidden = !on));
+        if (cc === 'IN') {
+          show('in', true);
+          show('in-only', true);
+          show('ae', false);
+        } else if (cc === 'AE') {
+          show('in', false);
+          show('in-only', false);
+          show('ae', true);
+        }
+      });
+    });
+  }
+</script>
+
+<style>
+  .shop {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 1.5rem 0;
+  }
+</style>

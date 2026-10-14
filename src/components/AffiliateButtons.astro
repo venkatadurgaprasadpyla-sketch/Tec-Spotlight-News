@@ -1,0 +1,40 @@
+---
+// "Try it" buttons for the tools a post recommends. Links come from
+// data/affiliates.json. A tool without a link yet shows a placeholder in
+// previews and is hidden on the live site.
+import { getTool, AFFILIATE_REL } from '../lib/affiliates';
+import { SHOW_DRAFTS } from '../data/posts';
+interface Props {
+  tools: string[];
+}
+const items = Astro.props.tools
+  .map((key) => ({ key, tool: getTool(key) }))
+  .filter(({ tool }) => tool && (tool.link || SHOW_DRAFTS));
+---
+{items.length > 0 && (
+  <div class="aff">
+    {items.map(({ key, tool }) =>
+      tool!.link ? (
+        <a class="btn" href={tool!.link} rel={AFFILIATE_REL} target="_blank">Try {tool!.name}</a>
+      ) : (
+        <span class="missing">[AFFILIATE: {key}] link not added yet</span>
+      ),
+    )}
+  </div>
+)}
+
+<style>
+  .aff {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 1.5rem 0;
+  }
+  .missing {
+    font-size: 0.85rem;
+    border: 1px dashed var(--amber);
+    border-radius: 999px;
+    padding: 8px 14px;
+    color: var(--text-muted);
+  }
+</style>

@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostList from '../../components/PostList.astro';
+import CategoryNav from '../../components/CategoryNav.astro';
+import { getNews } from '../../data/posts';
+import { NEWS_CATEGORIES } from '../../data/site';
+const posts = await getNews();
+---
+<BaseLayout title="Tech news" description="Short, clear tech news for India and the UAE, with what each story means for you.">
+  <div class="container page">
+    <h1>Tech news</h1>
+    <p class="muted lead">What happened, why people are talking, and what it means for you.</p>
+    <CategoryNav base="/news" categories={NEWS_CATEGORIES} />
+    <PostList items={posts} empty="The first news briefs are on their way." />
+  </div>
+</BaseLayout>
+<style>
+  .page { padding-top: 2rem; }
+  .lead { margin-top: -0.25rem; }
+</style>

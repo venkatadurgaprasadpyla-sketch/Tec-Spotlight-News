@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PostList from '../../../components/PostList.astro';
+import CategoryNav from '../../../components/CategoryNav.astro';
+import { getNews } from '../../../data/posts';
+import { NEWS_CATEGORIES } from '../../../data/site';
+
+export function getStaticPaths() {
+  return NEWS_CATEGORIES.map((c) => ({ params: { category: c.slug }, props: { cat: c } }));
+}
+const { cat } = Astro.props;
+const posts = (await getNews()).filter((p) => p.data.category === cat.slug);
+---
+<BaseLayout title={`${cat.name} news`} description={`The latest ${cat.name} news, explained for readers in India and the UAE.`}>
+  <div class="container page">
+    <h1>{cat.name} news</h1>
+    <CategoryNav base="/news" categories={NEWS_CATEGORIES} current={cat.slug} />
+    <PostList items={posts} empty={`No ${cat.name} news yet.`} />
+  </div>
+</BaseLayout>
+<style>.page { padding-top: 2rem; }</style>

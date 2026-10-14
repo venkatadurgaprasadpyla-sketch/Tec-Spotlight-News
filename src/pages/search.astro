@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Search" description="Search TechSpotlight News." noindex>
+  <div class="container page">
+    <h1>Search</h1>
+    <form role="search" onsubmit="return false">
+      <label for="q" class="visually-hidden">Search news and guides</label>
+      <input id="q" name="q" type="search" placeholder="Search news and guides" autocomplete="off" />
+    </form>
+    <p id="status" class="muted" aria-live="polite"></p>
+    <ul id="results"></ul>
+  </div>
+</BaseLayout>
+
+<script>
+  type Item = { t: string; d: string; u: string; k: string; x: string };
+  const input = document.querySelector<HTMLInputElement>('#q')!;
+  const list = document.querySelector<HTMLUListElement>('#results')!;
+  const status = document.querySelector<HTMLParagraphElement>('#status')!;
+  let items: Item[] | null = null;
+
+  async function load() {
+    if (!items) items = await (await fetch('/search.json')).json();
+    return items!;
+  }
+
+  function render(q: string, all: Item[]) {
+    list.replaceChildren();
+    const words = q.toLowerCase().split(/\s+/).filter(Boolean);
+    if (!words.length) {
+      status.textContent = '';
+      return;
+    }
+    const hits = all.filter((i) => {
+      const hay = `${i.t} ${i.d} ${i.x}`.toLowerCase();
+      return words.every((w) => hay.includes(w));
+    });
+    status.textContent = hits.length ? `${hits.length} result${hits.length > 1 ? 's' : ''}` : 'No results yet. Try a different word.';
+    for (const h of hits.slice(0, 30)) {
+      const li = document.createElement('li');
+      const kind = document.createElement('span');
+      kind.className = 'eyebrow';
+      kind.textContent = h.k;
+      const a = document.createElement('a');
+      a.href = h.u;
+      a.textContent = h.t;
+      const p = document.createElement('p');
+      p.textContent = h.d;
+      li.append(kind, a, p);
+      list.append(li);
+    }
+  }
+
+  const params = new URLSearchParams(location.search);
+  const initial = params.get('q') ?? '';
+  input.value = initial;
+  input.focus();
+  load().then((all) => render(initial, all));
+  input.addEventListener('input', async () => {
+    render(input.value, await load());
+    const url = new URL(location.href);
+    url.searchParams.set('q', input.value);
+    history.replaceState(null, '', url);
+  });
+</script>
+
+<style>
+  .page { padding-top: 2rem; max-width: 760px; }
+  input {
+    width: 100%;
+    min-height: 48px;
+    padding: 10px 16px;
+    font: inherit;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+  }
+  .visually-hidden {
+    position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);
+  }
+  #results { list-style: none; padding: 0; }
+  #results :global(li) { padding: 14px 0; border-bottom: 1px solid var(--border); }
+  #results :global(a) { display: block; font-weight: 700; color: var(--heading); text-decoration: none; font-size: 1.05rem; }
+  #results :global(p) { margin: 4px 0 0; font-size: 0.95rem; }
+</style>

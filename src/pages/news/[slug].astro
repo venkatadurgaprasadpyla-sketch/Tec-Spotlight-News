@@ -1,0 +1,68 @@
+---
+import { render } from 'astro:content';
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import RelatedGuide from '../../components/RelatedGuide.astro';
+import { getNews, readingTime } from '../../data/posts';
+import { NEWS_CATEGORIES } from '../../data/site';
+
+export async function getStaticPaths() {
+  const posts = await getNews();
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const d = post.data;
+const category = NEWS_CATEGORIES.find((c) => c.slug === d.category)!;
+---
+<ArticleLayout
+  kind="news"
+  title={d.title}
+  seoTitle={d.seoTitle}
+  description={d.description}
+  date={d.date}
+  updated={d.updated}
+  author={d.author}
+  category={category}
+  image={d.image}
+  imageAlt={d.imageAlt}
+  draft={d.draft}
+  affiliate={d.affiliate}
+  tools={d.tools}
+  shop={d.shop}
+  minutes={readingTime(post.body ?? '')}
+>
+  <div slot="top" class="box summary">
+    <strong>In short</strong>
+    <ul>{d.summary.map((line) => <li>{line}</li>)}</ul>
+  </div>
+
+  <Content />
+
+  <div slot="bottom">
+    <RelatedGuide slug={d.relatedGuide} />
+    {d.sources.length > 0 && (
+      <section class="sources">
+        <h2>Sources</h2>
+        <ul>{d.sources.map((s) => <li><a href={s.url} rel="noopener" target="_blank">{s.name}</a></li>)}</ul>
+      </section>
+    )}
+  </div>
+</ArticleLayout>
+
+<style>
+  .summary ul {
+    margin: 0.4rem 0 0;
+    padding-left: 1.2rem;
+  }
+  .summary li {
+    margin: 0.2rem 0;
+  }
+  .sources {
+    font-size: 0.92rem;
+  }
+  .sources h2 {
+    font-size: 1rem;
+    margin-top: 2rem;
+  }
+</style>

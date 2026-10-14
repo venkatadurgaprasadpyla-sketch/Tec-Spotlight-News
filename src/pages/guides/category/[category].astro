@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PostList from '../../../components/PostList.astro';
+import CategoryNav from '../../../components/CategoryNav.astro';
+import { getGuides } from '../../../data/posts';
+import { GUIDE_CATEGORIES } from '../../../data/site';
+
+export function getStaticPaths() {
+  return GUIDE_CATEGORIES.map((c) => ({ params: { category: c.slug }, props: { cat: c } }));
+}
+const { cat } = Astro.props;
+const guides = (await getGuides()).filter((g) => g.data.category === cat.slug);
+---
+<BaseLayout title={`${cat.name} guides`} description={`${cat.name} guides to apps and AI tools, tested honestly on free trials.`}>
+  <div class="container page">
+    <h1>{cat.name}</h1>
+    <CategoryNav base="/guides" categories={GUIDE_CATEGORIES} current={cat.slug} />
+    <PostList items={guides} empty={`No ${cat.name.toLowerCase()} guides yet.`} />
+  </div>
+</BaseLayout>
+<style>.page { padding-top: 2rem; }</style>

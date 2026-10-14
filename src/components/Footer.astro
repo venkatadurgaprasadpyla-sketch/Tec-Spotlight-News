@@ -1,0 +1,81 @@
+---
+import { SITE, NEWS_CATEGORIES, GUIDE_CATEGORIES } from '../data/site';
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div class="brand">
+        <img src="/images/brand/techspotlight-logo-dark.svg" alt="TechSpotlight News" width="200" height="40" loading="lazy" />
+        <p>{SITE.tagline}</p>
+      </div>
+      <div>
+        <h2>News</h2>
+        <ul>{NEWS_CATEGORIES.map((c) => <li><a href={`/news/category/${c.slug}/`}>{c.name}</a></li>)}</ul>
+      </div>
+      <div>
+        <h2>Guides</h2>
+        <ul>{GUIDE_CATEGORIES.map((c) => <li><a href={`/guides/category/${c.slug}/`}>{c.name}</a></li>)}</ul>
+      </div>
+      <div>
+        <h2>About</h2>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/editorial-policy/">Editorial Policy</a></li>
+          <li><a href="/affiliate-disclosure/">Affiliate Disclosure</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="/rss.xml">RSS feed</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="small">© {year} {SITE.name}. Some links on this site are affiliate links. <a href="/affiliate-disclosure/">Learn more</a>.</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--night);
+    color: #c9c6ea;
+    margin-top: 4rem;
+    padding: 2.5rem 0 1.5rem;
+    font-size: 0.92rem;
+  }
+  .cols {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+  .brand img {
+    height: 30px;
+    width: auto;
+  }
+  h2 {
+    color: #fff;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0 0 0.5rem;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    margin: 0.3rem 0;
+  }
+  a {
+    color: #e7e5f6;
+    text-decoration: none;
+  }
+  a:hover {
+    color: var(--glow);
+  }
+  .small {
+    border-top: 1px solid #2f2b66;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    font-size: 0.82rem;
+  }
+</style>

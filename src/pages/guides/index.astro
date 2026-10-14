@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostList from '../../components/PostList.astro';
+import CategoryNav from '../../components/CategoryNav.astro';
+import { getGuides } from '../../data/posts';
+import { GUIDE_CATEGORIES } from '../../data/site';
+const guides = await getGuides();
+---
+<BaseLayout title="Guides" description="Honest guides to the apps and AI tools worth your time and money, tested on free trials.">
+  <div class="container page">
+    <h1>Guides</h1>
+    <p class="muted lead">Honest guides to the apps and AI tools worth your time and money. Every tool is tested before it's recommended.</p>
+    <CategoryNav base="/guides" categories={GUIDE_CATEGORIES} />
+    <PostList items={guides} empty="The first guides are on their way." />
+  </div>
+</BaseLayout>
+<style>
+  .page { padding-top: 2rem; }
+  .lead { margin-top: -0.25rem; }
+</style>

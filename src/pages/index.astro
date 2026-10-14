@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostList from '../components/PostList.astro';
+import AdSlot from '../components/AdSlot.astro';
+import { getNews, getGuides } from '../data/posts';
+import { SITE } from '../data/site';
+
+const news = (await getNews()).slice(0, 6);
+const allGuides = await getGuides();
+const featured = allGuides.filter((g) => g.data.featured);
+const guides = (featured.length ? featured : allGuides).slice(0, 3);
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE.name,
+  url: SITE.url,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: `${SITE.url}/search/?q={query}`,
+    'query-input': 'required name=query',
+  },
+};
+---
+<BaseLayout title={SITE.name} schema={schema}>
+  <section class="hero">
+    <div class="container">
+      <p class="kicker">For readers in India and the UAE</p>
+      <h1>What matters in tech, <span>explained for you.</span></h1>
+      <p class="sub">Short news briefs you can read in a few minutes, and honest guides to the apps and AI tools worth your time and money.</p>
+      <div class="cta">
+        <a class="btn" href="/news/">Read today's news</a>
+        <a class="btn btn-ghost" href="/guides/">Browse guides</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="section-title">
+      <h2>Latest news</h2>
+      <a href="/news/">All news</a>
+    </div>
+    <PostList items={news} empty="The first news briefs are on their way." />
+
+    <AdSlot slot="home-middle" />
+
+    <div class="section-title">
+      <h2>Guides worth your time</h2>
+      <a href="/guides/">All guides</a>
+    </div>
+    <PostList items={guides} empty="The first guides are on their way." />
+  </div>
+</BaseLayout>
+
+<style>
+  .hero {
+    background:
+      radial-gradient(ellipse 60% 90% at 85% 0%, rgba(255, 174, 26, 0.22), transparent 70%),
+      var(--bg-soft);
+    border-bottom: 1px solid var(--border);
+    padding: 3rem 0 2.5rem;
+  }
+  .kicker {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 0 0 0.5rem;
+  }
+  h1 {
+    max-width: 18ch;
+    font-size: clamp(2rem, 6vw, 3.2rem);
+  }
+  h1 span {
+    background: linear-gradient(transparent 62%, rgba(255, 174, 26, 0.55) 62%);
+  }
+  .sub {
+    max-width: 52ch;
+    font-size: 1.1rem;
+    margin: 0 0 1.5rem;
+  }
+  .cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+</style>

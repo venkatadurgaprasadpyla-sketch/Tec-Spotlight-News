@@ -1,0 +1,48 @@
+---
+import { getEntry } from 'astro:content';
+interface Props {
+  slug?: string;
+}
+const { slug } = Astro.props;
+const guide = slug ? await getEntry('guides', slug) : undefined;
+---
+{guide ? (
+  <aside class="related">
+    <span class="eyebrow">Related guide</span>
+    <a href={`/guides/${guide.id}/`} class="title">{guide.data.title}</a>
+    <p>{guide.data.description}</p>
+  </aside>
+) : slug ? (
+  <aside class="related missing">Related guide "{slug}" not found. Add it or change relatedGuide.</aside>
+) : null}
+
+<style>
+  .related {
+    position: relative;
+    margin: 2rem 0;
+    padding: 18px 20px;
+    border-radius: var(--radius);
+    background: var(--accent-soft);
+    border-left: 5px solid var(--amber);
+  }
+  .title {
+    display: block;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--heading);
+    margin: 4px 0;
+    text-decoration: none;
+  }
+  .title::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+  p {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  .missing {
+    border-left-color: #c0392b;
+  }
+</style>

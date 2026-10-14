@@ -1,0 +1,50 @@
+---
+import { render } from 'astro:content';
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import { getGuides, readingTime } from '../../data/posts';
+import { GUIDE_CATEGORIES } from '../../data/site';
+
+export async function getStaticPaths() {
+  const guides = await getGuides();
+  return guides.map((guide) => ({ params: { slug: guide.id }, props: { guide } }));
+}
+
+const { guide } = Astro.props;
+const { Content } = await render(guide);
+const d = guide.data;
+const category = GUIDE_CATEGORIES.find((c) => c.slug === d.category)!;
+---
+<ArticleLayout
+  kind="guide"
+  title={d.title}
+  seoTitle={d.seoTitle}
+  description={d.description}
+  date={d.date}
+  updated={d.updated}
+  author={d.author}
+  category={category}
+  image={d.image}
+  imageAlt={d.imageAlt}
+  draft={d.draft}
+  affiliate={d.affiliate}
+  tools={d.tools}
+  shop={d.shop}
+  minutes={readingTime(guide.body ?? '')}
+>
+  {d.verdict && (
+    <div slot="top" class="box verdict">
+      <strong>Quick verdict</strong>
+      <p>{d.verdict}</p>
+    </div>
+  )}
+  <Content />
+</ArticleLayout>
+
+<style>
+  .verdict {
+    border-left: 5px solid var(--amber);
+  }
+  .verdict p {
+    margin: 0.3rem 0 0;
+  }
+</style>

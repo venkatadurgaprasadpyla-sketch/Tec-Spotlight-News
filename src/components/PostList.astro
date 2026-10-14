@@ -1,0 +1,37 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import PostCard from './PostCard.astro';
+import { NEWS_CATEGORIES, GUIDE_CATEGORIES } from '../data/site';
+
+interface Props {
+  items: (CollectionEntry<'news'> | CollectionEntry<'guides'>)[];
+  empty?: string;
+}
+const { items, empty = 'Nothing here yet. Check back soon.' } = Astro.props;
+const twoDays = 2 * 24 * 60 * 60 * 1000;
+const now = Date.now();
+---
+{items.length === 0 ? (
+  <p class="muted">{empty}</p>
+) : (
+  <div class="grid">
+    {items.map((item) => {
+      const isNews = item.collection === 'news';
+      const base = isNews ? '/news' : '/guides';
+      const cats = isNews ? NEWS_CATEGORIES : GUIDE_CATEGORIES;
+      const cat = cats.find((c) => c.slug === item.data.category)!;
+      return (
+        <PostCard
+          href={`${base}/${item.id}/`}
+          title={item.data.title}
+          description={item.data.description}
+          date={item.data.date}
+          category={cat.name}
+          categoryHref={`${base}/category/${cat.slug}/`}
+          draft={item.data.draft}
+          isNew={isNews && now - item.data.date.valueOf() < twoDays}
+        />
+      );
+    })}
+  </div>
+)}

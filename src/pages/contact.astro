@@ -1,0 +1,20 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { SITE } from '../data/site';
+const hasEmail = SITE.contactEmail.includes('@');
+---
+<PageLayout title="Contact" description="Get in touch with TechSpotlight News: corrections, tool suggestions, or a friendly hello.">
+  <p>I'd love to hear from you. Email is the best way to reach me:</p>
+  <p class="email">
+    {hasEmail ? <a class="btn" href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a> : <strong>{SITE.contactEmail}</strong>}
+  </p>
+  <h2>Good reasons to write</h2>
+  <ul>
+    <li><strong>A mistake:</strong> tell me the page and what's wrong. I fix errors quickly.</li>
+    <li><strong>A tool to look at:</strong> an app or AI tool you'd like me to test.</li>
+    <li><strong>Companies and PR:</strong> press releases and media kits are welcome. Coverage is never paid for, and sponsored posts are always labelled.</li>
+  </ul>
+</PageLayout>
+<style>
+  .email { margin: 1rem 0 1.5rem; }
+</style>

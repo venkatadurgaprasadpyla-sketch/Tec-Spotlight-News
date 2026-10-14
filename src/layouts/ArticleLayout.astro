@@ -1,0 +1,124 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import AffiliateDisclosure from '../components/AffiliateDisclosure.astro';
+import AffiliateButtons from '../components/AffiliateButtons.astro';
+import ShopButtons from '../components/ShopButtons.astro';
+import AdSlot from '../components/AdSlot.astro';
+import { SITE } from '../data/site';
+import { formatDate } from '../data/posts';
+
+interface Props {
+  kind: 'news' | 'guide';
+  title: string;
+  seoTitle?: string;
+  description: string;
+  date: Date;
+  updated?: Date;
+  author: string;
+  category: { slug: string; name: string };
+  image?: string;
+  imageAlt?: string;
+  draft: boolean;
+  affiliate: boolean;
+  tools: string[];
+  shop?: { amazonIn?: string; flipkart?: string; amazonAe?: string };
+  minutes: number;
+}
+
+const p = Astro.props;
+const base = p.kind === 'news' ? '/news' : '/guides';
+const url = new URL(Astro.url.pathname, Astro.site).toString();
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': p.kind === 'news' ? 'NewsArticle' : 'Article',
+  headline: p.title,
+  description: p.description,
+  datePublished: p.date.toISOString(),
+  dateModified: (p.updated ?? p.date).toISOString(),
+  author: { '@type': 'Person', name: p.author, url: new URL('/about/', Astro.site).toString() },
+  publisher: {
+    '@type': 'Organization',
+    name: SITE.name,
+    logo: { '@type': 'ImageObject', url: new URL('/images/apple-touch-icon.png', Astro.site).toString() },
+  },
+  mainEntityOfPage: url,
+  ...(p.image ? { image: [new URL(p.image, Astro.site).toString()] } : {}),
+};
+---
+<BaseLayout
+  title={p.seoTitle ?? p.title}
+  description={p.description}
+  image={p.image}
+  imageAlt={p.imageAlt}
+  type="article"
+  schema={schema}
+  published={p.date}
+  modified={p.updated}
+  noindex={p.draft}
+>
+  <article class="container article">
+    <header class="head">
+      {p.draft && <p class="draft-banner">Draft preview. This post is not on the live site.</p>}
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href={`${base}/`}>{p.kind === 'news' ? 'News' : 'Guides'}</a>
+        <span aria-hidden="true">/</span>
+        <a href={`${base}/category/${p.category.slug}/`}>{p.category.name}</a>
+      </nav>
+      <h1>{p.title}</h1>
+      <p class="byline muted">
+        By <a href="/about/">{p.author}</a> ·
+        <time datetime={p.date.toISOString()}>{formatDate(p.date)}</time>
+        {p.updated && <> · Updated <time datetime={p.updated.toISOString()}>{formatDate(p.updated)}</time></>}
+        · {p.minutes} min read
+      </p>
+    </header>
+
+    {p.affiliate && <AffiliateDisclosure />}
+    <slot name="top" />
+
+    {p.image && <img class="hero" src={p.image} alt={p.imageAlt ?? ''} width="1200" height="630" />}
+
+    <div class="prose">
+      <slot />
+    </div>
+
+    <AdSlot slot="article-end" />
+
+    {p.shop && <ShopButtons {...p.shop} />}
+    <AffiliateButtons tools={p.tools} />
+
+    <slot name="bottom" />
+  </article>
+</BaseLayout>
+
+<style>
+  .article {
+    padding-top: 1.75rem;
+  }
+  .head,
+  .article > :global(*) {
+    max-width: var(--measure);
+  }
+  .crumbs {
+    display: flex;
+    gap: 8px;
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+  .crumbs a {
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+  .byline {
+    font-size: 0.9rem;
+    margin: 0 0 1.25rem;
+  }
+  .byline a {
+    color: inherit;
+  }
+  .hero {
+    border-radius: var(--radius);
+    margin: 0 0 1.5rem;
+  }
+</style>
