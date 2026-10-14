@@ -14,7 +14,7 @@ Short, honest tech news for busy readers in India and the UAE, where every news 
 - **UAE:** professionals and the Indian and South Asian community there. UAE visitors usually earn more per visit, so we give them their own angle.
 - Mostly reading on a phone, in short moments.
 
-**About the owner:** Durga Prasad, connected to both India and the UAE. This is a real trust point for the About page: the site is written by someone who lives these two markets.
+**About the owner:** writes as **Pyla**, connected to both India and the UAE. This is a real trust point for the About page: the site is written by someone who lives these two markets.
 
 ## What we publish
 
@@ -66,5 +66,4 @@ YouTube Shorts, a regional-language version, social media auto-posting, and a ne
 
 ## Still to confirm
 
-- The name shown on the site and About page (real name or a pen name).
 - Contact email for the Contact page.
