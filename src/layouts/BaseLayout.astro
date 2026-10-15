@@ -23,7 +23,7 @@ interface Props {
 const {
   title,
   description = SITE.description,
-  image = '/images/og-default.png',
+  image = '/brand/og-image.png',
   imageAlt = 'TechSpotlight News',
   type = 'website',
   noindex = false,
@@ -55,8 +55,10 @@ const imageUrl = new URL(image, Astro.site);
     <meta name="author" content={SITE.author} />
     <meta name="theme-color" content="#221C5A" />
 
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="alternate" type="application/rss+xml" title={SITE.name} href="/rss.xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
 

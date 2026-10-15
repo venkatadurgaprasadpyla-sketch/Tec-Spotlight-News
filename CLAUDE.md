@@ -18,7 +18,7 @@ The full product brief is `docs/PROJECT-BRIEF.md`; the agreed plan is `docs/PRD.
 - Commands: `npm run dev` (local preview), `npm run build` (build into `dist/`), `npm run check` (type check), `npm run seo-check -- <post.md>` (SEO and quality score).
 - Preview links are hidden from Google (`noindex` and a blocking `robots.txt`); only `main` is indexed.
 - Site-wide settings (name, author, contact email, ads on/off): `src/data/site.ts`.
-- Brand: colours in `src/styles/global.css`, logos in `public/images/brand/` (originals in `images/brand/`). Font: Sora, self-hosted.
+- Brand: colours in `src/styles/global.css`. Logo: the terminal-style "> tech_spotlight" wordmark, inline in `src/components/Header.astro` with a blinking cursor (">_" icon on phones); logo files in `public/brand/`, icons at the root of `public/`, brand kit and spec in `brand-kit/` (older logos in `public/images/brand/` and `images/brand/` are no longer used). Font: Sora, self-hosted.
 
 ## Content
 

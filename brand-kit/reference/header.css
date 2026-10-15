@@ -1,0 +1,86 @@
+/* TechSpotlight header + logo
+   Colours read the site's existing tokens first, with brand fallbacks. */
+
+.ts-header {
+  --ts-header-bg: var(--header-bg, #221C5A);
+  --ts-header-text: var(--header-text, #FFFFFF);
+  --ts-prompt: var(--accent, #FFAE1A);   /* the ">" */
+  --ts-cursor: var(--glow, #FFD36E);     /* the blinking block */
+  --ts-nav: var(--glow, #FFD36E);
+
+  container-type: inline-size;           /* lets the logo swap by header width */
+  background: var(--ts-header-bg);
+  color: var(--ts-header-text);
+}
+
+.ts-header__inner {
+  max-width: var(--max, 1120px);
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* ---------- Logo ---------- */
+.ts-logo {
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 6px;
+  line-height: 0;
+}
+.ts-logo:focus-visible {
+  outline: 2px solid var(--ts-cursor);
+  outline-offset: 4px;
+}
+
+.ts-logo__wordmark { height: 34px; width: auto; display: block; }
+.ts-logo__prompt   { fill: var(--ts-prompt); }
+.ts-logo__text     { fill: currentColor; }
+
+.ts-logo__icon { height: 36px; width: 36px; display: none; }
+.ts-logo__icon-bg      { fill: var(--ts-header-bg); stroke: rgba(255,255,255,.18); stroke-width: 8; }
+.ts-logo__icon-chevron { fill: none; stroke: currentColor; stroke-width: 56; stroke-linecap: round; stroke-linejoin: round; }
+
+/* The blinking cursor (same timing on the full logo and the icon) */
+.ts-logo__cursor {
+  fill: var(--ts-cursor);
+  animation: ts-cursor-blink 1.06s steps(1, end) infinite;
+}
+@keyframes ts-cursor-blink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0; }
+}
+
+/* People who ask their device for less motion get a steady cursor */
+@media (prefers-reduced-motion: reduce) {
+  .ts-logo__cursor { animation: none; }
+}
+
+/* ---------- Nav ---------- */
+.ts-nav { display: flex; align-items: center; gap: 22px; }
+.ts-nav a {
+  color: var(--ts-nav);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+}
+.ts-nav a:hover,
+.ts-nav a[aria-current="page"] { border-bottom-color: var(--ts-prompt); }
+.ts-nav a:focus-visible { outline: 2px solid var(--ts-cursor); outline-offset: 3px; border-radius: 2px; }
+
+/* ---------- Narrow header: icon instead of full logo ---------- */
+@container (max-width: 560px) {
+  .ts-logo__wordmark { display: none; }
+  .ts-logo__icon     { display: block; }
+  .ts-nav            { gap: 16px; }
+  .ts-nav a          { font-size: 14px; }
+}
+
+/* ---------- Dark theme (site uses :root[data-theme="dark"]) ---------- */
+:root[data-theme="dark"] .ts-header { --ts-header-bg: var(--header-bg, #100E2A); }
