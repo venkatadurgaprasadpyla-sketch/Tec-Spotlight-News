@@ -5,6 +5,12 @@ description: "Google.org is giving $15 million to The/Nudge to build AI tools fo
 date: 2026-10-15
 category: apps-software
 draft: true
+image: "/images/posts/google-org-msme-ai-fund/cover.jpg"
+imageAlt: "A shopkeeper at a small drinks stall in Kolkata, with shelves of bottled drinks behind him"
+imageCredit:
+  name: "Laurentiu Morariu"
+  source: "Unsplash"
+  url: "https://unsplash.com/photos/man-standing-inside-store-0NTl61e9fTk"
 summary:
   - "Google.org, Google's charity arm, is giving $15 million to The/Nudge to build AI tools for India's small businesses."
   - "The focus is on three old headaches: getting formal loans, handling compliance and finding new customers."

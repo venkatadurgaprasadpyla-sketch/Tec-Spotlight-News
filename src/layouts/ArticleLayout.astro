@@ -18,6 +18,7 @@ interface Props {
   category: { slug: string; name: string };
   image?: string;
   imageAlt?: string;
+  imageCredit?: { name: string; source: string; url: string };
   draft: boolean;
   affiliate: boolean;
   tools: string[];
@@ -77,7 +78,16 @@ const schema = {
     {p.affiliate && <AffiliateDisclosure />}
     <slot name="top" />
 
-    {p.image && <img class="hero" src={p.image} alt={p.imageAlt ?? ''} width="1200" height="630" />}
+    {p.image && (
+      <figure class="hero">
+        <img src={p.image} alt={p.imageAlt ?? ''} width="1200" height="630" />
+        {p.imageCredit && (
+          <figcaption>
+            Photo: <a href={p.imageCredit.url} rel="noopener">{p.imageCredit.name}</a> on {p.imageCredit.source}
+          </figcaption>
+        )}
+      </figure>
+    )}
 
     <div class="prose">
       <slot />
@@ -118,7 +128,14 @@ const schema = {
     color: inherit;
   }
   .hero {
-    border-radius: var(--radius);
     margin: 0 0 1.5rem;
+  }
+  .hero img {
+    border-radius: var(--radius);
+  }
+  .hero figcaption {
+    margin-top: 6px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
   }
 </style>

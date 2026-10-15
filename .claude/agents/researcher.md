@@ -26,6 +26,6 @@ Gather only from the tool's own website and official docs: what it does, plans a
 
 - Always record the source link for every fact.
 - Never copy sentences; summarise in your own words.
-- Never download images from news sites.
+- Never download images from news sites. For a cover photo, suggest one free Unsplash or Pexels photo (not Unsplash+) with its page link and photographer's name.
 - If you can't confirm something, say so.
 - Save your notes to `drafts/YYYY-MM-DD/research-<topic>.md`.

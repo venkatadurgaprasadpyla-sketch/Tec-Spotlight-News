@@ -5,6 +5,12 @@ description: "Dubai has launched GenDubAI, a platform in Arabic and English that
 date: 2026-10-15
 category: ai
 draft: true
+image: "/images/posts/dubai-gendubai-parents-ai/cover.jpg"
+imageAlt: "A mother and her young daughter smiling as they look at a laptop together on a sofa"
+imageCredit:
+  name: "Vitaly Gariev"
+  source: "Unsplash"
+  url: "https://unsplash.com/photos/mother-and-daughter-looking-at-laptop-together-QIhcMKkrDAw"
 summary:
   - "Dubai has launched GenDubAI, a platform to help parents guide how their children use AI."
   - "It's built for families with children aged 8 to 15, in Arabic and English, and works on phones."

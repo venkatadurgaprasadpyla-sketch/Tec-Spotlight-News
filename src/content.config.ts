@@ -12,6 +12,9 @@ const common = {
   author: z.string().default('Pyla'),
   image: z.string().optional(),
   imageAlt: z.string().optional(),
+  // Who took the cover photo, shown under it. Needed for free stock photos
+  // (for example Unsplash or Pexels).
+  imageCredit: z.object({ name: z.string(), source: z.string(), url: z.string().url() }).optional(),
   // Drafts never appear on the live site.
   draft: z.boolean().default(false),
   // True when the post has affiliate links, so the disclosure shows at the top.

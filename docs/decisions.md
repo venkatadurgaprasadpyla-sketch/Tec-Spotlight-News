@@ -15,3 +15,4 @@
 | 2026-10-15 | Writing voice and content helpers | As in the brief | Voice skill, researcher, writer and auditor helpers, and five commands, as written in the brief | Follows section 7 of the brief. Drafts stay in drafts/ until Pyla says "publish". |
 | 2026-10-15 | Cloudflare product for hosting | Cloudflare Pages; Cloudflare Workers | Workers (static assets) | Owner connected the repository to Cloudflare as a Worker. It serves the same static files; settings live in wrangler.jsonc. |
 | 2026-10-15 | Contact email | – | techspotlightid.official@gmail.com | Given by the owner; used on the Contact and Privacy pages. |
+| 2026-10-15 | Cover images for posts | Only press kits, own screenshots or Canva; also free stock photo sites | Also free stock photos (Unsplash, Pexels) with the photographer credited under the image | Owner asked for a free-to-use photo at the top of every post. Their licences allow free use; Unsplash+ (paid) and news-site photos stay off-limits. |
