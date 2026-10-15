@@ -1,0 +1,164 @@
+# TechSpotlight news sources: starter registry
+# Every URL here must be validated on first run (see spec, step 3).
+# Feeds that fail validation are disabled and logged, never silently kept.
+
+settings:
+  user_agent: "TechSpotlightBot/1.0 (+https://REPLACE-WITH-SITE-URL/about; REPLACE-WITH-CONTACT-EMAIL)"
+  default_poll_minutes: 30
+  max_item_age_hours: 48
+  regions_of_interest: [US, IN, AE]   # Google Trends geos; India and UAE audience
+  focus_areas: [uae]                  # see spec, "UAE focus area"
+
+# URL patterns used to generate many feeds from one rule.
+patterns:
+  google_news_search: "https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en"
+  google_news_search_uae:    "https://news.google.com/rss/search?q={query}&hl=en-AE&gl=AE&ceid=AE:en"
+  google_news_search_uae_ar: "https://news.google.com/rss/search?q={query}&hl=ar&gl=AE&ceid=AE:ar"
+  reddit_subreddit:   "https://www.reddit.com/r/{subreddit}/.rss"
+  youtube_channel:    "https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"
+  arxiv_category:     "https://rss.arxiv.org/rss/{category}"
+  sec_edgar_company:  "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK={cik}&type=8-K&dateb=&owner=include&count=40&output=atom"
+  bluesky_profile:    "https://bsky.app/profile/{handle}/rss"
+  mastodon_profile:   "https://{instance}/@{username}.rss"
+  google_trends:      "https://trends.google.com/trending/rss?geo={geo}"
+
+feeds:
+  tech_news:
+    - { name: TechCrunch,      url: "https://techcrunch.com/feed/",                          authority: 0.9 }
+    - { name: The Verge,       url: "https://www.theverge.com/rss/index.xml",                authority: 0.9 }
+    - { name: Ars Technica,    url: "https://feeds.arstechnica.com/arstechnica/index",       authority: 0.9 }
+    - { name: Wired,           url: "https://www.wired.com/feed/rss",                         authority: 0.85 }
+    - { name: Engadget,        url: "https://www.engadget.com/rss.xml",                       authority: 0.8 }
+    - { name: VentureBeat,     url: "https://venturebeat.com/feed/",                          authority: 0.75 }
+    - { name: ZDNet,           url: "https://www.zdnet.com/news/rss.xml",                     authority: 0.75 }
+    - { name: The Register,    url: "https://www.theregister.com/headlines.atom",             authority: 0.75 }
+    - { name: Tom's Hardware,  url: "https://www.tomshardware.com/feeds/all",                 authority: 0.75 }
+    - { name: 9to5Mac,         url: "https://9to5mac.com/feed/",                              authority: 0.7 }
+    - { name: 9to5Google,      url: "https://9to5google.com/feed/",                           authority: 0.7 }
+    - { name: MacRumors,       url: "https://feeds.macrumors.com/MacRumors-All",              authority: 0.7 }
+    - { name: Android Authority, url: "https://www.androidauthority.com/feed/",               authority: 0.7 }
+
+  major_news:
+    - { name: BBC Technology,  url: "https://feeds.bbci.co.uk/news/technology/rss.xml",       authority: 0.95 }
+    - { name: Guardian Tech,   url: "https://www.theguardian.com/technology/rss",             authority: 0.9 }
+    - { name: NYT Technology,  url: "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml", authority: 0.95 }
+    - { name: CNBC Technology, url: "https://www.cnbc.com/id/19854910/device/rss/rss.html",   authority: 0.85 }
+    # Reuters and AP have no reliable public RSS; reach them through Google News:
+    - { name: Reuters via Google News, pattern: google_news_search, query: "site:reuters.com technology", authority: 0.95 }
+    - { name: AP via Google News,      pattern: google_news_search, query: "site:apnews.com technology",  authority: 0.95 }
+
+  science_research:
+    - { name: arXiv AI,        pattern: arxiv_category, category: cs.AI, authority: 0.7 }
+    - { name: arXiv ML,        pattern: arxiv_category, category: cs.LG, authority: 0.7 }
+    - { name: arXiv NLP,       pattern: arxiv_category, category: cs.CL, authority: 0.7 }
+    - { name: Nature,          url: "https://www.nature.com/nature.rss",                      authority: 0.95 }
+    - { name: MIT Technology Review, url: "https://www.technologyreview.com/feed/",           authority: 0.9 }
+    - { name: IEEE Spectrum,   url: "https://spectrum.ieee.org/feeds/feed.rss",               authority: 0.85 }
+    - { name: ScienceDaily,    url: "https://www.sciencedaily.com/rss/all.xml",               authority: 0.75 }
+    - { name: Phys.org,        url: "https://phys.org/rss-feed/",                             authority: 0.75 }
+    - { name: Quanta Magazine, url: "https://www.quantamagazine.org/feed/",                   authority: 0.85 }
+
+  company_blogs:   # official announcements; highest trust for product news
+    - { name: Google Blog,     url: "https://blog.google/rss/",                               authority: 1.0 }
+    - { name: Microsoft Blog,  url: "https://blogs.microsoft.com/feed/",                      authority: 1.0 }
+    - { name: NVIDIA Blog,     url: "https://blogs.nvidia.com/feed/",                         authority: 1.0 }
+    - { name: Apple Newsroom,  url: "https://www.apple.com/newsroom/rss-feed.rss",            authority: 1.0 }
+    - { name: OpenAI News,     url: "https://openai.com/news/rss.xml",                        authority: 1.0 }
+    # Discover feeds for these by autodiscovery (spec step 3); fall back to Google News:
+    - { name: Anthropic,       discover: "https://www.anthropic.com/news",                    authority: 1.0 }
+    - { name: Meta Newsroom,   discover: "https://about.fb.com/news/",                        authority: 1.0 }
+    - { name: Amazon News,     discover: "https://www.aboutamazon.com/news",                  authority: 1.0 }
+    - { name: Samsung Newsroom, discover: "https://news.samsung.com/global/",                 authority: 1.0 }
+
+  regional_india:   # discover feed URLs on first run
+    - { name: Economic Times Tech, discover: "https://economictimes.indiatimes.com/tech",      authority: 0.8 }
+    - { name: Gadgets 360,         discover: "https://www.gadgets360.com/",                   authority: 0.75 }
+    - { name: Inc42,               discover: "https://inc42.com/",                            authority: 0.7 }
+    - { name: India tech via Google News, pattern: google_news_search, query: "India technology launch", authority: 0.6 }
+
+  press_wires:   # discover category feeds for technology releases
+    - { name: PR Newswire,     discover: "https://www.prnewswire.com/rss/",                   authority: 0.6 }
+    - { name: Business Wire,   discover: "https://www.businesswire.com/",                     authority: 0.6 }
+    - { name: GlobeNewswire,   discover: "https://www.globenewswire.com/rss/list",            authority: 0.6 }
+
+
+# ---------------------------------------------------------------------------
+# FOCUS AREA: UAE tech news (see spec, "UAE focus area")
+# Every item from this section is tagged focus: uae.
+# ---------------------------------------------------------------------------
+uae_tech:
+  official:   # government and official bodies; highest trust for UAE policy and launches
+    - { name: WAM (Emirates News Agency),     discover: "https://www.wam.ae/en",                 authority: 1.0 }
+    - { name: Dubai Media Office,             discover: "https://www.mediaoffice.ae/en",         authority: 1.0 }
+    - { name: Abu Dhabi Media Office,         discover: "https://www.mediaoffice.abudhabi/en/",  authority: 1.0 }
+    - { name: UAE Government portal news,     discover: "https://u.ae/en/media",                 authority: 0.95 }
+    - { name: TDRA (telecom and digital regulator), discover: "https://tdra.gov.ae/en/media-hub", authority: 0.95 }
+    - { name: Dubai Future Foundation,        discover: "https://www.dubaifuture.ae/",           authority: 0.9 }
+
+  news_outlets:
+    - { name: Gulf News Technology,   discover: "https://gulfnews.com/technology",      authority: 0.85 }
+    - { name: Khaleej Times Tech,     discover: "https://www.khaleejtimes.com/tech",    authority: 0.85 }
+    - { name: The National (UAE),     discover: "https://www.thenationalnews.com/future/technology/", authority: 0.9 }
+    - { name: Arabian Business Tech,  discover: "https://www.arabianbusiness.com/technology", authority: 0.8 }
+    - { name: Gulf Business Tech,     discover: "https://gulfbusiness.com/category/technology/", authority: 0.75 }
+    - { name: Zawya Tech,             discover: "https://www.zawya.com/en/business/technology", authority: 0.75 }
+    - { name: Wamda (startups),       discover: "https://www.wamda.com/",               authority: 0.75 }
+    - { name: Computer News Middle East, discover: "https://www.cnmeonline.com/",       authority: 0.65 }
+
+  companies_and_ecosystem:   # UAE tech companies, telcos and startup hubs
+    - { name: G42,           pattern: google_news_search_uae, query: "G42",                       authority: 0.7 }
+    - { name: e& (Etisalat), pattern: google_news_search_uae, query: "e& OR Etisalat technology", authority: 0.7 }
+    - { name: du,            pattern: google_news_search_uae, query: "du telecom UAE",            authority: 0.7 }
+    - { name: Hub71,         pattern: google_news_search_uae, query: "Hub71",                     authority: 0.65 }
+    - { name: Dubai Internet City, pattern: google_news_search_uae, query: "\"Dubai Internet City\"", authority: 0.65 }
+    - { name: MBZUAI (AI university), pattern: google_news_search_uae, query: "MBZUAI",           authority: 0.7 }
+
+  google_news_uae:   # broad nets, UAE edition of Google News
+    - { name: UAE tech,          pattern: google_news_search_uae, query: "UAE technology",              authority: 0.6 }
+    - { name: UAE AI,            pattern: google_news_search_uae, query: "UAE artificial intelligence", authority: 0.6 }
+    - { name: Dubai tech launch, pattern: google_news_search_uae, query: "Dubai tech launch",           authority: 0.6 }
+    - { name: Abu Dhabi tech,    pattern: google_news_search_uae, query: "Abu Dhabi technology",        authority: 0.6 }
+    - { name: UAE gadgets and prices, pattern: google_news_search_uae, query: "UAE price launch smartphone OR laptop", authority: 0.6 }
+    - { name: UAE startups funding,   pattern: google_news_search_uae, query: "UAE startup funding",     authority: 0.6 }
+
+  arabic_optional:   # off by default; turn on later if wanted (headlines get translated for clustering)
+    enabled: false
+    sources:
+      - { name: Google News UAE Arabic, pattern: google_news_search_uae_ar, query: "تكنولوجيا الإمارات", authority: 0.6 }
+
+  social:
+    reddit_subreddits: [dubai, abudhabi, UAE]
+
+  events:   # Durga fills in dates each year; topics during these weeks get a boost
+    - { name: "GITEX Global (Dubai)", start: "YYYY-MM-DD", end: "YYYY-MM-DD" }
+    - { name: "Expand North Star (Dubai)", start: "YYYY-MM-DD", end: "YYYY-MM-DD" }
+
+social:
+  hacker_news:
+    - { name: HN front page (100+ points), url: "https://hnrss.org/frontpage?points=100",     signal: true }
+  reddit:   # rising/hot posts used as buzz signals, not as sources of facts
+    pattern: reddit_subreddit
+    subreddits: [technology, gadgets, Android, apple, hardware, artificial, OpenAI, LocalLLaMA, MachineLearning, Futurology, india]   # UAE subreddits are under uae_tech.social
+  youtube:  # look up channel IDs on first run; new uploads signal what's hot
+    pattern: youtube_channel
+    channels: ["Marques Brownlee", "Linus Tech Tips", "Mrwhosetheboss", "The Verge", "Dave2D", "Two Minute Papers", "Technical Guruji"]
+  bluesky:
+    pattern: bluesky_profile
+    handles: []   # add journalists/companies later
+  mastodon:
+    pattern: mastodon_profile
+    accounts: []  # add later
+  not_included:   # see spec: no free, permitted feed access
+    - X (Twitter)
+    - LinkedIn
+    - Instagram
+    - TikTok
+    - Threads
+
+trending:
+  google_trends: { pattern: google_trends, geos: [US, IN, AE] }
+  wikipedia_top_pageviews: "https://wikimedia.org/api/rest_v1/metrics/pageviews/top/en.wikipedia/all-access/{yyyy}/{mm}/{dd}"
+
+fortune_500:
+  # Generated file, built by spec step 4. Do not hand-edit.
+  companies_file: "pipeline/companies.generated.yaml"
