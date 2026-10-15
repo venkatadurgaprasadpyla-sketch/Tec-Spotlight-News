@@ -32,6 +32,8 @@ The full product brief is `docs/PROJECT-BRIEF.md`; the agreed plan is `docs/PRD.
 
 Every post goes: researcher (facts and **keyword plan**) → writer → **auditor** (facts and rules) → **editor-in-chief** (story scorecard: every metric 4+, average 4.5+) → **seo-cto** (keywords, metadata, links, build, `npm run seo-check` GATE PASSED: no fails, 90%+). Only then is it saved in `src/content/` with `draft: true` and pushed to the preview for Pyla. Agents are in `.claude/agents/`.
 
+A scheduled task runs `/auto-news` every morning at 06:52 India time: it picks the day's top trending tech story worldwide, runs the full pipeline, saves it as a draft on the preview, and asks Pyla for their view. It never publishes.
+
 - Keywords: Semrush (`us` database plus other big markets the story touches) when the account has API units; otherwise Google's search suggestions via Firecrawl. Each post sets `focusKeyword` and 3–6 `keywords`, used naturally (people first, never stuffed).
 - `seoTitle` 30–60 characters, `description` 120–155, short hyphenated web address, cover at least 1200 wide and under 250 KB.
 
