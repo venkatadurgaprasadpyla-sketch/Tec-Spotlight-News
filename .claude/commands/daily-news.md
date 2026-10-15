@@ -5,7 +5,7 @@ description: Find today's tech stories, let Pyla pick, then write the briefs and
 Run the daily news flow. Speak to Pyla in plain English, one question at a time.
 
 1. Use the **researcher** agent (news mode) to find 5 candidate stories from the last 24–48 hours.
-2. Show Pyla the 5 as a short numbered list: headline, one line on why it matters for India and the UAE, and the related guide. Ask which to write (the plan is 1 a day; up to 3 is fine). Recommend one.
+2. Show Pyla the 5 as a short numbered list: headline, one line on why it matters to readers, and the related guide. Ask which to write (the plan is 1 a day; up to 3 is fine). Recommend one.
 3. For each chosen story, have the **researcher** make the **keyword plan** (Semrush, or Google suggestions if Semrush has no units) and find a free cover photo.
 4. Use the **writer** agent to draft the brief into `drafts/<today>/`, using the keyword plan.
 5. Run the three quality gates in order. A draft moves to the next gate only after it passes; if a gate says REVISE, send its notes to the writer and run that gate again (maximum 3 rounds per gate):

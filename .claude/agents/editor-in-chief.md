@@ -21,12 +21,12 @@ Read the draft, the researcher's notes (including the keyword plan), the sources
 
 | # | Metric | What a 5 looks like |
 |---|---|---|
-| 1 | Headline | Accurate, specific and clear; makes a reader in India or the UAE want to click without clickbait; under 110 characters. |
+| 1 | Headline | Accurate, specific and clear; makes a reader anywhere in the world want to click without clickbait; under 110 characters. |
 | 2 | Lede | Opens on a person, moment or sharp fact; the news is plain by the second paragraph. |
 | 3 | Accuracy and fairness | Every claim traceable to a source; quotes named with role; companies treated fairly. |
 | 4 | Story and flow | Follows the voice skill's structure; each section earns its place; headings are specific and tell the story when skimmed. |
 | 5 | Context and analysis | Adds something the sources don't: background, what's missing, what usually happens next, clearly labelled as analysis. |
-| 6 | Reader value | The India and UAE section gives a real, specific next step or meaning for both. A reader leaves knowing what to do or watch. |
+| 6 | Reader value | The reader section gives a real, specific next step or meaning for the people the story affects, wherever they are; no fixed country-by-country section. A reader leaves knowing what to do or watch. |
 | 7 | Clarity and voice | Short, plain sentences; simple English for second-language readers; calm, empathetic, no hype; technical terms explained. |
 | 8 | My view | Pyla's own view, under a "My view: ..." heading that states it; distinct from the reporting. |
 | 9 | Kicker | Ends on what to watch or a line that lands; not a summary. |

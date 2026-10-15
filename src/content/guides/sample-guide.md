@@ -18,8 +18,8 @@ One short paragraph on who should read this guide, and who can skip it.
 
 | Tool | Best for | Free plan | Price (checked on 14 Oct 2026) |
 |---|---|---|---|
-| Tool A | Students | Yes | ₹ / AED per month |
-| Tool B | Small teams | Trial only | ₹ / AED per month |
+| Tool A | Students | Yes | US$ per month |
+| Tool B | Small teams | Trial only | US$ per month |
 
 ## How I tested
 

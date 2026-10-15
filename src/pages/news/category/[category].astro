@@ -11,7 +11,7 @@ export function getStaticPaths() {
 const { cat } = Astro.props;
 const posts = (await getNews()).filter((p) => p.data.category === cat.slug);
 ---
-<BaseLayout title={`${cat.name} news`} description={`The latest ${cat.name} news, explained for readers in India and the UAE.`}>
+<BaseLayout title={`${cat.name} news`} description={`The latest ${cat.name} news, explained clearly for readers everywhere.`}>
   <div class="container page">
     <h1>{cat.name} news</h1>
     <CategoryNav base="/news" categories={NEWS_CATEGORIES} current={cat.slug} />

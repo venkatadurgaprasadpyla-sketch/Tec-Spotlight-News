@@ -4,17 +4,17 @@
 
 ## The one-line idea
 
-Short, honest tech news for busy readers in India and the UAE, where every news brief points to a useful guide that can earn money.
+Short, honest tech news from around the world for busy readers everywhere, where every news brief points to a useful guide that can earn money. (Changed 2026-10-15: the site was first planned for India and the UAE; the owner widened it to a worldwide audience.)
 
 **Tagline:** "What matters in tech, explained for you."
 
 ## Who it is for
 
-- **India:** students, young professionals and small business owners choosing apps and AI tools.
-- **UAE:** professionals and the Indian and South Asian community there. UAE visitors usually earn more per visit, so we give them their own angle.
+- **Readers worldwide:** students, professionals and small business owners who want to understand tech news and choose apps and AI tools.
+- No country-specific section in every article; a story mentions a country only when the story is about it.
 - Mostly reading on a phone, in short moments.
 
-**About the owner:** writes as **Pyla**, connected to both India and the UAE. This is a real trust point for the About page: the site is written by someone who lives these two markets.
+**About the owner:** writes as **Pyla**, connected to both India and the UAE.
 
 ## What we publish
 

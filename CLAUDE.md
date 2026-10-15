@@ -1,6 +1,6 @@
 # TechSpotlight News
 
-Short, honest tech news and money-earning guides for readers in India and the UAE.
+Short, honest tech news from around the world, and money-earning guides, for readers worldwide (owner's decision 2026-10-15; the original brief's India/UAE focus no longer applies).
 The full product brief is `docs/PROJECT-BRIEF.md`; the agreed plan is `docs/PRD.md`, `docs/roadmap.md` and `docs/risks.md`.
 
 ## Working with the owner
@@ -25,14 +25,14 @@ The full product brief is `docs/PROJECT-BRIEF.md`; the agreed plan is `docs/PRD.
 - News briefs: `src/content/news/<slug>.md`. Guides (money pages): `src/content/guides/<slug>.md`. The fields each post needs are defined in `src/content.config.ts`.
 - `draft: true` posts show only on preview links and local preview, never on the live site. The two `sample-*` posts are layout samples and must stay drafts.
 - Work-in-progress drafts from the content pipeline live in `drafts/YYYY-MM-DD/`, outside the site.
-- News brief layout (500–800 words): headline, 3-line summary (`summary`), cover photo, then a story told like a senior journalist: lede, nut graf, the facts, the open question, the reader angle (India and UAE), Pyla's view under a "My view: ..." heading, kicker. Headings are written for each story, never generic. Then related guide (`relatedGuide`) and sources (`sources`). Full rules: the `techspotlight-voice` skill.
+- News brief layout (500–800 words): headline, 3-line summary (`summary`), cover photo, then a story told like a senior journalist: lede, nut graf, the facts, the open question, the reader angle (what it means for readers, wherever they are), Pyla's view under a "My view: ..." heading, kicker. Headings are written for each story, never generic. Then related guide (`relatedGuide`) and sources (`sources`). Full rules: the `techspotlight-voice` skill.
 - Guide layout: who it's for, quick verdict (`verdict`) and summary table, How I tested, details, pros and cons, pricing with date checked, alternatives, FAQ, my verdict, affiliate buttons (`tools`).
 
 ## Quality pipeline and SEO
 
 Every post goes: researcher (facts and **keyword plan**) → writer → **auditor** (facts and rules) → **editor-in-chief** (story scorecard: every metric 4+, average 4.5+) → **seo-cto** (keywords, metadata, links, build, `npm run seo-check` GATE PASSED: no fails, 90%+). Only then is it saved in `src/content/` with `draft: true` and pushed to the preview for Pyla. Agents are in `.claude/agents/`.
 
-- Keywords: Semrush (`in` and `ae` databases) when the account has API units; otherwise Google's search suggestions via Firecrawl. Each post sets `focusKeyword` and 3–6 `keywords`, used naturally (people first, never stuffed).
+- Keywords: Semrush (`us` database plus other big markets the story touches) when the account has API units; otherwise Google's search suggestions via Firecrawl. Each post sets `focusKeyword` and 3–6 `keywords`, used naturally (people first, never stuffed).
 - `seoTitle` 30–60 characters, `description` 120–155, short hyphenated web address, cover at least 1200 wide and under 250 KB.
 
 ## Money rules

@@ -7,7 +7,7 @@ draft: true
 summary:
   - "This line says what happened, in one sentence."
   - "This line says why it matters."
-  - "This line says who it affects most in India and the UAE."
+  - "This line says who it affects most."
 relatedGuide: sample-guide
 sources:
   - name: "Example source (official announcement)"
@@ -24,8 +24,7 @@ This part covers the reaction: what users, experts or communities are saying. Ru
 
 ## What this means for you
 
-- **In India:** what changes for students, young professionals or small businesses here, including prices in rupees where it helps.
-- **In the UAE:** what changes for readers there, including prices in dirhams where it helps.
+This part says what changes for readers: who is affected, where it's available, and what to do or watch next.
 
 ## My take
 

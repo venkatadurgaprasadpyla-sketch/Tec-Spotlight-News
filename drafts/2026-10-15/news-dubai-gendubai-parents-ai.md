@@ -1,6 +1,6 @@
 ---
 title: "Dubai's new GenDubAI platform helps parents guide children's AI use"
-seoTitle: "GenDubAI: Dubai's free AI guide for parents, explained"
+seoTitle: "AI guide for parents: Dubai's free GenDubAI, explained"
 description: "Dubai's new GenDubAI is a free AI guide for parents of children aged 8 to 15, in Arabic and English, built around short family moments at home."
 focusKeyword: "AI guide for parents"
 keywords:
@@ -8,6 +8,7 @@ keywords:
   - "AI literacy for parents"
   - "AI for parents and kids"
   - "GenDubAI"
+  - "what age can children use AI"
 date: 2026-10-15
 category: ai
 draft: true
@@ -44,7 +45,7 @@ It lands at a useful time. UAE families are already debating where AI help ends 
 
 ## An AI guide for parents, in Arabic and English
 
-GenDubAI was built by the Dubai Centre for Artificial Intelligence. Its partners are the Community Development Authority and Dubai Future Foundation. Think of it as AI literacy for parents. Here is what it offers:
+Its partners are the Community Development Authority and Dubai Future Foundation. Think of it as AI literacy for parents. Here is what it offers:
 
 - It is designed for families with children aged **8 to 15**.
 - It works in **Arabic and English**, with a mobile-friendly version.
@@ -62,13 +63,13 @@ That also shapes its answer to the question many parents ask first: is AI safe f
 
 Khalfan Belhoul, chief executive of Dubai Future Foundation, said "the UAE is among the world's leading countries in the adoption of AI". He also pointed to children's growing use of smart devices. This suggests the people behind GenDubAI see AI as already in children's hands, and want parents in the room too.
 
-Some things are still unclear. The site calls itself a pilot but gives no date for its next update. Its emergency contacts are Dubai services, so families in other emirates may want to note their own local helplines. We will update this post, and our [AI news](/news/category/ai/), as we learn more.
+Some things are still unclear. The site calls itself a pilot but gives no date for its next update. Its emergency contacts are Dubai services, so families outside Dubai may want to note their own local helplines. We will update this post, and our [AI news](/news/category/ai/), as we learn more.
 
-## For parents in the UAE, and those watching from India
+## Ten minutes, one question: where any parent can start
 
-If you live in the UAE and have a child between 8 and 15, start small. Open [gen.dub.ai](https://gen.dub.ai/) on your phone and try one short activity together this week. It is in English and Arabic and built for short sessions, so it fits around school runs and busy evenings. Many of its "Moments" come with a card you can forward on WhatsApp, even to grandparents in India.
+If you live in the UAE and have a child between 8 and 15, start small. Open [gen.dub.ai](https://gen.dub.ai/) on your phone and try one short activity together this week. It is free, in Arabic and English, and built for short sessions, so it fits around school runs and busy evenings. You can share many of its "Moments" on WhatsApp as a ready-made card or message, so grandparents and other relatives can follow along wherever they live.
 
-In India, there is no word yet on a version built for Indian families. The site is free and in English, so you can still browse its guides from India, though it is written with UAE families in mind. And the habit behind it travels well. Sit with your child for ten minutes and ask an AI tool a question together. Then check the answer in a textbook or a trusted website. That habit teaches one of the most useful AI skills: don't trust it blindly.
+If you live elsewhere, the site is free and in English, so you can still browse its guides, though it is written for UAE families. And the habit behind it travels well. Sit with your child for ten minutes and ask an AI tool a question together. Then check the answer in a textbook or a trusted website. That habit teaches one of the most useful AI skills: don't trust it blindly.
 
 ## My view: start early, but stay in the room
 
