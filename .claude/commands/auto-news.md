@@ -35,7 +35,7 @@ For each story:
 
 1. **researcher:** facts, sources, keyword plan (Semrush if it has API units; otherwise Google suggestions), and a free Unsplash or Pexels cover photo (not Unsplash+).
 2. **writer:** draft into `drafts/<today>/news-<slug>.md`, with the right `category` (`ai`, `apps-software`, `phones-gadgets`, `launches`, `deals`, `business` for big-company news, `science` for science and breakthroughs). Write the whole article in one chief tech journalist voice with a fair judgment section (no separate "My view"; see the `techspotlight-voice` skill), and link related TechSpotlight stories where natural. Never claim an experience Pyla didn't have.
-3. Get the cover with Firecrawl's screenshot if the photo site is blocked, crop to 1200x630 with ffmpeg, keep it under 250 KB, save it to `public/images/posts/<slug>/cover.jpg`.
+3. Get the cover yourself (the researcher has no shell). Image hosts are blocked here and Firecrawl won't screenshot a bare image file, so screenshot the photo's own Unsplash or Pexels page with Firecrawl (`formats: ["screenshot"]`, viewport 1920x1300, `waitFor: 2500`), download the screenshot link with curl, look at it, crop out just the photo and scale to 1200x630 with ffmpeg, keep it under 250 KB, save it to `public/images/posts/<slug>/cover.jpg`, and look at the result.
 4. Run the three gates in order, maximum 3 rounds each, applying each gate's exact fixes: **auditor**, then **editor-in-chief**, then **seo-cto**. No open items are allowed.
 
 ## 4. Save as drafts for Pyla
