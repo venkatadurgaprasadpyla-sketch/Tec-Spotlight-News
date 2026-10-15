@@ -9,7 +9,6 @@ summary:
   - "Dubai has launched GenDubAI, a platform to help parents guide how their children use AI."
   - "It's built for families with children aged 8 to 15, in Arabic and English, and works on phones."
   - "It focuses on safety, privacy and creativity, built around short 'family moments' at home."
-relatedGuide: best-ai-tools-for-students
 sources:
   - name: "Arabian Business: Dubai launches AI platform for parents and children aged 8 to 15"
     url: "https://www.arabianbusiness.com/business/education/dubai-launches-ai-platform-for-parents-and-children-aged-8-to-15"

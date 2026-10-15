@@ -9,7 +9,6 @@ summary:
   - "Google.org, Google's charity arm, is giving $15 million to The/Nudge to build AI tools for India's small businesses."
   - "The focus is on three old headaches: getting formal loans, handling compliance and finding new customers."
   - "An open call for ideas starts in January 2027, plus a voice-based training platform for people in smaller towns."
-relatedGuide: brevo-guide
 sources:
   - name: "CXOToday: Google.org announces $15 million in funding (announcement text)"
     url: "https://cxotoday.com/media-coverage/google-org-announces-15-million-in-funding-to-support-ai-powered-growth-for-indias-msmes-in-partnership-with-the-nudge/"
