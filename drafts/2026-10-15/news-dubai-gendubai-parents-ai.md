@@ -44,14 +44,14 @@ The Dubai Centre for Artificial Intelligence says more material will be added as
 
 A lot of AI safety advice focuses on what to block. GenDubAI leans the other way: parents and children explore AI together, instead of children working it out alone. The organisers say they also want it to build critical thinking.
 
-It arrives as UAE families are already debating where AI help ends and homework begins. Khalfan Belhoul, chief executive of Dubai Future Foundation, said the UAE is among the world's leading countries in AI adoption, and that children's use of smart devices keeps growing.
+It arrives as UAE families are already debating where AI help ends and homework begins. Khalfan Belhoul, chief executive of Dubai Future Foundation, said "the UAE is among the world's leading countries in the adoption of AI", and pointed to children's growing use of smart devices.
 
-What we don't know yet: whether it's free for everyone, whether you need to be a UAE resident to sign up, and what data it keeps about families. We'll update this post when we confirm them.
+What we know: the official site says it's free, and it describes itself as a pilot that will change based on what parents say. What we don't know yet: whether parents outside Dubai were part of the plan, and exactly what data it keeps if you sign up for updates. We'll update this post when we confirm them.
 
 ## What this means for you
 
 - **In the UAE:** if you have a child between 8 and 15, open [gen.dub.ai](https://gen.dub.ai/) on your phone and try one short activity together this week. It's in English and Arabic and built for short sessions, so it fits around school runs and busy evenings. It's especially useful if you feel you're behind on AI yourself.
-- **In India:** GenDubAI is built for families in Dubai, and there's no word yet on a version for India. But the idea travels well. Sit with your child for ten minutes, ask an AI tool a question together, and then check the answer in a textbook or a trusted website. That one habit teaches the most important AI skill: don't trust it blindly.
+- **In India:** GenDubAI is built for families in Dubai, and there's no word yet on a version for India. The site itself is free and in English, so you can still browse its guides from India, though it's written with UAE families in mind. And the idea travels well. Sit with your child for ten minutes, ask an AI tool a question together, and then check the answer in a textbook or a trusted website. That one habit teaches the most important AI skill: don't trust it blindly.
 
 ## My take
 
