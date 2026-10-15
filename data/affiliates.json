@@ -1,10 +1,55 @@
 {
-  "_readme": "One place for every affiliate link. Posts refer to a tool by its key, so a link only ever needs changing here.",
+  "_readme": "One place for every affiliate link. Posts refer to a tool by its key, so a link only ever needs changing here. A tool shows in banners only once its 'link' is filled in (previews show a sample). 'topics' are the news and guide categories where the tool fits; 'tagline' is one plain, factual line (no claims we haven't checked).",
   "tools": {
-    "gamma": { "name": "Gamma", "program": "PartnerStack", "link": "", "commission": "", "added": "" },
-    "quillbot": { "name": "QuillBot", "program": "PartnerStack", "link": "", "commission": "", "added": "" },
-    "elevenlabs": { "name": "ElevenLabs", "program": "PartnerStack", "link": "", "commission": "", "added": "" },
-    "1password": { "name": "1Password", "program": "PartnerStack", "link": "", "commission": "", "added": "" },
-    "brevo": { "name": "Brevo", "program": "PartnerStack", "link": "", "commission": "", "added": "" }
+    "gamma": {
+      "name": "Gamma",
+      "program": "PartnerStack",
+      "link": "",
+      "commission": "",
+      "added": "",
+      "tagline": "Turn notes into slides, documents and simple web pages with AI.",
+      "cta": "Try Gamma",
+      "topics": ["ai", "apps-software", "business", "best-tools", "reviews", "how-to"]
+    },
+    "quillbot": {
+      "name": "QuillBot",
+      "program": "PartnerStack",
+      "link": "",
+      "commission": "",
+      "added": "",
+      "tagline": "Paraphrasing, grammar checks and summaries for clearer writing.",
+      "cta": "Try QuillBot",
+      "topics": ["ai", "apps-software", "science", "best-tools", "comparisons", "how-to"]
+    },
+    "elevenlabs": {
+      "name": "ElevenLabs",
+      "program": "PartnerStack",
+      "link": "",
+      "commission": "",
+      "added": "",
+      "tagline": "AI voices and speech for videos, podcasts and audiobooks.",
+      "cta": "Try ElevenLabs",
+      "topics": ["ai", "launches", "apps-software", "best-tools", "reviews"]
+    },
+    "1password": {
+      "name": "1Password",
+      "program": "PartnerStack",
+      "link": "",
+      "commission": "",
+      "added": "",
+      "tagline": "A password manager that stores your logins across your devices.",
+      "cta": "Try 1Password",
+      "topics": ["phones-gadgets", "apps-software", "business", "deals", "best-tools", "alternatives"]
+    },
+    "brevo": {
+      "name": "Brevo",
+      "program": "PartnerStack",
+      "link": "",
+      "commission": "",
+      "added": "",
+      "tagline": "Email and SMS marketing for small businesses.",
+      "cta": "Try Brevo",
+      "topics": ["business", "apps-software", "deals", "best-tools", "comparisons"]
+    }
   }
 }

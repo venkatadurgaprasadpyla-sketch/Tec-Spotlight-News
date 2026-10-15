@@ -17,6 +17,7 @@ const category = GUIDE_CATEGORIES.find((c) => c.slug === d.category)!;
 ---
 <ArticleLayout
   kind="guide"
+  slug={guide.id}
   title={d.title}
   seoTitle={d.seoTitle}
   focusKeyword={d.focusKeyword}
@@ -32,6 +33,7 @@ const category = GUIDE_CATEGORIES.find((c) => c.slug === d.category)!;
   draft={d.draft}
   affiliate={d.affiliate}
   tools={d.tools}
+  promos={d.promos}
   shop={d.shop}
   minutes={readingTime(guide.body ?? '')}
 >

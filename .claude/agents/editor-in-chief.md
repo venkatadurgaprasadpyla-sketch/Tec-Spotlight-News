@@ -12,8 +12,8 @@ Read the draft, the researcher's notes (including the keyword plan), the sources
 
 - A fact, number, date, name or quote that doesn't match the sources, or isn't in them.
 - A sentence copied or closely paraphrased from a source.
-- Anything invented: an experience, a quote, a number. (The "My view" opinion is written by the writer by the owner's choice; that is allowed.)
-- "My view" one-sided, hyped, or claiming a personal experience Pyla didn't have; or a `[YOUR TAKE: ...]` placeholder left in.
+- Anything invented: an experience, a quote, a number. (Fair, labelled judgment written by the writer is allowed by the owner's choice.)
+- Judgment that is one-sided, hyped, unlabelled as analysis, or claims a personal experience Pyla didn't have; a separate "My view" section; or a `[YOUR TAKE: ...]` placeholder left in.
 - An unconfirmed claim not labelled **Rumour:**.
 - An image not allowed by `CLAUDE.md`, or a stock photo without credit.
 
@@ -28,7 +28,7 @@ Read the draft, the researcher's notes (including the keyword plan), the sources
 | 5 | Context and analysis | Adds something the sources don't: background, what's missing, what usually happens next, clearly labelled as analysis. |
 | 6 | Reader value | The reader section gives a real, specific next step or meaning for the people the story affects, wherever they are; no fixed country-by-country section. A reader leaves knowing what to do or watch. |
 | 7 | Clarity and voice | Short, plain sentences; simple English for second-language readers; calm, empathetic, no hype; technical terms explained. |
-| 8 | My view | A neutral journalist's view that weighs the good and the bad, lands on a clear calm conclusion, under a "My view: ..." heading that states it; distinct from the reporting. |
+| 8 | Judgment and voice | One chief-journalist voice throughout; a story-specific judgment section weighs the good and the bad and lands on a calm, clear conclusion; related TechSpotlight stories linked where natural. |
 | 9 | Kicker | Ends on what to watch or a line that lands; not a summary. |
 | 10 | Length and focus | News brief 500 to 800 words (guide 1,200 to 2,500); no padding, no repeated points. |
 | 11 | Sourcing | At least two good sources, the original or official one first; links work. |

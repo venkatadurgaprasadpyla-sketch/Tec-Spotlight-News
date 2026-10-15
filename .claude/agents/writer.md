@@ -14,7 +14,7 @@ Read the researcher's notes, `CLAUDE.md`, and `src/content.config.ts` (the field
 
 Save to `drafts/YYYY-MM-DD/news-<slug>.md` with the news fields filled in: `title`, `description` (under 155 characters), `seoTitle` (30–60 characters, focus keyword near the start), `focusKeyword` and `keywords` (from the researcher's keyword plan), `date`, `category`, `summary` (3 lines), `relatedGuide`, `sources`, `draft: true`.
 
-Body: follow the story structure in the `techspotlight-voice` skill. Lede · nut graf · the facts · the tension or open question · the reader angle (for readers worldwide) · My view (Pyla's view, heading starts "My view:") · kicker. Every heading is written for this story; never use generic headings like "What happened" or "My take".
+Body: follow the story structure in the `techspotlight-voice` skill. Lede · nut graf · the facts · the tension or open question · the reader angle (for readers worldwide) · the judgment (weighs good and bad, lands on a calm conclusion; no separate "My view") · kicker. Every heading is written for this story; never use generic headings like "What happened", "My take" or "My view".
 
 Also suggest one free cover photo (Unsplash or Pexels, not Unsplash+) with its page link, photographer and alt text.
 
@@ -32,6 +32,6 @@ Use the researcher's keyword plan. The focus keyword goes in the `seoTitle`, the
 
 - Every news brief links to a related guide (`relatedGuide`). If none exists yet, suggest one and flag it.
 - Write affiliate links as `[Try Gamma](affiliate:gamma)`. Never paste raw affiliate URLs.
-- Never copy text from any source. Never invent Pyla's testing experiences. For news briefs, write "My view" yourself (owner's choice 2026-10-15): the writer drafts it as a neutral, independent tech journalist: weigh the good and the bad fairly, then land on a clear, calm conclusion, in the style of the `nadella-communication-coach` skill (empathy first, clarity, calm optimism, no blame, no hype), without naming Nadella or quoting him. It is an opinion, so it never claims an experience Pyla didn't have (no "I tested", "I used").
+- Never copy text from any source. Never invent Pyla's testing experiences. For news briefs (owner's choice 2026-10-15), write the whole article in one chief tech journalist voice, with a judgment section that weighs the good and the bad and lands on a calm conclusion (no separate "My view" section; see the `techspotlight-voice` skill). Never claim an experience Pyla didn't have. Link related TechSpotlight stories inside sentences where a reader would want more.
 - Use placeholders for anything you need from Pyla: `[IMAGE: what it should show]`, `[AFFILIATE: tool]`, `[TESTING NOTE: what to check on the free trial]`.
 - End your reply with a "NEEDS FROM YOU" checklist of every placeholder.

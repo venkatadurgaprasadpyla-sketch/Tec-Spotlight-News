@@ -2,6 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PostList from '../components/PostList.astro';
 import AdSlot from '../components/AdSlot.astro';
+import PromoCards from '../components/PromoCards.astro';
+import { pickPromos } from '../lib/promos.mjs';
 import { getNews, getGuides } from '../data/posts';
 import { SITE } from '../data/site';
 
@@ -9,6 +11,9 @@ const news = (await getNews()).slice(0, 6);
 const allGuides = await getGuides();
 const featured = allGuides.filter((g) => g.data.featured);
 const guides = (featured.length ? featured : allGuides).slice(0, 3);
+
+// Three tool cards on the home page (only tools whose affiliate link is added).
+const promos = pickPromos({ slug: 'home', count: 3 });
 
 const organization = {
   '@context': 'https://schema.org',
@@ -44,11 +49,15 @@ const website = {
   </section>
 
   <div class="container">
+    <AdSlot slot="home-top" />
+
     <div class="section-title">
       <h2>Latest news</h2>
       <a href="/news/">All news</a>
     </div>
     <PostList items={news} empty="The first news briefs are on their way." />
+
+    <PromoCards items={promos} />
 
     <AdSlot slot="home-middle" />
 

@@ -30,53 +30,49 @@ sources:
     url: "https://m.economictimes.com/small-biz/sme-sector/google-org-announces-15-million-in-funding-to-support-ai-powered-growth-for-indias-msmes-in-partnership-with-the/nudge/articleshow/134940801.cms"
   - name: "MediaNews4U: Google.org, The/Nudge launch $15 million initiative"
     url: "https://www.medianews4u.com/google-org-the-nudge-launch-15-million-initiative-for-ai-driven-msme-growth/"
-  - name: "Samriddhi by The/Nudge: open call for proposals"
+  - name: "Samriddhi (the^delta, with Google.org and The/Nudge): challenges and early-interest form"
     url: "https://samriddhi.thedelta.org.in/"
 ---
 
-Ask a shop owner in a small Indian town what slows the business down, and the answer is often not the work itself. It is the loan form they can't finish, the sales-tax (GST) filing they don't fully understand, and the customers they can't reach beyond their own street.
+Ask a shop owner in a small Indian town what slows the business down, and the answer is often not the work itself. It is the loan form they can't finish, the goods and services tax (GST) filing they don't fully understand, and the customers they can't reach beyond their own street.
 
 On 14 October, Google.org, Google's charity arm, put $15 million behind fixing that. The money goes to The/Nudge, an Indian institute that works on jobs and incomes, to build AI tools for MSMEs: India's micro, small and medium businesses.
 
-The size of the problem explains the size of the bet. According to the announcement, India has more than 90 million small businesses, employing over 345 million people. The same announcement notes that many of them still struggle to get finance and to reach customers online.
+The size of the problem explains the size of the bet. According to the announcement, India has more than 90 million small businesses, employing over 345 million people. Many still struggle to get finance and reach customers online, it adds. The government is adding money too: India's Union Cabinet approved a Rs 10,000 crore (1 crore is 10 million rupees) SME Growth Fund in October, to invest directly in growing businesses.
 
 ## How $15 million becomes AI tools for MSMEs
 
 The funding targets three old headaches: getting formal credit (bank loans instead of informal lenders), finding new markets, and keeping up with compliance (the paperwork and filings the government requires).
 
-For small business owners, that could mean AI help with a loan application, a compliance filing such as GST, or finding buyers online. Those are our examples, not named projects.
-
 It will be spent in two ways:
 
-- **An open call for ideas.** Innovators can pitch AI solutions through a site called Samriddhi by The/Nudge. The challenges open in January 2027, and you can register interest now.
-- **A voice-led training platform.** It will work by voice and in several languages. The aim is to prepare young people in India's smaller towns for work, then match them with small businesses that need staff.
+- **An open call for ideas.** Innovators can pitch AI solutions through Samriddhi, run by the^delta, a group that backs social entrepreneurs. Its site names four challenges: compliance, finding buyers, product quality and credit. They open in January 2027, and you can register interest now.
+- **A voice-led training platform.** It will work by voice, in several languages, to prepare young people in India's smaller towns for work, then match them with small businesses that need staff.
 
-Preeti Lobana, Google India's Vice President and Country Manager, framed the goal plainly: AI must become "a practical multiplier for the millions of small businesses that drive our economic growth".
+Preeti Lobana, Google India's Vice President and Country Manager, framed the goal: AI must become "a practical multiplier for the millions of small businesses that drive our economic growth".
 
 ## The hard part is the last mile
 
-Subhashree Dutta, CEO of the^delta, the team running the Samriddhi challenges, calls it "one of the largest philanthropic commitments to India's MSMEs". Size alone won't decide whether it works. In our view, money for building tools is the easy step. Getting a busy shop owner to trust and use them is the hard one.
+Subhashree Dutta, CEO of the^delta, calls it "one of the largest philanthropic commitments to India's MSMEs". In our view, money for building tools is the easy step. Getting a busy shop owner to trust and use them is the hard one.
 
-The announcement leaves three things open: which tools will be built, when they will be ready, and whether they will be free. The Samriddhi page offers one clue: each challenge runs for 18 months from January 2027, so in our reading, many finished tools may not arrive before mid-2028. The announcement's quotes do mention "open standards" and "open digital tools", which suggests some of what gets built may be free for anyone to use. That is our reading, not a promise.
-
-In practice, programmes like this usually succeed or fail on design more than funding. A tool that works beautifully in English on a new phone can mean nothing to an owner who runs the business on WhatsApp, in Telugu or Bhojpuri, on a budget handset.
+The announcement leaves three things open: which tools will be built, when they will be ready, and whether they will be free. The Samriddhi page offers one clue: each challenge runs for 18 months from January 2027, so in our reading, many finished tools may not arrive before mid-2028. The announcement's quotes do mention "open standards" and "open digital tools", which suggests some tools may be free for anyone to use. That is our reading, not a promise.
 
 ## Who can use this, and what small firms anywhere can take from it
 
-If you run a small business in India, nothing changes on your counter today. But look out for new tools that help with loan applications, GST and other compliance, or selling online.
+If you run a small business in India, nothing changes on your counter today, but watch for tools that help with loans, GST and other compliance, or selling online. The Samriddhi page also lets businesses, not only builders, sign up early to hear first.
 
-If you build AI tools for SMEs, the Samriddhi open call could mean funding. Its page has an early-interest form, but neither it nor the announcement says yet who can apply. In India's smaller towns, the training platform could help people find a job or apprenticeship with a small business.
+If you build AI tools for SMEs, the Samriddhi open call could mean funding. Neither the Samriddhi page nor the announcement says yet who can apply. In India's smaller towns, the training platform could help people find a job or apprenticeship with a small business.
 
-If you run or build for small firms elsewhere, watch this one. Loans, paperwork and finding buyers are hurdles in many countries, so this is a useful test of what AI for small business owners needs in practice. We will follow it too, in our [apps and software news](/news/category/apps-software/).
+If you run or build for small firms elsewhere, watch this one. Loans, paperwork and finding buyers are hurdles in many countries, so this is a useful test of what AI for small business owners needs in practice. We will follow it in our [apps and software news](/news/category/apps-software/).
 
-## My view: AI has to speak the owner's language
+## Ease of use and language will decide whether this works
 
-For AI to really reach small and marginal business owners, it has to be very easy to use. A simple screen matters more than clever features.
+On balance, this is a meaningful step: it targets problems owners name, and voice-led, multi-language training shows the organisers know whom they must reach.
 
-Language is the other big hurdle. Many owners think and work in their own language, so AI needs to understand native languages properly, including the small nuances in how people actually speak. Without that, a lot of owners will try it once and give up.
+In practice, programmes like this usually succeed or fail on design more than funding. To reach small and marginal business owners, AI has to be very easy to use. A simple screen matters more than clever features.
 
-I also think owners need some guidance first: what they can ask AI for, how to ask, and which problems it can actually help with. If this fund puts money into that kind of teaching, alongside the tools, it would be a much better push.
+Language is the other big hurdle. Many owners run the business on WhatsApp, in Telugu or Bhojpuri, on a budget phone. AI has to understand the way they actually speak. Otherwise, owners will likely try it once and give up.
 
----
+Owners also need guidance first: what to ask AI for, how to ask, and which problems it can solve. Dubai's [free GenDubAI guide for parents](/news/dubai-gendubai-parents-ai/) applies that idea to families, in Arabic and English. The training platform announced so far is for young job seekers; the announcement does not mention teaching owners themselves. In our view, funding that teaching alongside the tools would make this a much stronger push.
 
-The real test starts in January 2027, when the challenges open. Watch whether the ideas that get backed are built for the shop counter, or for a presentation to investors.
+The real test starts in January 2027, when the challenges open. Watch whether the ideas that get backed are built for the shop counter, or just to impress the judges.

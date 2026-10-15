@@ -34,7 +34,7 @@ Pick the top two, preferably from different areas (for example one tech, one sci
 For each story:
 
 1. **researcher:** facts, sources, keyword plan (Semrush if it has API units; otherwise Google suggestions), and a free Unsplash or Pexels cover photo (not Unsplash+).
-2. **writer:** draft into `drafts/<today>/news-<slug>.md`, with the right `category` (`ai`, `apps-software`, `phones-gadgets`, `launches`, `deals`, `business` for big-company news, `science` for science and breakthroughs). Write the `## My view: ...` section yourself, as a neutral, independent tech journalist who weighs the good and the bad (owner's choice; see the `techspotlight-voice` skill). Never claim an experience Pyla didn't have.
+2. **writer:** draft into `drafts/<today>/news-<slug>.md`, with the right `category` (`ai`, `apps-software`, `phones-gadgets`, `launches`, `deals`, `business` for big-company news, `science` for science and breakthroughs). Write the whole article in one chief tech journalist voice with a fair judgment section (no separate "My view"; see the `techspotlight-voice` skill), and link related TechSpotlight stories where natural. Never claim an experience Pyla didn't have.
 3. Get the cover with Firecrawl's screenshot if the photo site is blocked, crop to 1200x630 with ffmpeg, keep it under 250 KB, save it to `public/images/posts/<slug>/cover.jpg`.
 4. Run the three gates in order, maximum 3 rounds each, applying each gate's exact fixes: **auditor**, then **editor-in-chief**, then **seo-cto**. No open items are allowed.
 
@@ -44,6 +44,6 @@ Copy each passed draft to `src/content/news/<slug>.md` with `draft: true`. Run `
 
 ## 5. Tell Pyla (one short message per run)
 
-In plain English: each headline, why it was picked, the gate results and SEO score, the "My view" line in one sentence (Pyla can change it), and any site-health problem found or fixed. Keep it short; skip the health part when all is well. If a story didn't pass after 3 rounds, say so and leave it out of the preview. Nothing goes live until Pyla says "publish".
+In plain English: each headline, why it was picked, the gate results and SEO score, the article's conclusion in one sentence (Pyla can change it), and any site-health problem found or fixed. Keep it short; skip the health part when all is well. If a story didn't pass after 3 rounds, say so and leave it out of the preview. Nothing goes live until Pyla says "publish".
 
 If something blocks the run (no strong new story, a build error you can't fix), save what you have, don't push a broken build, and tell Pyla plainly what happened.

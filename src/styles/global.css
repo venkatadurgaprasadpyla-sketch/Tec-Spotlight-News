@@ -275,3 +275,57 @@ h3 {
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
+
+/* Affiliate banner placed mid-article at build time (src/lib/rehype-inline-promo.mjs). */
+.promo-inline {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 6px 16px;
+  margin: 2rem 0;
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--amber);
+  border-radius: var(--radius);
+  background: linear-gradient(110deg, var(--accent-soft), var(--surface) 70%);
+}
+.promo-label {
+  grid-column: 1 / -1;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.promo-label a {
+  color: inherit;
+}
+.promo-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.promo-name {
+  color: var(--heading);
+  font-size: 1.05rem;
+}
+.promo-tag {
+  font-size: 0.95rem;
+}
+.promo-inline .promo-btn {
+  white-space: nowrap;
+}
+@media (max-width: 520px) {
+  .promo-inline {
+    grid-template-columns: 1fr;
+  }
+  .promo-inline .promo-btn {
+    justify-self: start;
+  }
+}
+
+/* Links to related TechSpotlight stories added automatically inside article text. */
+.prose a.related-link {
+  text-decoration-style: dotted;
+  text-underline-offset: 3px;
+}

@@ -1,8 +1,10 @@
 ---
-// "Keep reading" box at the end of a post: up to 3 other posts, same category
-// first. Helps readers find more, and helps Google find every page.
+// "Related stories" box at the end of a post: the 3 most related other posts
+// (shared search phrases, topic words and section), news and guides alike.
+// Helps readers follow a story, and helps Google find every page.
 import PostList from './PostList.astro';
 import { getNews, getGuides } from '../data/posts';
+import { relatedTo } from '../lib/related.mjs';
 
 interface Props {
   kind: 'news' | 'guide';
@@ -10,12 +12,17 @@ interface Props {
   category: string;
 }
 const { kind, id, category } = Astro.props;
-const all = (kind === 'news' ? await getNews() : await getGuides()).filter((p) => p.id !== id && !p.id.startsWith('sample-'));
-const items = [...all.filter((p) => p.data.category === category), ...all.filter((p) => p.data.category !== category)].slice(0, 3);
+const all = [...(await getNews()), ...(await getGuides())].filter((p) => !(p.collection === (kind === 'news' ? 'news' : 'guides') && p.id === id) && !p.id.startsWith('sample-'));
+const ranked = relatedTo(id, 3)
+  .map((r: { post: { slug: string } }) => all.find((p) => p.id === r.post.slug))
+  .filter((p: (typeof all)[number] | undefined): p is (typeof all)[number] => !!p);
+// Fill any gap with the newest posts from the same section, then any section.
+const rest = [...all.filter((p) => p.data.category === category), ...all].filter((p) => !ranked.includes(p));
+const items = [...new Set([...ranked, ...rest])].slice(0, 3);
 ---
 {items.length > 0 && (
   <section class="more">
-    <h2>Keep reading</h2>
+    <h2>Related stories</h2>
     <PostList items={items} />
   </section>
 )}

@@ -23,6 +23,8 @@ const common = {
   draft: z.boolean().default(false),
   // True when the post has affiliate links, so the disclosure shows at the top.
   affiliate: z.boolean().default(false),
+  // Set to false to keep sponsored banners off a sensitive story (for example child safety).
+  promos: z.boolean().default(true),
   // Keys from data/affiliates.json for the "Try it" buttons.
   tools: z.array(z.string()).default([]),
   // Optional shop links for gadget posts (shown by visitor country).

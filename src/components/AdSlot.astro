@@ -1,15 +1,20 @@
 ---
-// A reserved space for a Google AdSense ad. It renders nothing until
-// SITE.adsEnabled is switched on after AdSense approval.
+// A reserved space for a Google AdSense ad. It shows real ads only once
+// SITE.adsEnabled is switched on after AdSense approval. Until then, preview
+// links show a dashed "ad space" box so the layout can be checked; the live
+// site shows nothing.
 import { SITE } from '../data/site';
+import { SHOW_DRAFTS } from '../data/posts';
 interface Props {
   slot: string;
   label?: string;
 }
 const { slot } = Astro.props;
+const live = SITE.adsEnabled && SITE.adsenseClient;
 ---
-{SITE.adsEnabled && SITE.adsenseClient && (
+{live ? (
   <aside class="ad" aria-label="Advertisement">
+    <span class="ad-label">Advertisement</span>
     <ins
       class="adsbygoogle"
       style="display:block"
@@ -20,11 +25,32 @@ const { slot } = Astro.props;
     ></ins>
     <script is:inline>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </aside>
+) : SHOW_DRAFTS && (
+  <aside class="ad ad-placeholder" aria-hidden="true">Ad space ({slot}). Turns on after AdSense approval.</aside>
 )}
 
 <style>
   .ad {
     margin: 2rem 0;
     min-height: 100px;
+  }
+  .ad-label {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+  }
+  .ad-placeholder {
+    display: grid;
+    place-items: center;
+    min-height: 90px;
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 12px;
   }
 </style>

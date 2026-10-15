@@ -1,0 +1,97 @@
+---
+// A tidy row of affiliate "tool" cards (end of articles, home page).
+// Tools come from data/affiliates.json and only show once their link is added;
+// preview links show labelled samples so the design can be checked.
+import { PROMO_REL } from '../lib/promos.mjs';
+
+interface Tool {
+  key: string;
+  name: string;
+  link: string;
+  tagline: string;
+  cta: string;
+  sample: boolean;
+}
+interface Props {
+  items: Tool[];
+  heading?: string;
+}
+const { items, heading = 'Tools worth a look' } = Astro.props;
+---
+{items.length > 0 && (
+  <section class="promos" aria-label="Sponsored tools">
+    <div class="promos-head">
+      <h2>{heading}</h2>
+      <span class="promo-label">Sponsored · <a href="/affiliate-disclosure/">affiliate links</a></span>
+    </div>
+    <div class="promos-grid">
+      {items.map((t) => (
+        <div class="promo-card">
+          <span class="promo-mark" aria-hidden="true">{t.name.slice(0, 1)}</span>
+          <strong class="promo-name">{t.name}</strong>
+          <span class="promo-tag">{t.tagline}</span>
+          {t.sample && <span class="promo-sample">Sample (link not added yet)</span>}
+          <a class="btn promo-btn" href={t.link || '#'} rel={PROMO_REL} target="_blank">{t.cta}</a>
+        </div>
+      ))}
+    </div>
+  </section>
+)}
+
+<style>
+  .promos {
+    margin: 2.5rem 0;
+  }
+  .promos-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 0.9rem;
+  }
+  .promos-head h2 {
+    font-size: 1.1rem;
+    margin: 0;
+  }
+  .promos-grid {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+  .promo-card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 16px 18px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: linear-gradient(160deg, var(--accent-soft), var(--surface) 55%);
+  }
+  .promo-mark {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: var(--ink);
+    color: var(--amber);
+    font-weight: 700;
+  }
+  .promo-card .promo-tag {
+    font-size: 0.92rem;
+    flex: 1;
+  }
+  .promo-card .promo-btn {
+    align-self: flex-start;
+    margin-top: 4px;
+  }
+  .promo-sample {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    border: 1px dashed var(--amber);
+    border-radius: 999px;
+    padding: 2px 8px;
+    align-self: flex-start;
+  }
+</style>

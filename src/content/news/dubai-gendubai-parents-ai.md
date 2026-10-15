@@ -1,5 +1,5 @@
 ---
-title: "Dubai's new GenDubAI platform helps parents guide children's AI use"
+title: "Dubai's free GenDubAI guide asks parents to learn AI alongside their kids"
 seoTitle: "AI guide for parents: Dubai's free GenDubAI, explained"
 description: "Dubai's new GenDubAI is a free AI guide for parents of children aged 8 to 15, in Arabic and English, built around short family moments at home."
 focusKeyword: "AI guide for parents"
@@ -37,46 +37,46 @@ sources:
     url: "https://gulfnews.com/living-in-uae/education/uae-families-draw-the-line-let-ai-guide-children-not-do-their-homework-1.500651700"
 ---
 
-It usually starts with homework. A child asks an AI chatbot for help with a project. The answer comes back in seconds. The parent watching over their shoulder is left wondering: is this learning, or is it cheating? And what else is it saying when I'm not looking?
+It usually starts with homework. A child asks an AI chatbot for help with a project. The answer comes back in seconds. A parent watching over their shoulder wonders: is this learning, or is it cheating? And what else is it saying when I'm not looking?
 
-On 14 October, Dubai launched an answer built for that moment. **GenDubAI**, a new platform from the Dubai Centre for Artificial Intelligence, is a free AI guide for parents. It helps them take part in how their children use AI, so children are not the only ones learning.
+On 14 October, Dubai launched an answer built for that moment. **GenDubAI**, a new platform from the Dubai Centre for Artificial Intelligence, is a free AI guide for parents. It helps them take part in how their children use AI.
 
-It lands at a useful time. UAE families are already debating where AI help ends and homework begins. Two global studies cited on GenDubAI's own site hint at a gap. One found 86% of children aged 8 to 15 use or interact with AI (Common Sense Media, 2026). Another found only 14% of parents say they have discussed appropriate use of generative AI with their children (CRPE and the Understanding America Study, 2025).
+It arrives in the UAE's Year of the Family 2026, while families are already debating where AI help ends and homework begins. Two global studies cited on GenDubAI's own site hint at a gap. One found 86% of children aged 8 to 15 use or interact with AI (Common Sense Media, 2026). Another found only 14% of parents say they have discussed appropriate use of generative AI (AI that writes text or makes pictures) with their children (CRPE and the Understanding America Study, 2025).
 
 ## An AI guide for parents, in Arabic and English
 
-Its partners are the Community Development Authority and Dubai Future Foundation. Think of it as AI literacy for parents. Here is what it offers:
+The centre built it with two partners, the Community Development Authority and Dubai Future Foundation. Think of it as AI literacy for parents. In short:
 
 - It is designed for families with children aged **8 to 15**.
-- It works in **Arabic and English**, with a mobile-friendly version.
-- It teaches parents the basics of AI, the tools their children are likely to meet, and both the benefits and the risks.
+- It works in **Arabic and English**, on phones as well as computers.
+- It has short guides for parents, such as AI basics, what not to share with AI, and how to choose a new AI app.
 - It is built around "family moments": short activities a parent and child can do together.
 - Its themes are safety, privacy, critical thinking and creativity, shaped around local culture.
 
-The official site, [gen.dub.ai](https://gen.dub.ai/), says it is free and describes itself as a pilot that will change based on what parents say.
+The official site, [gen.dub.ai](https://gen.dub.ai/), says it is free and needs no account. Its FAQ says the content draws on guidance from UNICEF, MIT RAISE, Common Sense Media and Internet Matters, and on conversations with over 60 UAE families.
 
 ## Why "explore together" is the real idea here
 
-Much of the public debate on children and technology is about what to block. GenDubAI leans the other way. It treats AI as something for parents and kids to explore side by side, and the goal is critical thinking, not just protection.
+Much of the debate on children and technology is about what to block. GenDubAI treats AI as something for parents and kids to explore side by side, and the goal is critical thinking, not just protection.
 
-That also shapes its answer to the question many parents ask first: is AI safe for kids? GenDubAI does not give a simple yes or no. Asked what age is right for AI, its own FAQ says it depends on the tool, the context and the child. Instead of a verdict, it makes safety and privacy something families learn about together, with parents staying involved.
+That shapes its answer to the question many parents ask first: is AI safe for kids? There is no simple yes or no. On age, its FAQ says it depends on the tool, the context and the child. It also notes that many general AI tools are not meant for children under 13, and that younger children should generally use AI with an adult nearby.
 
-Khalfan Belhoul, chief executive of Dubai Future Foundation, said "the UAE is among the world's leading countries in the adoption of AI". He also pointed to children's growing use of smart devices. This suggests the people behind GenDubAI see AI as already in children's hands, and want parents in the room too.
+Khalfan Belhoul, chief executive of Dubai Future Foundation, said "the UAE is among the world's leading countries in the adoption of AI, in parallel with growing levels of smart-device use among children in and outside schools". This suggests the people behind GenDubAI see AI as already in children's hands, and want parents in the room too.
 
-Some things are still unclear. The site calls itself a pilot but gives no date for its next update. Its emergency contacts are Dubai services, so families outside Dubai may want to note their own local helplines. We will update this post, and our [AI news](/news/category/ai/), as we learn more.
+The site calls itself a pilot but gives no date for its next release. The launch reports give no target for how many families it should reach, and no plan to check whether it changes habits at home. We will update this post, and our [AI news](/news/category/ai/), as we learn more.
 
 ## Ten minutes, one question: where any parent can start
 
-If you live in the UAE and have a child between 8 and 15, start small. Open [gen.dub.ai](https://gen.dub.ai/) on your phone and try one short activity together this week. It is free, in Arabic and English, and built for short sessions, so it fits around school runs and busy evenings. You can share many of its "Moments" on WhatsApp as a ready-made card or message, so grandparents and other relatives can follow along wherever they live.
+If you live in the UAE and have a child between 8 and 15, open [gen.dub.ai](https://gen.dub.ai/) on your phone and try one short activity together this week. Many of its "Moments" come with a card or message you can send on WhatsApp, so a grandparent, teacher or other trusted adult can join in.
 
-If you live elsewhere, the site is free and in English, so you can still browse its guides, though it is written for UAE families. And the habit behind it travels well. Sit with your child for ten minutes and ask an AI tool a question together. Then check the answer in a textbook or a trusted website. That habit teaches one of the most useful AI skills: don't trust it blindly.
+Wherever you live, sit with your child for ten minutes and ask an AI tool a question together. Then check the answer in a textbook or trusted website. That teaches the most useful AI habit: don't trust it blindly.
 
-## My view: start early, but stay in the room
+## Starting early is right, as long as a parent stays in the room
 
-I would definitely let my kids learn with something like this.
+On balance, GenDubAI is a meaningful step. Children already meet AI; learning alongside them is likelier to build good habits than keeping it away. We made a similar point about [Google.org's $15 million fund for India's small businesses](/news/google-org-msme-ai-fund/): new tools only help when people are shown how to use them.
 
-I believe every child should start interacting with AI as early as possible, but in a controlled environment. That means parents stay involved and keep an eye on what their children ask and what the AI says back. Used that way, AI becomes a learning habit rather than a worry.
+The limits are real. It is a pilot built for UAE families, and its emergency contacts are Dubai services, so families elsewhere need their own.
 
----
+Still, the instinct is right. Children can start with AI early, using tools meant for their age, with a parent nearby who keeps an eye on what they ask and what the AI says back.
 
-Watch what the next release adds once real families start using it. If it works, the bigger lesson won't be about Dubai at all. It will be that the best AI safety tool for a child is still a parent sitting next to them.
+Watch what the next release adds once real families use it. If it works, the bigger lesson won't be about Dubai at all. It will be that the best AI safety tool for a child is still a parent sitting next to them.

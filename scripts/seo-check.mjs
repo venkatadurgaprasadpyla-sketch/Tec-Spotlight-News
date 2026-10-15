@@ -102,9 +102,8 @@ function check(file) {
   ok(headings.filter((h) => h.level === 2).length >= 3, 'Structure', `${headings.filter((h) => h.level === 2).length} section headings`, 'Use at least 3 H2 section headings so readers and Google can scan it', 'WARN');
   if (isNews) {
     ok(words.length >= 500 && words.length <= 800, 'Structure', `${words.length} words`, `${words.length} words; news briefs are 500-800`, words.length < 400 ? 'FAIL' : 'WARN');
-    ok(headings.some((h) => /^my view:/i.test(h.text)), 'Structure', 'Has the "My view:" section', 'Missing a "My view: ..." section with Pyla\'s view');
+    ok(!headings.some((h) => /^my (view|take)/i.test(h.text)), 'Structure', 'One voice, no separate "My view" section', 'Remove the separate "My view" heading; weave the judgment into the story');
     ok(Array.isArray(d.summary) && d.summary.length === 3 && d.summary.every((s) => s.length <= 160), 'Structure', '3-line summary, each line short', 'Summary should be exactly 3 lines of 160 characters or fewer');
-    ok(/\n---\s*\n[\s\S]{40,}$/.test(body), 'Structure', 'Ends with a kicker after a line break', 'Add a short kicker after a horizontal rule (---)', 'WARN');
   }
   ok(!/\[YOUR TAKE/i.test(body), 'Structure', 'No placeholders left', 'A [YOUR TAKE: ...] placeholder still needs Pyla');
 

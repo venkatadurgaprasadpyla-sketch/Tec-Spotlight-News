@@ -4,11 +4,14 @@ import AffiliateDisclosure from '../components/AffiliateDisclosure.astro';
 import AffiliateButtons from '../components/AffiliateButtons.astro';
 import ShopButtons from '../components/ShopButtons.astro';
 import AdSlot from '../components/AdSlot.astro';
+import PromoCards from '../components/PromoCards.astro';
+import { pickPromos } from '../lib/promos.mjs';
 import { SITE } from '../data/site';
 import { formatDate } from '../data/posts';
 
 interface Props {
   kind: 'news' | 'guide';
+  slug: string;
   title: string;
   seoTitle?: string;
   focusKeyword?: string;
@@ -24,6 +27,7 @@ interface Props {
   draft: boolean;
   affiliate: boolean;
   tools: string[];
+  promos?: boolean;
   shop?: { amazonIn?: string; flipkart?: string; amazonAe?: string };
   minutes: number;
 }
@@ -31,6 +35,11 @@ interface Props {
 const p = Astro.props;
 const base = p.kind === 'news' ? '/news' : '/guides';
 const url = new URL(Astro.url.pathname, Astro.site).toString();
+
+// Affiliate banners that fit this article: the first sits mid-article (added at
+// build time), the next two at the end. The disclosure shows whenever any do.
+const promos = p.promos === false ? [] : pickPromos({ slug: p.slug, category: p.category.slug, tools: p.tools, count: 3 });
+const showDisclosure = p.affiliate || promos.length > 0;
 
 const tags = [...new Set([p.focusKeyword, ...(p.keywords ?? [])].filter((k): k is string => !!k))];
 const article = {
@@ -99,7 +108,7 @@ const breadcrumbs = {
       </p>
     </header>
 
-    {p.affiliate && <AffiliateDisclosure />}
+    {showDisclosure && <AffiliateDisclosure />}
     <slot name="top" />
 
     {p.image && (
@@ -113,6 +122,8 @@ const breadcrumbs = {
       </figure>
     )}
 
+    <AdSlot slot="article-top" />
+
     <div class="prose">
       <slot />
     </div>
@@ -121,6 +132,7 @@ const breadcrumbs = {
 
     {p.shop && <ShopButtons {...p.shop} />}
     <AffiliateButtons tools={p.tools} />
+    <PromoCards items={promos.slice(1)} heading="Tools for this topic" />
 
     <slot name="bottom" />
   </article>
