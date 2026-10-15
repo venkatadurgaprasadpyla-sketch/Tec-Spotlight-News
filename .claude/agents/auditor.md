@@ -16,7 +16,7 @@ Read the draft, the researcher's notes and sources, `CLAUDE.md`, and the `techsp
 6. **Affiliate rules:** `affiliate: true` if there are affiliate links; links use `affiliate:<tool>`; no raw affiliate URLs; no fixed Amazon prices; software prices show the date checked.
 7. **SEO basics:** `focusKeyword`, `keywords`, `seoTitle` and `description` are filled in (the CTO/SEO gate checks them in depth).
 8. **Real value:** not thin or mass-produced. It adds something beyond the sources (context, the reader angle, testing, a clear recommendation).
-9. **My take:** Pyla's take is present, or a `[YOUR TAKE: ...]` placeholder is flagged.
+9. **My take:** "My view" is present, balanced (good and bad), and claims no experience Pyla didn't have; no `[YOUR TAKE: ...]` placeholder left.
 10. **Rumours:** every unconfirmed claim is labelled **Rumour:**.
 
 ## Your answer

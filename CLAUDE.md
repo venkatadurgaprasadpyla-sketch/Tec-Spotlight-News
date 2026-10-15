@@ -25,14 +25,14 @@ The full product brief is `docs/PROJECT-BRIEF.md`; the agreed plan is `docs/PRD.
 - News briefs: `src/content/news/<slug>.md`. Guides (money pages): `src/content/guides/<slug>.md`. The fields each post needs are defined in `src/content.config.ts`.
 - `draft: true` posts show only on preview links and local preview, never on the live site. The two `sample-*` posts are layout samples and must stay drafts.
 - Work-in-progress drafts from the content pipeline live in `drafts/YYYY-MM-DD/`, outside the site.
-- News brief layout (500–800 words): headline, 3-line summary (`summary`), cover photo, then a story told like a senior journalist: lede, nut graf, the facts, the open question, the reader angle (what it means for readers, wherever they are), Pyla's view under a "My view: ..." heading, kicker. Headings are written for each story, never generic. Then related guide (`relatedGuide`) and sources (`sources`). Full rules: the `techspotlight-voice` skill.
+- News brief layout (500–800 words): headline, 3-line summary (`summary`), cover photo, then a story told like a senior journalist: lede, nut graf, the facts, the open question, the reader angle (what it means for readers, wherever they are), a balanced "My view: ..." section, kicker. Headings are written for each story, never generic. Then related guide (`relatedGuide`) and sources (`sources`). Full rules: the `techspotlight-voice` skill.
 - Guide layout: who it's for, quick verdict (`verdict`) and summary table, How I tested, details, pros and cons, pricing with date checked, alternatives, FAQ, my verdict, affiliate buttons (`tools`).
 
 ## Quality pipeline and SEO
 
 Every post goes: researcher (facts and **keyword plan**) → writer → **auditor** (facts and rules) → **editor-in-chief** (story scorecard: every metric 4+, average 4.5+) → **seo-cto** (keywords, metadata, links, build, `npm run seo-check` GATE PASSED: no fails, 90%+). Only then is it saved in `src/content/` with `draft: true` and pushed to the preview for Pyla. Agents are in `.claude/agents/`.
 
-A scheduled task runs `/auto-news` every morning at 06:52 India time: it picks the day's top trending tech story worldwide, runs the full pipeline, saves it as a draft on the preview, and asks Pyla for their view. It never publishes.
+A scheduled task runs `/auto-news` every 5 hours (8 to 10 stories a day, 2 per run): it checks the site's health first and fixes problems, then picks the top new stories in tech, big companies (Fortune 500) and science worldwide, runs the full pipeline, and saves them as drafts on the preview. It never publishes.
 
 - Keywords: Semrush (`us` database plus other big markets the story touches) when the account has API units; otherwise Google's search suggestions via Firecrawl. Each post sets `focusKeyword` and 3–6 `keywords`, used naturally (people first, never stuffed).
 - `seoTitle` 30–60 characters, `description` 120–155, short hyphenated web address, cover at least 1200 wide and under 250 KB.
@@ -47,7 +47,7 @@ A scheduled task runs `/auto-news` every morning at 06:52 India time: it picks t
 
 ## Writing voice
 
-Empathy first, short clear sentences, calm and humble, no hype words ("insane", "game-changer", "killer", "mind-blowing"), label rumours, the reader is the hero. Every post needs the owner's own take; if missing, insert `[YOUR TAKE: <question>]`. Never invent experiences the owner didn't have. Full rules: section 4 of the brief (a voice skill comes in Phase 2).
+Empathy first, short clear sentences, calm and humble, no hype words ("insane", "game-changer", "killer", "mind-blowing"), label rumours, the reader is the hero. Every news brief has a "My view" section that Claude writes as a neutral, independent tech journalist, weighing the good and the bad, in a calm Nadella-style voice (owner's choice 2026-10-15); Pyla can edit it before "publish". Guides still need the owner's own testing. Never invent experiences the owner didn't have. Full rules: section 4 of the brief (a voice skill comes in Phase 2).
 
 ## Images
 

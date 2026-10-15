@@ -19,6 +19,8 @@ export const NEWS_CATEGORIES = [
   { slug: 'phones-gadgets', name: 'Phones & Gadgets' },
   { slug: 'launches', name: 'Launches' },
   { slug: 'deals', name: 'Deals' },
+  { slug: 'business', name: 'Big Tech & Business' },
+  { slug: 'science', name: 'Science & Breakthroughs' },
 ] as const;
 
 export const GUIDE_CATEGORIES = [

@@ -39,7 +39,7 @@ const news = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/news' }),
   schema: z.object({
     ...common,
-    category: z.enum(['ai', 'apps-software', 'phones-gadgets', 'launches', 'deals']),
+    category: z.enum(['ai', 'apps-software', 'phones-gadgets', 'launches', 'deals', 'business', 'science']),
     // The three-line summary shown under the headline.
     summary: z.array(z.string()).min(1).max(3),
     // Slug of the guide this brief points readers to.

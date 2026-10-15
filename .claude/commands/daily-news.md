@@ -13,5 +13,5 @@ Run the daily news flow. Speak to Pyla in plain English, one question at a time.
    2. **editor-in-chief**: story, accuracy, voice and reader value (every metric 4+, average 4.5+).
    3. **seo-cto**: keywords, metadata, links, image, build, and `npm run seo-check` showing GATE PASSED (90%+, no fails).
 6. When all three pass, save the draft for Pyla: copy it to `src/content/news/<slug>.md` with `draft: true`, put the cover in `public/images/posts/<slug>/`, run `npm run build`, then commit and push to the preview branch (never `main`).
-7. Show Pyla each draft with: the preview link, a one-line result from each gate (with the SEO score and focus keyword), and a **NEEDS FROM YOU** checklist (their take, anything else).
+7. Show Pyla each draft with: the preview link, a one-line result from each gate (with the SEO score and focus keyword), and a **NEEDS FROM YOU** checklist (anything else; the "My view" section is already written and Pyla can change it).
 8. Stop. Nothing goes live until Pyla says "publish".

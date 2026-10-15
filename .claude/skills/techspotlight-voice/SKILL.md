@@ -26,7 +26,7 @@ No fixed, generic headings. Every heading is written for this story and tells th
 3. **The facts** under a story-specific heading (for example "Where the $15 million will go", not "What happened"). Who, what, when, how much, from the sources.
 4. **The tension or the open question** under a story-specific heading (for example "The hard part is the last mile"). Quotes, context, and what isn't known yet.
 5. **The reader angle** under a heading written for the reader (for example "If you run a small business, what to watch"). What the story means for the people it affects, wherever they live: who can use it, where it is available, what to do or watch next. Woven into the story; never a fixed country-by-country section.
-6. **My view** (Pyla's own view) under a heading that starts "My view:" and states the view itself (for example "My view: AI has to speak the shopkeeper's language"). First person, from Pyla's own words only.
+6. **My view** (Pyla's own view) under a heading that starts "My view:" and states the view itself (for example "My view: AI has to speak the shopkeeper's language"). First person. Since 2026-10-15 (owner's choice) the writer drafts it as a neutral, independent tech journalist: weigh the good and the bad fairly, then land on a clear, calm conclusion, in the style of the `nadella-communication-coach` skill (empathy first, clarity, calm optimism, no blame, no hype), without naming Nadella or quoting him. It is an opinion, so it never claims an experience Pyla didn't have (no "I tested", "I used"). Pyla can edit it before saying "publish".
 7. **Kicker (1–3 sentences).** After a horizontal rule (`---`), so it isn't read as Pyla's words. What to watch next, or a closing line that lands. Never "In conclusion".
 
 Guides keep their own layout (see `CLAUDE.md`), but their headings and intros follow the same storytelling rules.
@@ -40,7 +40,7 @@ Guides keep their own layout (see `CLAUDE.md`), but their headings and intros fo
 5. **Quotes earn their place.** Use a quote only when it adds a voice or a claim worth testing; always say who said it and their role. Never stack quotes.
 6. **Numbers with meaning.** Give each big number a human scale ("more than 90 million small businesses, employing over 345 million people") and say where it comes from.
 7. **Human, not template.** Banned openers and closers: "In today's fast-paced world", "Let's dive in", "In this article we will", "In conclusion", "To sum up", "Without further ado". Never reuse the same heading wording across posts.
-8. **Honest and fair.** Never invent an experience, a quote, a number or an opinion. Pyla's view comes only from Pyla. If missing, write `[YOUR TAKE: <a specific question for Pyla>]` and flag it.
+8. **Honest and fair.** Never invent an experience, a quote, a number or an opinion. For news briefs, the writer drafts "My view" as described above (owner's choice); it must be fair to both sides and never pretend to a personal experience.
 9. **Simple English.** Words a reader anywhere in the world who uses English as a second language follows easily. Explain any technical term in one short line.
 
 ## A worldwide audience
@@ -56,6 +56,6 @@ Guides keep their own layout (see `CLAUDE.md`), but their headings and intros fo
 - Is every heading specific to this story (no "What happened", "Why people are talking", "What this means for you", "My take")?
 - Is there real context or analysis beyond the sources, labelled as analysis?
 - Does the reader section say something real for the people the story affects, without a fixed country-by-country section?
-- Is Pyla's view in Pyla's own words, under a "My view: ..." heading that states it?
+- Is "My view" balanced (good and bad weighed), calm and clear, under a "My view: ..." heading that states it, with no invented experience?
 - Does it end with a kicker, not a summary?
 - Any banned word or opener? Any unlabelled rumour?
