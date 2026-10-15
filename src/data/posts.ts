@@ -4,7 +4,8 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 // other than main). The live site, built from main, never includes them.
 // Cloudflare Workers Builds sets WORKERS_CI_BRANCH; Pages sets CF_PAGES_BRANCH.
 const branch = process.env.WORKERS_CI_BRANCH ?? process.env.CF_PAGES_BRANCH;
-export const SHOW_DRAFTS = import.meta.env.DEV || (branch !== undefined && branch !== 'main');
+export const IS_PREVIEW = branch !== undefined && branch !== 'main';
+export const SHOW_DRAFTS = import.meta.env.DEV || IS_PREVIEW;
 
 const visible = <T extends { data: { draft: boolean } }>(e: T) => SHOW_DRAFTS || !e.data.draft;
 const byDate = (a: { data: { date: Date } }, b: { data: { date: Date } }) =>

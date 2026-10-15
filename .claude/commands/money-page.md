@@ -14,8 +14,9 @@ Speak to Pyla in plain English and ask **one question at a time**:
 
 Then:
 
-5. Use the **researcher** agent (guide mode) for official features, plans and prices.
-6. Use the **writer** agent to draft the guide into `drafts/<today>/`, using only Pyla's real testing notes.
-7. Use the **auditor** agent. If REVISE, back to the writer. Maximum 2 rounds.
-8. Show Pyla the final draft, the auditor's result and a **NEEDS FROM YOU** checklist.
-9. Stop. Nothing is published until Pyla says "publish".
+5. Use the **researcher** agent (guide mode) for official features, plans and prices, plus the **keyword plan** (Semrush, or Google suggestions if Semrush has no units).
+6. Use the **writer** agent to draft the guide into `drafts/<today>/`, using only Pyla's real testing notes and the keyword plan.
+7. Run the three quality gates in order (maximum 3 rounds each; on REVISE, back to the writer): **auditor** (facts and rules), **editor-in-chief** (every metric 4+, average 4.5+), **seo-cto** (keywords, metadata, links, build, and `npm run seo-check` GATE PASSED).
+8. When all three pass, save it for Pyla: copy it to `src/content/guides/<slug>.md` with `draft: true`, run `npm run build`, commit and push to the preview branch (never `main`).
+9. Show Pyla the preview link, a one-line result from each gate, and a **NEEDS FROM YOU** checklist.
+10. Stop. Nothing is published until Pyla says "publish".

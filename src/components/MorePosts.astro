@@ -1,0 +1,28 @@
+---
+// "Keep reading" box at the end of a post: up to 3 other posts, same category
+// first. Helps readers find more, and helps Google find every page.
+import PostList from './PostList.astro';
+import { getNews, getGuides } from '../data/posts';
+
+interface Props {
+  kind: 'news' | 'guide';
+  id: string;
+  category: string;
+}
+const { kind, id, category } = Astro.props;
+const all = (kind === 'news' ? await getNews() : await getGuides()).filter((p) => p.id !== id && !p.id.startsWith('sample-'));
+const items = [...all.filter((p) => p.data.category === category), ...all.filter((p) => p.data.category !== category)].slice(0, 3);
+---
+{items.length > 0 && (
+  <section class="more">
+    <h2>Keep reading</h2>
+    <PostList items={items} />
+  </section>
+)}
+
+<style>
+  .more h2 {
+    font-size: 1.1rem;
+    margin: 2.5rem 0 1rem;
+  }
+</style>

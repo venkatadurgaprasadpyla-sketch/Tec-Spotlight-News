@@ -1,6 +1,7 @@
 ---
 import { render } from 'astro:content';
 import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import MorePosts from '../../components/MorePosts.astro';
 import RelatedGuide from '../../components/RelatedGuide.astro';
 import { getNews, readingTime } from '../../data/posts';
 import { NEWS_CATEGORIES } from '../../data/site';
@@ -19,6 +20,8 @@ const category = NEWS_CATEGORIES.find((c) => c.slug === d.category)!;
   kind="news"
   title={d.title}
   seoTitle={d.seoTitle}
+  focusKeyword={d.focusKeyword}
+  keywords={d.keywords}
   description={d.description}
   date={d.date}
   updated={d.updated}
@@ -48,6 +51,7 @@ const category = NEWS_CATEGORIES.find((c) => c.slug === d.category)!;
         <ul>{d.sources.map((s) => <li><a href={s.url} rel="noopener" target="_blank">{s.name}</a></li>)}</ul>
       </section>
     )}
+    <MorePosts kind="news" id={post.id} category={d.category} />
   </div>
 </ArticleLayout>
 

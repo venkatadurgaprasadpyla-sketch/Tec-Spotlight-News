@@ -1,6 +1,7 @@
 ---
 import { render } from 'astro:content';
 import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import MorePosts from '../../components/MorePosts.astro';
 import { getGuides, readingTime } from '../../data/posts';
 import { GUIDE_CATEGORIES } from '../../data/site';
 
@@ -18,6 +19,8 @@ const category = GUIDE_CATEGORIES.find((c) => c.slug === d.category)!;
   kind="guide"
   title={d.title}
   seoTitle={d.seoTitle}
+  focusKeyword={d.focusKeyword}
+  keywords={d.keywords}
   description={d.description}
   date={d.date}
   updated={d.updated}
@@ -39,6 +42,9 @@ const category = GUIDE_CATEGORIES.find((c) => c.slug === d.category)!;
     </div>
   )}
   <Content />
+  <div slot="bottom">
+    <MorePosts kind="guide" id={guide.id} category={d.category} />
+  </div>
 </ArticleLayout>
 
 <style>

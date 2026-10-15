@@ -11,6 +11,8 @@ interface Props {
   kind: 'news' | 'guide';
   title: string;
   seoTitle?: string;
+  focusKeyword?: string;
+  keywords?: string[];
   description: string;
   date: Date;
   updated?: Date;
@@ -30,10 +32,14 @@ const p = Astro.props;
 const base = p.kind === 'news' ? '/news' : '/guides';
 const url = new URL(Astro.url.pathname, Astro.site).toString();
 
-const schema = {
+const tags = [...new Set([p.focusKeyword, ...(p.keywords ?? [])].filter((k): k is string => !!k))];
+const article = {
   '@context': 'https://schema.org',
   '@type': p.kind === 'news' ? 'NewsArticle' : 'Article',
   headline: p.title,
+  inLanguage: 'en',
+  articleSection: p.category.name,
+  ...(tags.length ? { keywords: tags.join(', ') } : {}),
   description: p.description,
   datePublished: p.date.toISOString(),
   dateModified: (p.updated ?? p.date).toISOString(),
@@ -44,7 +50,23 @@ const schema = {
     logo: { '@type': 'ImageObject', url: new URL('/images/apple-touch-icon.png', Astro.site).toString() },
   },
   mainEntityOfPage: url,
-  ...(p.image ? { image: [new URL(p.image, Astro.site).toString()] } : {}),
+  ...(p.image
+    ? {
+        image: [
+          { '@type': 'ImageObject', url: new URL(p.image, Astro.site).toString(), width: 1200, height: 630 },
+        ],
+      }
+    : {}),
+};
+const breadcrumbs = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: new URL('/', Astro.site).toString() },
+    { '@type': 'ListItem', position: 2, name: p.kind === 'news' ? 'News' : 'Guides', item: new URL(`${base}/`, Astro.site).toString() },
+    { '@type': 'ListItem', position: 3, name: p.category.name, item: new URL(`${base}/category/${p.category.slug}/`, Astro.site).toString() },
+    { '@type': 'ListItem', position: 4, name: p.title, item: url },
+  ],
 };
 ---
 <BaseLayout
@@ -53,7 +75,9 @@ const schema = {
   image={p.image}
   imageAlt={p.imageAlt}
   type="article"
-  schema={schema}
+  schema={[article, breadcrumbs]}
+  keywords={tags}
+  section={p.category.name}
   published={p.date}
   modified={p.updated}
   noindex={p.draft}

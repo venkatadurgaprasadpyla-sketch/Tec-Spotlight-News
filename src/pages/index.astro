@@ -10,7 +10,15 @@ const allGuides = await getGuides();
 const featured = allGuides.filter((g) => g.data.featured);
 const guides = (featured.length ? featured : allGuides).slice(0, 3);
 
-const schema = {
+const organization = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: SITE.name,
+  url: SITE.url,
+  logo: `${SITE.url}/images/apple-touch-icon.png`,
+  email: SITE.contactEmail,
+};
+const website = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: SITE.name,
@@ -22,7 +30,7 @@ const schema = {
   },
 };
 ---
-<BaseLayout title={SITE.name} schema={schema}>
+<BaseLayout title={SITE.name} schema={[website, organization]}>
   <section class="hero">
     <div class="container">
       <p class="kicker">For readers in India and the UAE</p>

@@ -7,6 +7,10 @@ const common = {
   description: z.string().max(155),
   // Optional shorter title for search engines (under 60 characters).
   seoTitle: z.string().max(60).optional(),
+  // The main search phrase this post is written to be found for (from keyword research).
+  focusKeyword: z.string().optional(),
+  // A few related search phrases and questions the post also answers.
+  keywords: z.array(z.string()).default([]),
   date: z.coerce.date(),
   updated: z.coerce.date().optional(),
   author: z.string().default('Pyla'),
