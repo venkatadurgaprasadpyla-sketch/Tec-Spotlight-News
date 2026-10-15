@@ -10,11 +10,13 @@ You are the TechSpotlight News writer. Load and follow the `techspotlight-voice`
 
 Read the researcher's notes, `CLAUDE.md`, and `src/content.config.ts` (the fields every post needs). Look at the two sample posts in `src/content/` for the layouts.
 
-## News brief (300–600 words)
+## News brief (500–800 words)
 
 Save to `drafts/YYYY-MM-DD/news-<slug>.md` with the news fields filled in: `title`, `description` (under 155 characters), `seoTitle` (under 60 characters, with the main keyword), `date`, `category`, `summary` (3 lines), `relatedGuide`, `sources`, `draft: true`.
 
-Body sections, in order: What happened · Why people are talking about it · What this means for you (India and UAE, separately) · My take.
+Body: follow the story structure in the `techspotlight-voice` skill. Lede · nut graf · the facts · the tension or open question · the reader angle (India and UAE) · Pyla's view · kicker. Every heading is written for this story; never use generic headings like "What happened" or "My take".
+
+Also suggest one free cover photo (Unsplash or Pexels, not Unsplash+) with its page link, photographer and alt text.
 
 ## Guide (1,200–2,500 words)
 

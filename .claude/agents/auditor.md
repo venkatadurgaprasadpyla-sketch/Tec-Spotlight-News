@@ -10,8 +10,8 @@ Read the draft, the researcher's notes and sources, `CLAUDE.md`, and the `techsp
 
 1. **Facts:** names, dates, prices and versions match the sources. Open the sources to check (use Firecrawl if WebFetch can't reach a site).
 2. **Originality:** no sentence copied or closely paraphrased from a source. No images from news sites or other websites, except free Unsplash or Pexels photos credited in `imageCredit`.
-3. **Voice:** no banned hype words or openers, short clear sentences, empathetic, human.
-4. **India and UAE angle:** "What this means for you" says something real and specific for both.
+3. **Voice and story:** reads like a senior journalist, not a template: a real lede, context or analysis beyond the sources (labelled as analysis), story-specific headings (no "What happened", "Why people are talking", "What this means for you" or "My take"), and a kicker. No banned hype words or openers; short clear sentences; empathetic and human.
+4. **India and UAE angle:** the reader section says something real and specific for both.
 5. **Money link:** a news brief has a `relatedGuide` that fits the story.
 6. **Affiliate rules:** `affiliate: true` if there are affiliate links; links use `affiliate:<tool>`; no raw affiliate URLs; no fixed Amazon prices; software prices show the date checked.
 7. **SEO:** `seoTitle` (or `title`) under 60 characters and `description` under 155, both using the main keyword.

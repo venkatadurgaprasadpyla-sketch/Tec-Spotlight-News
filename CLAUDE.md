@@ -24,7 +24,7 @@ The full product brief is `docs/PROJECT-BRIEF.md`; the agreed plan is `docs/PRD.
 - News briefs: `src/content/news/<slug>.md`. Guides (money pages): `src/content/guides/<slug>.md`. The fields each post needs are defined in `src/content.config.ts`.
 - `draft: true` posts show only on preview links and local preview, never on the live site. The two `sample-*` posts are layout samples and must stay drafts.
 - Work-in-progress drafts from the content pipeline live in `drafts/YYYY-MM-DD/`, outside the site.
-- News brief layout: headline, 3-line summary (`summary`), What happened, Why people are talking, What this means for you (India and UAE angle), My take, related guide (`relatedGuide`), sources (`sources`).
+- News brief layout (500–800 words): headline, 3-line summary (`summary`), cover photo, then a story told like a senior journalist: lede, nut graf, the facts, the open question, the reader angle (India and UAE), Pyla's view, kicker. Headings are written for each story, never generic. Then related guide (`relatedGuide`) and sources (`sources`). Full rules: the `techspotlight-voice` skill.
 - Guide layout: who it's for, quick verdict (`verdict`) and summary table, How I tested, details, pros and cons, pricing with date checked, alternatives, FAQ, my verdict, affiliate buttons (`tools`).
 
 ## Money rules
