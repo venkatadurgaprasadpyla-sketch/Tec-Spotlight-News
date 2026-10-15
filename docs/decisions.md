@@ -12,3 +12,4 @@
 | 2026-10-14 | Where the Sora font loads from | Google Fonts; self-hosted | Self-hosted | Faster, and readers' details aren't sent to Google just to load a font. |
 | 2026-10-14 | Web addresses for categories | /news/ai/; /news/category/ai/ | /news/category/ai/ | Keeps post addresses short (/news/<post>/) and avoids clashes between post and category names. |
 | 2026-10-14 | How to show sample posts | No samples; samples marked as drafts | Two sample posts marked as drafts | They show the layouts on preview links but never appear on the live site. |
+| 2026-10-15 | Writing voice and content helpers | As in the brief | Voice skill, researcher, writer and auditor helpers, and five commands, as written in the brief | Follows section 7 of the brief. Drafts stay in drafts/ until Pyla says "publish". |
