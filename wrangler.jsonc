@@ -3,8 +3,16 @@
 {
   "name": "tec-spotlight-news",
   "compatibility_date": "2026-10-13",
+  // Build the site before every upload. Cloudflare's preview builds skip the
+  // dashboard build command, so this makes sure ./dist always exists.
+  "build": {
+    "command": "npm run build"
+  },
   "assets": {
     "directory": "./dist",
     "not_found_handling": "404-page"
-  }
+  },
+  // Needed for preview links (`wrangler preview`). Empty because previews
+  // use the same settings as the live site.
+  "previews": {}
 }
