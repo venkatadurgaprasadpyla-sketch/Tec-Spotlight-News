@@ -1,12 +1,18 @@
 ---
 title: "Google.org puts $15 million behind AI tools for India's small businesses"
-seoTitle: "Google.org's $15M AI fund for Indian small businesses"
-description: "Google.org is giving $15 million to The/Nudge to build AI tools for India's small businesses: easier credit, compliance and new markets."
+seoTitle: "AI tools for MSMEs: Google.org's $15M fund for India"
+description: "Google.org is giving $15 million to The/Nudge to build AI tools for MSMEs in India, to help with loans, compliance and finding new customers."
+focusKeyword: "AI tools for MSMEs"
+keywords:
+  - "AI for small business owners"
+  - "AI tools for SMEs"
+  - "Google.org India"
+  - "Samriddhi open call"
 date: 2026-10-15
 category: apps-software
 draft: true
 image: "/images/posts/google-org-msme-ai-fund/cover.jpg"
-imageAlt: "A shopkeeper at a small drinks stall in Kolkata, with shelves of bottled drinks behind him"
+imageAlt: "A shopkeeper at a small drinks stall in Kolkata, the kind of MSME the new AI tools aim to help"
 imageCredit:
   name: "Laurentiu Morariu"
   source: "Unsplash"
@@ -25,18 +31,20 @@ sources:
   - name: "MediaNews4U: Google.org, The/Nudge launch $15 million initiative"
     url: "https://www.medianews4u.com/google-org-the-nudge-launch-15-million-initiative-for-ai-driven-msme-growth/"
   - name: "Samriddhi by The/Nudge: open call for proposals"
-    url: "http://samriddhi.thedelta.org.in/"
+    url: "https://samriddhi.thedelta.org.in/"
 ---
 
-Ask a small shop owner in a small Indian town what slows the business down, and the answer is often not the work itself. It is the loan form they can't finish, the GST filing they don't fully understand, and the customers they can't reach beyond their own street.
+Ask a shop owner in a small Indian town what slows the business down, and the answer is often not the work itself. It is the loan form they can't finish, the GST filing they don't fully understand, and the customers they can't reach beyond their own street.
 
-On 14 October, Google.org, Google's charity arm, put $15 million behind fixing that. The money goes to The/Nudge, an Indian organisation that works on livelihoods, to build AI tools for India's micro, small and medium businesses (often called MSMEs).
+On 14 October, Google.org, Google's charity arm, put $15 million behind fixing that. The money goes to The/Nudge, an Indian non-profit, to build AI tools for MSMEs: India's micro, small and medium businesses.
 
 The size of the problem explains the size of the bet. According to the announcement, India has more than 90 million small businesses, employing over 345 million people. The same announcement notes that many of them still struggle to get finance and to reach customers online.
 
-## Where the $15 million will go
+## How $15 million becomes AI tools for MSMEs
 
 The funding targets three old headaches: getting formal credit (bank loans instead of informal lenders), finding new markets, and keeping up with compliance (the paperwork and filings the government requires).
+
+For small business owners, that could mean AI help with a loan application, a compliance filing such as GST, or finding buyers online. Those are our examples, not named projects.
 
 It will be spent in two ways:
 
@@ -49,15 +57,15 @@ Preeti Lobana, Google India's Vice President and Country Manager, framed the goa
 
 Subhashree Dutta, CEO of the^delta, which is building the programme with Google.org, calls it "one of the largest philanthropic commitments to India's MSMEs". Size alone won't decide whether it works. In our view, money for building tools is the easy step. Getting a busy shop owner to trust and use them is the hard one.
 
-The announcement leaves three things open: which tools will be built, when they will be ready, and whether they will be free. Those answers will likely depend on which proposals are chosen. It does mention "open standards" and "open digital tools", which suggests some of what gets built may be free for anyone to use. That is our reading, not a promise.
+The announcement leaves three things open: which tools will be built, when they will be ready, and whether they will be free. The Samriddhi page offers one clue: each challenge runs for 18 months from January 2027, so in our reading, many finished tools may not arrive before mid-2028. It does mention "open standards" and "open digital tools", which suggests some of what gets built may be free for anyone to use. That is our reading, not a promise.
 
 In practice, programmes like this usually succeed or fail on design more than funding. A tool that works beautifully in English on a new phone can mean nothing to an owner who runs the business on WhatsApp, in Telugu or Bhojpuri, on a budget handset.
 
 ## If you run a small business in India, or support one from the UAE
 
-Nothing changes on your counter today. But this is worth watching.
+Nothing changes on your counter today. But this is worth watching, alongside our other [apps and software news](/news/category/apps-software/).
 
-If you own a small business in India, look out for free tools that help with loan applications, GST and other compliance, or selling online. If you are a developer or startup building for small businesses, the Samriddhi open call is a real chance at funding, and registering early costs nothing. If you live in a smaller town, the training platform could lead to paid work with local businesses.
+If you own a small business in India, look out for free tools that help with loan applications, GST and other compliance, or selling online. If you are a developer or startup building AI tools for SMEs, the Samriddhi open call is a real chance at funding, and registering early costs nothing. If you live in a smaller town, the training platform could lead to paid work with local businesses.
 
 If you are in the UAE, the fund is aimed at Indian businesses. Indian founders and developers based in the UAE should check the Samriddhi page for who can apply, because neither the announcement nor the Samriddhi page says yet. And if you help run a family business back home, keep an eye on The/Nudge for tools as they launch, so you can pass them on.
 

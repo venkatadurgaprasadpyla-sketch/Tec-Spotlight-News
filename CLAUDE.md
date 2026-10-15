@@ -15,7 +15,8 @@ The full product brief is `docs/PROJECT-BRIEF.md`; the agreed plan is `docs/PRD.
 ## The site
 
 - Built with Astro (static site). Hosted on Cloudflare Workers (worker `tec-spotlight-news`, settings in `wrangler.jsonc`); `main` is the live site, every other branch gets a private preview link.
-- Commands: `npm run dev` (local preview), `npm run build` (build into `dist/`), `npm run check` (type check).
+- Commands: `npm run dev` (local preview), `npm run build` (build into `dist/`), `npm run check` (type check), `npm run seo-check -- <post.md>` (SEO and quality score).
+- Preview links are hidden from Google (`noindex` and a blocking `robots.txt`); only `main` is indexed.
 - Site-wide settings (name, author, contact email, ads on/off): `src/data/site.ts`.
 - Brand: colours in `src/styles/global.css`, logos in `public/images/brand/` (originals in `images/brand/`). Font: Sora, self-hosted.
 
@@ -26,6 +27,13 @@ The full product brief is `docs/PROJECT-BRIEF.md`; the agreed plan is `docs/PRD.
 - Work-in-progress drafts from the content pipeline live in `drafts/YYYY-MM-DD/`, outside the site.
 - News brief layout (500–800 words): headline, 3-line summary (`summary`), cover photo, then a story told like a senior journalist: lede, nut graf, the facts, the open question, the reader angle (India and UAE), Pyla's view under a "My view: ..." heading, kicker. Headings are written for each story, never generic. Then related guide (`relatedGuide`) and sources (`sources`). Full rules: the `techspotlight-voice` skill.
 - Guide layout: who it's for, quick verdict (`verdict`) and summary table, How I tested, details, pros and cons, pricing with date checked, alternatives, FAQ, my verdict, affiliate buttons (`tools`).
+
+## Quality pipeline and SEO
+
+Every post goes: researcher (facts and **keyword plan**) → writer → **auditor** (facts and rules) → **editor-in-chief** (story scorecard: every metric 4+, average 4.5+) → **seo-cto** (keywords, metadata, links, build, `npm run seo-check` GATE PASSED: no fails, 90%+). Only then is it saved in `src/content/` with `draft: true` and pushed to the preview for Pyla. Agents are in `.claude/agents/`.
+
+- Keywords: Semrush (`in` and `ae` databases) when the account has API units; otherwise Google's search suggestions via Firecrawl. Each post sets `focusKeyword` and 3–6 `keywords`, used naturally (people first, never stuffed).
+- `seoTitle` 30–60 characters, `description` 120–155, short hyphenated web address, cover at least 1200 wide and under 250 KB.
 
 ## Money rules
 

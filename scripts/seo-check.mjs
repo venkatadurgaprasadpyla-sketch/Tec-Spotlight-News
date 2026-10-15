@@ -20,7 +20,7 @@ const BANNED_OPENERS = ["in today's fast-paced world", "let's dive in", 'in this
 const files = process.argv.slice(2).length
   ? process.argv.slice(2)
   : ['src/content/news', 'src/content/guides'].flatMap((d) =>
-      existsSync(d) ? readdirSync(d).filter((f) => f.endsWith('.md')).map((f) => join(d, f)) : [],
+      existsSync(d) ? readdirSync(d).filter((f) => f.endsWith('.md') && !f.startsWith('sample-')).map((f) => join(d, f)) : [],
     );
 
 let failed = 0;
@@ -152,7 +152,7 @@ function check(file) {
 
 function plain(md) {
   return md
-    .replace(/^#{1,6}\s+/gm, '')
+    .replace(/^#{1,6}\s+(.+)$/gm, '$1.')
     .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
     .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
     .replace(/^---\s*$/gm, '')
