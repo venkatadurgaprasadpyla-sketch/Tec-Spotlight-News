@@ -134,7 +134,7 @@ function check(file) {
   }
   ok(!links.some((l) => /^https?:\/\/(?!techspotlight\.news)/.test(l) && /amazon|flipkart|partnerstack|ref=|aff/i.test(l)), 'Trust', 'No raw affiliate links in the text', 'Raw affiliate link found; use affiliate:<tool>');
   ok(!links.some((l) => l.startsWith('affiliate:')) || d.affiliate === true, 'Trust', 'Affiliate disclosure set correctly', 'Has affiliate links but affiliate: true is missing');
-  const internal = links.filter((l) => l.startsWith('/') || l.includes('techspotlight.news'));
+  const internal = links.filter((l) => l.startsWith('/') || l.includes('techspotlight.news') || l.includes('workers.dev'));
   ok(internal.length > 0 || !!d.relatedGuide, 'Links', 'Links to another page on the site', 'No link to another TechSpotlight page in the text (the "More news" box still adds some)', 'WARN');
 
   // --- Report ---

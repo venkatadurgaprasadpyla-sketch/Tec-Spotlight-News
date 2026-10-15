@@ -11,7 +11,7 @@ keywords:
   - "what age can children use AI"
 date: 2026-10-15
 category: ai
-draft: true
+draft: false
 image: "/images/posts/dubai-gendubai-parents-ai/cover.jpg"
 imageAlt: "A mother and young daughter smiling at a laptop on a sofa, the kind of family moment an AI guide for parents is built for"
 imageCredit:

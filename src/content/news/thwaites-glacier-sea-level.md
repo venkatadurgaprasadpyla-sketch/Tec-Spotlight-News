@@ -10,7 +10,7 @@ keywords:
   - "doomsday glacier melting"
 date: 2026-10-15
 category: science
-draft: true
+draft: false
 image: "/images/posts/thwaites-glacier-sea-level/cover.jpg"
 imageAlt: "A wall of white ice meets a calm sea (stock photo, not Thwaites Glacier)"
 imageCredit:

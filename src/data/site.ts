@@ -4,7 +4,7 @@ export const SITE = {
   tagline: 'What matters in tech, explained for you.',
   description:
     'Short, clear tech news and honest guides to apps and AI tools, for curious readers everywhere.',
-  url: 'https://techspotlight.news',
+  url: 'https://tec-spotlight-news.techspotlightid-official.workers.dev',
   author: 'Pyla',
   contactEmail: 'techspotlightid.official@gmail.com',
   locale: 'en_US',

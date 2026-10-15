@@ -15,6 +15,7 @@ The full product brief is `docs/PROJECT-BRIEF.md`; the agreed plan is `docs/PRD.
 ## The site
 
 - Built with Astro (static site). Hosted on Cloudflare Workers (worker `tec-spotlight-news`, settings in `wrangler.jsonc`); `main` is the live site, every other branch gets a private preview link.
+- Live since 2026-10-15 at https://tec-spotlight-news.techspotlightid-official.workers.dev (free Cloudflare address; the site address is set in `src/data/site.ts` and `astro.config.mjs`). Switch both to techspotlight.news once the domain is bought and connected.
 - RSS feeds: `/rss.xml` (everything), `/news/rss.xml`, `/guides/rss.xml` (`src/lib/feed.ts`): last 50 items with summary, section and cover photo.
 - Commands: `npm run dev` (local preview), `npm run build` (build into `dist/`), `npm run check` (type check), `npm run seo-check -- <post.md>` (SEO and quality score).
 - Preview links are hidden from Google (`noindex` and a blocking `robots.txt`); only `main` is indexed.

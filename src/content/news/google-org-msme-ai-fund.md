@@ -10,7 +10,7 @@ keywords:
   - "Samriddhi open call"
 date: 2026-10-15
 category: apps-software
-draft: true
+draft: false
 image: "/images/posts/google-org-msme-ai-fund/cover.jpg"
 imageAlt: "A shopkeeper at a small drinks stall in Kolkata, the kind of MSME the new AI tools aim to help"
 imageCredit:

@@ -6,7 +6,7 @@ import rehypeRelatedLinks from './src/lib/rehype-related-links.mjs';
 import rehypeInlinePromo from './src/lib/rehype-inline-promo.mjs';
 
 export default defineConfig({
-  site: 'https://techspotlight.news',
+  site: 'https://tec-spotlight-news.techspotlightid-official.workers.dev',
   trailingSlash: 'ignore',
   integrations: [sitemap()],
   markdown: {
