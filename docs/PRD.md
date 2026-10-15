@@ -38,7 +38,7 @@ Honesty rule: we never recommend a tool just because it pays more.
 Pages: Home, News (AI, Apps & Software, Phones & Gadgets, Launches, Deals), Guides (Best Tools, Comparisons, Reviews, Alternatives, How-to), About, Editorial Policy, Affiliate Disclosure, Privacy Policy, Contact, Search.
 
 - **Domain:** techspotlight.news (free to buy as of 14 Oct 2026; owner to buy it on Cloudflare).
-- **Hosting:** Cloudflare Pages, free. Every approved change goes live on its own.
+- **Hosting:** Cloudflare Workers (static files), free. Every approved change goes live on its own.
 - **How it's built:** a fast "static" site (pages are made ahead of time, so they load very quickly). I recommend a tool called **Astro**: posts are simple text files, it's free, and it works well with Cloudflare.
 - **Look:** the brand colours and Sora font from the brief, light and dark mode, mobile first.
 
@@ -63,7 +63,3 @@ We also track: auditor first-try pass rate, visitors (and the UAE share), affili
 ## Not doing now
 
 YouTube Shorts, a regional-language version, social media auto-posting, and a newsletter.
-
-## Still to confirm
-
-- Contact email for the Contact page.

@@ -6,8 +6,7 @@ export const SITE = {
     'Short, clear tech news and honest guides to apps and AI tools, written for readers in India and the UAE.',
   url: 'https://techspotlight.news',
   author: 'Pyla',
-  // TODO: owner to confirm the contact email before launch.
-  contactEmail: '[CONTACT EMAIL]',
+  contactEmail: 'techspotlightid.official@gmail.com',
   locale: 'en_IN',
   // Ads stay off until the AdSense application is approved.
   adsEnabled: false,

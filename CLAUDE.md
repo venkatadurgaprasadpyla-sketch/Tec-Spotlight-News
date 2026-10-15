@@ -14,7 +14,7 @@ The full product brief is `docs/PROJECT-BRIEF.md`; the agreed plan is `docs/PRD.
 
 ## The site
 
-- Built with Astro (static site). Hosted on Cloudflare Pages; `main` is the live site, every other branch gets a private preview link.
+- Built with Astro (static site). Hosted on Cloudflare Workers (worker `tec-spotlight-news`, settings in `wrangler.jsonc`); `main` is the live site, every other branch gets a private preview link.
 - Commands: `npm run dev` (local preview), `npm run build` (build into `dist/`), `npm run check` (type check).
 - Site-wide settings (name, author, contact email, ads on/off): `src/data/site.ts`.
 - Brand: colours in `src/styles/global.css`, logos in `public/images/brand/` (originals in `images/brand/`). Font: Sora, self-hosted.

@@ -2,7 +2,8 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 
 // Drafts show only in local preview and on Cloudflare preview links (any branch
 // other than main). The live site, built from main, never includes them.
-const branch = process.env.CF_PAGES_BRANCH;
+// Cloudflare Workers Builds sets WORKERS_CI_BRANCH; Pages sets CF_PAGES_BRANCH.
+const branch = process.env.WORKERS_CI_BRANCH ?? process.env.CF_PAGES_BRANCH;
 export const SHOW_DRAFTS = import.meta.env.DEV || (branch !== undefined && branch !== 'main');
 
 const visible = <T extends { data: { draft: boolean } }>(e: T) => SHOW_DRAFTS || !e.data.draft;
