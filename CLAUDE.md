@@ -51,7 +51,7 @@ A scheduled task runs `/auto-news` every 5 hours (8 to 10 stories a day, 2 per r
 
 ## Writing voice
 
-Empathy first, short clear sentences, calm and humble, no hype words ("insane", "game-changer", "killer", "mind-blowing"), label rumours, the reader is the hero. Every news brief is written in one chief tech journalist voice (no separate "My view" section): Claude weighs the good and the bad and lands on a calm conclusion, in a calm Nadella-style voice (owner's choice 2026-10-15); Pyla can edit it before "publish". Guides still need the owner's own testing. Never invent experiences the owner didn't have. Full rules: section 4 of the brief (a voice skill comes in Phase 2).
+Empathy first, short clear sentences, calm and humble, no hype words ("insane", "game-changer", "killer", "mind-blowing"), label rumours, the reader is the hero. Every news brief is written in one chief tech journalist voice (no separate "My view" section): Claude weighs the good and the bad and lands on a calm conclusion, in a calm Nadella-style voice (owner's choice 2026-10-15); Pyla can edit it before "publish". UAE stories (owner's rule 2026-10-15): positive and appreciative, crediting the UAE authorities by name, with open questions framed as a constructive "what to watch"; facts stay accurate and nothing is invented or left out. Guides still need the owner's own testing. Never invent experiences the owner didn't have. Full rules: section 4 of the brief (a voice skill comes in Phase 2).
 
 ## Images
 

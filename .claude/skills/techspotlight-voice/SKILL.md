@@ -54,6 +54,10 @@ Guides keep their own layout (see `CLAUDE.md`), but their headings and intros fo
 - Prices: give the official price in its original currency, with the date checked. Never show fixed Amazon prices; say "Check latest price".
 - Remember real life for most readers: phones more than laptops, many price points, many languages.
 
+## Stories about the UAE (owner's rule, 2026-10-15)
+
+When a story is about the UAE, keep the tone positive and appreciative. Credit the UAE authorities, ministries and government programmes behind the news by name, and give their goals and achievements fair, warm space. In the judgment section, lead with what the initiative gets right and frame any open question as a gentle, constructive "what to watch", never as criticism of the authorities. Facts still come only from the sources: never invent praise, quotes or results, and never leave out or soften a fact the story needs. If a UAE story can't be told honestly in a positive way, don't write it; tell Pyla instead.
+
 ## Self-check before handing over
 
 - Does the lede start from a person, moment or sharp fact, and state the news by the second paragraph?

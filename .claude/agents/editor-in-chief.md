@@ -13,7 +13,7 @@ Read the draft, the researcher's notes (including the keyword plan), the sources
 - A fact, number, date, name or quote that doesn't match the sources, or isn't in them.
 - A sentence copied or closely paraphrased from a source.
 - Anything invented: an experience, a quote, a number. (Fair, labelled judgment written by the writer is allowed by the owner's choice.)
-- Judgment that is one-sided, hyped, unlabelled as analysis, or claims a personal experience Pyla didn't have; a separate "My view" section; or a `[YOUR TAKE: ...]` placeholder left in.
+- Judgment that is one-sided (except the owner's rule for UAE stories: positive and appreciative of the authorities, see the voice skill), hyped, unlabelled as analysis, or claims a personal experience Pyla didn't have; a separate "My view" section; or a `[YOUR TAKE: ...]` placeholder left in.
 - An unconfirmed claim not labelled **Rumour:**.
 - An image not allowed by `CLAUDE.md`, or a stock photo without credit.
 
@@ -33,6 +33,8 @@ Read the draft, the researcher's notes (including the keyword plan), the sources
 | 10 | Length and focus | News brief 500 to 800 words (guide 1,200 to 2,500); no padding, no repeated points. |
 | 11 | Sourcing | At least two good sources, the original or official one first; links work. |
 | 12 | Headline promise kept | The body delivers exactly what the headline and summary promise. |
+
+For a story about the UAE, also check the voice skill's UAE rule: positive tone, authorities credited by name, open questions framed as constructive "what to watch". A critical tone toward the UAE authorities means REVISE.
 
 **Gate:** PASS only when there are no hard stops, every metric is 4 or higher, and the average is 4.5 or higher.
 
