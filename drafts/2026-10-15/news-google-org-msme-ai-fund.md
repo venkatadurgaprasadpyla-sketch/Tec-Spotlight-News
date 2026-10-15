@@ -48,4 +48,8 @@ What we don't know yet: which tools will be built, when they'll be ready, and wh
 
 ## My take
 
-[YOUR TAKE: Do you think AI tools like these will actually reach small shop owners in smaller towns, or will they mostly help businesses that are already online? Have you seen a small business near you struggle with loans, GST or finding customers?]
+For AI to really reach small and marginal business owners, it has to be very easy to use. A simple screen matters more than clever features.
+
+Language is the other big hurdle. Many owners think and work in their own language, so AI needs to understand native languages properly, including the small nuances in how people actually speak. Without that, a lot of owners will try it once and give up.
+
+I also think owners need some guidance first: what they can ask AI for, how to ask, and which problems it can actually help with. If this fund puts money into that kind of teaching, alongside the tools, it would be a much better push.

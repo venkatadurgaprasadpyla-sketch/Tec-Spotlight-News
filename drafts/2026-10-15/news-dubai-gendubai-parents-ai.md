@@ -55,4 +55,6 @@ What we know: the official site says it's free, and it describes itself as a pil
 
 ## My take
 
-[YOUR TAKE: As someone connected to both India and the UAE, would you use a platform like this with children in your family? What's one AI habit you'd want every child to learn?]
+I would definitely let my kids learn with something like this.
+
+I believe every child should start interacting with AI as early as possible, but in a controlled environment. That means parents stay involved and keep an eye on what their children ask and what the AI says back. Used that way, AI becomes a learning habit rather than a worry.
