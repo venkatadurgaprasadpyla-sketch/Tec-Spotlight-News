@@ -26,7 +26,7 @@ No fixed, generic headings. Every heading is written for this story and tells th
 3. **The facts** under a story-specific heading (for example "Where the $15 million will go", not "What happened"). Who, what, when, how much, from the sources.
 4. **The tension or the open question** under a story-specific heading (for example "The hard part is the last mile"). Quotes, context, and what isn't known yet.
 5. **The reader angle** under a heading written for the reader (for example "If you run a shop in India, or support one from Dubai"). Must give something real and specific for India **and** the UAE, woven into the story, not two copy-paste bullets.
-6. **Pyla's view** under a heading that states the view itself (for example "Pyla's view: AI has to speak the shopkeeper's language"). First person, from Pyla's own words only.
+6. **My view** (Pyla's own view) under a heading that starts "My view:" and states the view itself (for example "My view: AI has to speak the shopkeeper's language"). First person, from Pyla's own words only.
 7. **Kicker (1–3 sentences).** After a horizontal rule (`---`), so it isn't read as Pyla's words. What to watch next, or a closing line that lands. Never "In conclusion".
 
 Guides keep their own layout (see `CLAUDE.md`), but their headings and intros follow the same storytelling rules.
@@ -55,6 +55,6 @@ Guides keep their own layout (see `CLAUDE.md`), but their headings and intros fo
 - Is every heading specific to this story (no "What happened", "Why people are talking", "What this means for you", "My take")?
 - Is there real context or analysis beyond the sources, labelled as analysis?
 - Does the reader section give something specific for both India and the UAE?
-- Is Pyla's view in Pyla's own words, with a heading that states it?
+- Is Pyla's view in Pyla's own words, under a "My view: ..." heading that states it?
 - Does it end with a kicker, not a summary?
 - Any banned word or opener? Any unlabelled rumour?

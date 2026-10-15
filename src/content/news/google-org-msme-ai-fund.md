@@ -61,7 +61,7 @@ If you own a small business in India, look out for free tools that help with loa
 
 If you are in the UAE, the fund is aimed at Indian businesses. Indian founders and developers based in the UAE should check the Samriddhi page for who can apply, because neither the announcement nor the Samriddhi page says yet. And if you help run a family business back home, keep an eye on The/Nudge for tools as they launch, so you can pass them on.
 
-## Pyla's view: AI has to speak the owner's language
+## My view: AI has to speak the owner's language
 
 For AI to really reach small and marginal business owners, it has to be very easy to use. A simple screen matters more than clever features.
 

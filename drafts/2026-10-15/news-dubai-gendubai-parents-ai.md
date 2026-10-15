@@ -60,7 +60,7 @@ If you live in the UAE and have a child between 8 and 15, open [gen.dub.ai](http
 
 In India, there is no word yet on a version built for Indian families. The site is free and in English, so you can still browse its guides from India, though it is written with UAE families in mind. And the habit behind it travels well: sit with your child for ten minutes, ask an AI tool a question together, then check the answer in a textbook or a trusted website. That habit teaches one of the most useful AI skills: don't trust it blindly.
 
-## Pyla's view: start early, but stay in the room
+## My view: start early, but stay in the room
 
 I would definitely let my kids learn with something like this.
 
