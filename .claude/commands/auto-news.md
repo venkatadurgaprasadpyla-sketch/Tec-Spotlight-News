@@ -19,7 +19,7 @@ Test one cheap Firecrawl search first. If it says the credits ran out, **don't s
 
 - **Finding stories and facts:** WebSearch for the last few hours' news, the trending lists and each story's facts. Other sites can't be opened directly here, so every key fact (numbers, dates, names, quotes) must be confirmed by **two independent results**, one of them the official source. Anything only one result supports is cut or labelled.
 - **Gates:** the auditor, editor-in-chief and seo-cto all use WebSearch for their checks. Keyword ideas come from WebSearch (related and "people also ask" searches) when Google suggestions can't be read.
-- **Covers:** stock photo sites can't be reached without Firecrawl. Use the cover style Pyla picked for this case (see `docs/decisions.md`), and note it in the message so a photo can be swapped in later.
+- **Covers:** stock photo sites can't be reached without Firecrawl, so make a branded title card (Pyla's choice, 2026-10-17): `python3 scripts/title-card.py <slug> "<headline>" "<section name>"`, look at the result, and set `imageCredit` to `name: "TechSpotlight News"`, `source: "Title card"`, `url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"`. Alt text describes the card ("TechSpotlight title card: <headline>"). A photo can be swapped in later.
 - Tell Pyla once that the backup was used; don't repeat it every run.
 
 ## 1. Find what's new (since the last run, worldwide)
