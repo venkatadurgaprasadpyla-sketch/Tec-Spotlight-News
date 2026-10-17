@@ -11,7 +11,7 @@ keywords:
   - "icesat-2"
 date: 2026-10-17
 category: science
-draft: true
+draft: false
 image: "/images/posts/ice-cliffs-collapse-sea-level-study/cover.jpg"
 imageAlt: "TechSpotlight title card: Ice cliffs break off faster than models assumed, then stop, sea-level study finds"
 imageCredit:

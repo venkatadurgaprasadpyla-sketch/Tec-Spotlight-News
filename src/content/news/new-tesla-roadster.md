@@ -11,7 +11,7 @@ keywords:
   - "is the tesla roadster real"
 date: 2026-10-16
 category: launches
-draft: true
+draft: false
 image: "/images/posts/new-tesla-roadster/cover.jpg"
 imageAlt: "An empty road in low sun beside a long freight train (stock photo, not the new Tesla Roadster)"
 imageCredit:

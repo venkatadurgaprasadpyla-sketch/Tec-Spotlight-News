@@ -11,7 +11,7 @@ keywords:
   - "iphone duo vs samsung fold 8"
 date: 2026-10-16
 category: phones-gadgets
-draft: true
+draft: false
 image: "/images/posts/iphone-duo-pre-order/cover.jpg"
 imageAlt: "Two hands holding an ordinary smartphone sideways with a blank screen (stock photo, not the iPhone Duo)"
 imageCredit:

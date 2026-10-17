@@ -11,7 +11,7 @@ keywords:
   - "magic state distillation"
 date: 2026-10-15
 category: science
-draft: true
+draft: false
 image: "/images/posts/google-willow-magic-state-quantum/cover.jpg"
 imageAlt: "Gold quantum computer with silver wiring, illustrating magic state cultivation (a render, not Google's Willow chip)"
 imageCredit:

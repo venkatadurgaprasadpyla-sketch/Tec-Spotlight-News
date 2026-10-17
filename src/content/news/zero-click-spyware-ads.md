@@ -12,7 +12,7 @@ keywords:
   - "reset advertising ID"
 date: 2026-10-15
 category: apps-software
-draft: true
+draft: false
 image: "/images/posts/zero-click-spyware-ads/cover.jpg"
 imageAlt: "A hand holding a small brass padlock, a reminder that a zero-click attack needs no tap to get in"
 imageCredit:

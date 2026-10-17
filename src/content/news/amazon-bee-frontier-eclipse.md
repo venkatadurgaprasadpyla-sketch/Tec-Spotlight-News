@@ -11,7 +11,7 @@ keywords:
   - "is bee ai legit"
 date: 2026-10-15
 category: phones-gadgets
-draft: true
+draft: false
 image: "/images/posts/amazon-bee-frontier-eclipse/cover.jpg"
 imageAlt: "A person stretching indoors with a fitness band on the wrist (stock photo, not the Amazon Bee Frontier)"
 imageCredit:

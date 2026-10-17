@@ -11,7 +11,7 @@ keywords:
   - "how much power does an ai data center use"
 date: 2026-10-17
 category: business
-draft: true
+draft: false
 image: "/images/posts/microsoft-nisource-indiana-power-deal/cover.jpg"
 imageAlt: "TechSpotlight title card: Microsoft signs 20-year power deal with NiSource for its Indiana AI data centre campus"
 imageCredit:

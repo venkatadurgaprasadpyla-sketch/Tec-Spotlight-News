@@ -11,7 +11,7 @@ keywords:
   - "what to do after a data breach"
 date: 2026-10-17
 category: business
-draft: true
+draft: false
 image: "/images/posts/japan-data-breaches-yamato-nikkei/cover.jpg"
 imageAlt: "TechSpotlight title card: Japan data breach wave grows as Yamato and Nikkei confirm customer records were taken"
 imageCredit:

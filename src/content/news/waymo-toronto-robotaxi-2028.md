@@ -12,7 +12,7 @@ keywords:
   - "is waymo safe"
 date: 2026-10-16
 category: business
-draft: true
+draft: false
 image: "/images/posts/waymo-toronto-robotaxi-2028/cover.jpg"
 imageAlt: "A wet downtown Toronto street at sunrise with streetcar tracks and melting snow, in the city Waymo plans to map"
 imageCredit:

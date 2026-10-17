@@ -11,7 +11,7 @@ keywords:
   - "brown fat activation"
 date: 2026-10-16
 category: science
-draft: true
+draft: false
 image: "/images/posts/brown-fat-study-losartan/cover.jpg"
 imageAlt: "Empty hospital scanner room with a scanner bed and shelves, a stock photo for a story on a brown fat study"
 imageCredit:

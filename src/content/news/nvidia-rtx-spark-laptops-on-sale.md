@@ -11,7 +11,7 @@ keywords:
   - "is rtx spark arm based"
 date: 2026-10-16
 category: phones-gadgets
-draft: true
+draft: false
 image: "/images/posts/nvidia-rtx-spark-laptops-on-sale/cover.jpg"
 imageAlt: "Close-up of a generic computer chip with gold pins (stock photo, not the chip inside RTX Spark laptops)"
 imageCredit:

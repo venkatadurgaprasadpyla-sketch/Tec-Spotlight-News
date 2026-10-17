@@ -11,7 +11,7 @@ keywords:
   - "neanderthal care"
 date: 2026-10-16
 category: science
-draft: true
+draft: false
 image: "/images/posts/neanderthal-wooden-spear-shanidar/cover.jpg"
 imageAlt: "Looking out of a cave mouth at forest and sky (a cave in Romania, not Shanidar), for a story on a Neanderthal spear wound"
 imageCredit:

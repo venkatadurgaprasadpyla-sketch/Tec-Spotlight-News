@@ -11,7 +11,7 @@ keywords:
   - "china export controls solar"
 date: 2026-10-16
 category: ai
-draft: true
+draft: false
 image: "/images/posts/china-ai-solar-tech-export-curbs/cover.jpg"
 imageAlt: "Aerial view of a large solar farm, as China's AI export controls draft also covers solar panel technology"
 imageCredit:

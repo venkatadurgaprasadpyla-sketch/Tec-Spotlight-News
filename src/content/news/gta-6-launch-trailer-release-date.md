@@ -11,7 +11,7 @@ keywords:
   - "is gta 6 going to have online"
 date: 2026-10-16
 category: launches
-draft: true
+draft: false
 image: "/images/posts/gta-6-launch-trailer-release-date/cover.jpg"
 imageAlt: "Coastal city skyline lit up at night over dark water, for a GTA 6 release date story (stock photo, not from the game)"
 imageCredit:

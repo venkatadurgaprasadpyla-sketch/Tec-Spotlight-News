@@ -12,7 +12,7 @@ keywords:
   - "meta open weight model"
 date: 2026-10-15
 category: ai
-draft: true
+draft: false
 image: "/images/posts/meta-muse-spark-open-mac-studio/cover.jpg"
 imageAlt: "A computer monitor showing code on a home desk (stock photo, not the Mac Studio setup for Muse Spark Open)"
 imageCredit:

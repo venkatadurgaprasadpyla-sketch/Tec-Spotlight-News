@@ -11,7 +11,7 @@ keywords:
   - "leap hour"
 date: 2026-10-16
 category: science
-draft: true
+draft: false
 image: "/images/posts/leap-second-vote-2027/cover.jpg"
 imageAlt: "Close-up of an antique clock face with Roman numerals, illustrating the leap second vote"
 imageCredit:

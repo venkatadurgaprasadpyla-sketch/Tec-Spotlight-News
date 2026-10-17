@@ -11,7 +11,7 @@ keywords:
   - "Abu Dhabi government app"
 date: 2026-10-17
 category: ai
-draft: true
+draft: false
 image: "/images/posts/tamm-global-abu-dhabi-ai-government/cover.jpg"
 imageAlt: "TechSpotlight title card: Abu Dhabi launches TAMM Global to take its AI government app to the world"
 imageCredit:

@@ -11,7 +11,7 @@ keywords:
   - "amazon deforestation statistics"
 date: 2026-10-16
 category: science
-draft: true
+draft: false
 image: "/images/posts/amazon-deforestation-record-low-2026/cover.jpg"
 imageAlt: "The Amazon River winds through rainforest under scattered clouds, seen from above, where deforestation is at a record low"
 imageCredit:
