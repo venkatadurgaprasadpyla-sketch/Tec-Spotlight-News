@@ -13,6 +13,15 @@ Before writing anything, make sure the site is healthy, and fix what you can:
 - Spot-check the source links of the newest drafts with Firecrawl; replace or flag dead ones.
 - Fix small problems yourself (broken build, failing check, dead link, oversized image). Anything that needs Pyla (money, publishing, deleting) goes in the message to Pyla instead.
 
+## If Firecrawl is out of credits (Pyla's rule, 2026-10-17)
+
+Test one cheap Firecrawl search first. If it says the credits ran out, **don't stop**: use Claude's own web search (`WebSearch`, `mode: "extended"`) instead, everywhere this file says Firecrawl.
+
+- **Finding stories and facts:** WebSearch for the last few hours' news, the trending lists and each story's facts. Other sites can't be opened directly here, so every key fact (numbers, dates, names, quotes) must be confirmed by **two independent results**, one of them the official source. Anything only one result supports is cut or labelled.
+- **Gates:** the auditor, editor-in-chief and seo-cto all use WebSearch for their checks. Keyword ideas come from WebSearch (related and "people also ask" searches) when Google suggestions can't be read.
+- **Covers:** stock photo sites can't be reached without Firecrawl. Use the cover style Pyla picked for this case (see `docs/decisions.md`), and note it in the message so a photo can be swapped in later.
+- Tell Pyla once that the backup was used; don't repeat it every run.
+
 ## 1. Find what's new (since the last run, worldwide)
 
 Use the **researcher** agent (news mode). Cover all of these, using Firecrawl (direct web access is blocked here):
