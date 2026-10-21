@@ -40,3 +40,9 @@
 | 2026-10-17 | Web tool when Firecrawl runs out of credits | Pause news runs until topped up; use Claude's own web search | Claude's own web search (WebSearch) for finding stories, facts and keywords | Owner's request. Pages can't be opened directly here, so every key fact must match two independent search results, one official. Stock photo sites stay unreachable without Firecrawl, so covers follow a separate choice. |
 | 2026-10-17 | Covers while Firecrawl is out (photo sites unreachable) | Branded title card; Canva graphic; no cover | Branded title card: the site's colours, logo, section name and headline, made by `scripts/title-card.py` | Owner picked it on the decision card. Nothing is copied, it matches the brand, and a stock photo can replace it any time. |
 | 2026-10-17 | Publish the waiting news drafts | Publish some; publish all | All 18 gate-passed news drafts set to `draft: false` and pushed to main (the two `sample-*` layout posts stay drafts) | Owner said "Publish all drafts". Each keeps its original story date. The live address still shows the "coming soon" page because `data/live.json` stays `online: false` until Pyla says to put the site back online. |
+
+## 2026-10-21: Breaking news goes first
+
+- **Options:** keep ranking stories by search buzz only, or check breaking news and a list of big upcoming events first.
+- **Choice:** every news run now does a breaking check first. Events that have finished since the last run are covered first (from `drafts/watchlist.md`), then anything from the last 6 hours that major outlets are covering. A breaking story always takes the first slot.
+- **Why:** Pyla asked for hot breaking tech news to get top priority after asking about the Tesla Roadster event.

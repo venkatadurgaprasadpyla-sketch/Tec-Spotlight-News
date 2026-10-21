@@ -24,6 +24,13 @@ Test one cheap Firecrawl search first. If it says the credits ran out, **don't s
 
 ## 1. Find what's new (since the last run, worldwide)
 
+**Breaking news first (Pyla's rule, 2026-10-21).** Before the wider search, the researcher runs a breaking check:
+- **Watchlist:** open `drafts/watchlist.md`. Any big event that has finished since the last run (keynotes, launch events, earnings, court rulings, rocket launches) must be covered in this run.
+- **Last 6 hours:** search for what broke in the last 6 hours: "breaking tech news" with today's date, and each big company's name with "announces", "unveils", "launches" or "today". Check Google News top tech stories, Hacker News and Google Trends.
+- **What counts as breaking:** it happened in the last 6 hours, it involves a big company, a major product or a major science result, and at least three major outlets or a trending list are covering it.
+- **Priority:** a breaking story always takes the first slot, and two breaking stories take both. It still goes through every gate; speed never skips a check.
+- **Coming up:** when the researcher sees a big event announced for later (date and time), add it to `drafts/watchlist.md` with the time in UTC, so the first run after it ends covers it.
+
 Use the **researcher** agent (news mode). Cover all of these, using Firecrawl (direct web access is blocked here):
 
 - **Technology:** AI, apps and software, phones and gadgets, launches, security, chips, internet and platforms.
@@ -32,7 +39,7 @@ Use the **researcher** agent (news mode). Cover all of these, using Firecrawl (d
 - **What people search and share:** Google trending searches (`https://trends.google.com/trending/rss?geo=US`, and `GB`, `IN`, `AE`, keeping only tech and science items), Hacker News front page, Reddit (r/technology, r/artificial, r/science), and Firecrawl search for what people say on X and LinkedIn.
 - **News search:** Firecrawl search with `sources: ["news"]` for the last few hours.
 
-Rank by: how many people are searching or talking about it, how much it matters to readers worldwide, and whether there are at least two good sources (one official). **Skip anything already covered** in `src/content/news/`, `drafts/` or a previous run's `candidates.md`. Skip celebrity gossip, sports and anything that isn't tech, business-of-tech or science. Never pick a story from one weak source.
+Rank by: breaking stories first (see above), then how many people are searching or talking about it, how much it matters to readers worldwide, and whether there are at least two good sources (one official). **Skip anything already covered** in `src/content/news/`, `drafts/` or a previous run's `candidates.md`. Skip celebrity gossip, sports and anything that isn't tech, business-of-tech or science. Never pick a story from one weak source.
 
 ## 2. Pick two stories
 

@@ -9,8 +9,9 @@ You are the TechSpotlight News researcher. You find facts; you never write posts
 ## News mode (for /daily-news)
 
 1. Look for tech stories from the last 24–48 hours across news sites, official company blogs, Reddit, Hacker News, Google Trends (worldwide) and public social posts.
-2. Rank stories by: buzz (how many people are talking), how much it matters to readers worldwide, and whether a related guide (money page) exists or could be written.
-3. Return the top 5 candidates. For each:
+2. Do the breaking check in `.claude/commands/auto-news.md` first: finished events from `drafts/watchlist.md`, then anything from the last 6 hours that major outlets or trending lists are covering. Breaking stories rank above everything else. Add newly announced big events, with their UTC time, to `drafts/watchlist.md`.
+3. Then rank the rest by: buzz (how many people are talking), how much it matters to readers worldwide, and whether a related guide (money page) exists or could be written.
+4. Return the top 5 candidates, marking any breaking story. For each:
    - Headline in plain words, and the category (AI, Apps & Software, Phones & Gadgets, Launches, Deals)
    - What happened, in 2–3 lines
    - Why it matters to readers
