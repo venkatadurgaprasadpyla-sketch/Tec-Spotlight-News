@@ -73,3 +73,13 @@ There was no previous CLAUDE.md in this repository (it held only a README), so t
 - Don't run builds or tests repeatedly. Run once at the end unless something fails.
 - If a task is simple (small text edit, rename, quick fix), tell me I can switch to a cheaper model with /model.
 - When a task is finished or the chat is getting long, remind me to use /clear (new task) or /compact (same task).
+
+## Code map (Graphify, 2026-10-21)
+
+`graphify-out/` holds a map of the site's code, the `.claude/` pipeline and the plan docs, built by [Graphify](https://github.com/Graphify-Labs/graphify) (open source, offline, no AI cost). It saves tokens when looking around the code.
+
+- Before the first search or file read for a code question, run `graphify query "<question>"` (or `graphify explain "<name>"`, `graphify path "<A>" "<B>"`), then open only the lines it points to.
+- `graphify-out/GRAPH_REPORT.md` is the big-picture overview; read it only when a query isn't enough.
+- After changing code, run `graphify update .` and commit `graphify-out/` with the change.
+- Posts, drafts, research notes and images are left out of the map (`.graphifyignore`).
+- Graphify installs itself at the start of each session (`.claude/settings.json`); if it isn't there, carry on as normal.
