@@ -1,0 +1,9 @@
+# Keep the map to the site's code, pipeline and plan docs.
+# Posts, drafts and research notes change every news run and are read one at a time anyway.
+drafts/
+src/content/
+news-sources-kit/
+public/
+images/
+brand-kit/
+brand/
