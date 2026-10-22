@@ -12,6 +12,8 @@ The researcher adds big tech, company and science events here when they are anno
 - 2026-10-28 after US close (about 20:00 UTC): eBay Q3 2026 results (day after 9% layoff news). https://www.rte.ie/news/business/2026/1021/1596297-ebay-to-cut-over-1-000-global-jobs/
 - 2026-10-29 about 20:05 UTC: Intel Q3 2026 results (call 21:00 UTC, 2 p.m. PDT). https://www.intc.com/news-events/ir-calendar/detail/20261029-q3-2026-intel-corporation-earnings-conference-call
 
+- 2026-10-22 about 20:05 UTC: Western Digital fiscal Q1 2027 results (call 20:30 UTC). https://investor.wdc.com/
+
 ## Done
 
 - 2026-10-16 00:55 UTC: Tesla Roadster reveal, McGregor, Texas. Covered: src/content/news/new-tesla-roadster.md (written 16 Oct, published 17 Oct).

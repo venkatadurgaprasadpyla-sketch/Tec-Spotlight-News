@@ -25,3 +25,14 @@ Discovery: WebSearch (extended) only; Firecrawl out of credits, pages not opened
 6. **IBM Q3 2026: revenue up 5% to US$17.1 billion, software up 8% (Red Hat +11%), free-cash-flow outlook raised; shares slip after hours** (business; 21 Oct after US close). Official: https://newsroom.ibm.com/2026-10-21-IBM-RELEASES-THIRD-QUARTER-RESULTS ; https://www.cnbc.com/2026/10/21/ibm-q3-earnings-report-2026.html
 
 Also seen (not ranked): Perseverance beats Opportunity's off-world driving record (11 Oct, older; https://science.nasa.gov/blogs/perseverance-mars-rover/2026/10/12/nasas-perseverance-sets-off-world-record-for-total-distance-driven/); Bonn "young" stem cells from an 80-year-old's blood (ScienceDaily 20 Oct); Gemini Personal Intelligence comes to Android Auto (20 Oct); Amazon to invest over EUR 16 billion in Germany in 2027; Notion long-running agents.
+
+## Run 20:10 UTC (22 Oct)
+
+Discovery: WebSearch (extended) only; Firecrawl out of credits. Breaking check: no watchlist event finished since 10:10 UTC; nothing in the last 6 hours met the "3 major outlets" bar. Picked: SpaceX Q3 (carried over, official sources) and Barclays AI job cuts (official results today).
+
+1. **SpaceX Q3 2026 results** (business; PICKED). See 10:10 list.
+2. **Barclays to cut about 5,000 jobs, about 60% in support roles incl. developers, partly crediting AI; Q3 profit up 12%** (business; 22 Oct; PICKED). https://home.barclays/investor-relations/reports-and-events/financial-results/ ; https://www.cnbc.com/2026/10/22/barclays-ai-jobs-cuts.html
+3. **DeepSeek reportedly raises about US$15 billion led by CATL and Tencent, two days after US federal ban; STAR Market IPO prep** (ai/business; 22 Oct; reported only, no DeepSeek statement). https://techcrunch.com/2026/10/22/deepseek-reportedly-raises-15b-days-after-us-restrictions/ ; https://dealroom.co/news/164903-deepseek-doubles-round-to-15-billion-led-by-catl-and-tencent/
+4. **Nvidia DSX POD: containerised Vera Rubin "AI factory" (504 GPUs), setup in as little as 14 days, ships early 2027** (launches; GTC Berlin 21 Oct). https://nvidianews.nvidia.com/news/nvidia-introduces-dsx-pod-ai-factories-to-accelerate-europes-infrastructure-deployment ; https://www.servethehome.com/nvidia-gtc-berlin-2026-nvidia-intros-dsx-pods-and-more/
+5. **Walmart "Agent Gateway" lets ChatGPT, Gemini and Meta agents shop with spending limits** (ai; 21 Oct; no official page found). https://techcrunch.com/2026/10/21/while-amazon-blocks-ai-agents-walmart-rolls-out-the-welcome-mat/
+6. **ChatGPT ads expand to 26 more countries (89 total)** (ai; 21 Oct). https://www.cnbc.com/2026/10/21/openai-chatgpt-ads-26-countries.html
