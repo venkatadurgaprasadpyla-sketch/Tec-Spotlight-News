@@ -12,12 +12,12 @@ keywords:
 date: 2026-10-16
 category: launches
 draft: false
-image: "/images/posts/gta-6-launch-trailer-release-date/cover.jpg"
-imageAlt: "Coastal city skyline lit up at night over dark water, for a GTA 6 release date story (stock photo, not from the game)"
+image: "/images/posts/gta-6-launch-trailer-release-date/jason-lucia-motorbike.jpg"
+imageAlt: "GTA 6 leads Jason and Lucia escaping on a dirt bike as a police car and helicopter chase them through Vice City"
 imageCredit:
-  name: "Alain Garcia"
-  source: "Pexels"
-  url: "https://www.pexels.com/photo/illuminated-skyline-of-miami-at-night-19705160/"
+  name: "Rockstar Games"
+  source: "Rockstar Games"
+  url: "https://www.rockstargames.com/VI"
 summary:
   - "Rockstar posted the Grand Theft Auto VI Launch Trailer on 15 October; the game arrives on 19 November 2026 on PS5 and Xbox Series X|S."
   - "It costs US$79.99, £69.99 or ₹5,999 for the Standard Edition, pre-load starts on 12 November, and boxed copies hold only a download code."
@@ -76,6 +76,11 @@ Rockstar's post confirms the date. Pre-load, the early download that lets you pl
 
 The GTA 6 launch trailer debuts "Flower in a Hurricane", a new song by Justice, the French duo behind the game's score. Tame Impala, SZA and King Gizzard & The Lizard Wizard feature on the track. GameSpot and gHacks say it shows more of Jason and Lucia's relationship and plenty of helicopter action. The story is set in Vice City, in Rockstar's fictional state of Leonida.
 
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin:1.5rem 0;border-radius:8px"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" src="https://www.youtube-nocookie.com/embed/rz1B4B2yBZY" title="Grand Theft Auto VI Launch Trailer video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
+![The giant Vice City letters sign at sunset in GTA 6, with a jet flying low overhead](/images/posts/gta-6-launch-trailer-release-date/vice-city-sign.jpg)
+*Vice City, where Grand Theft Auto VI is set. Image: Rockstar Games*
+
 ## Two delays, no PC date and no online mode yet
 
 Take-Two once aimed for autumn 2025. In May 2025, Rockstar moved the game to 26 May 2026, and six months later to 19 November. Each time it apologised. The second time, it said the extra months would help it finish the game "with the level of polish you have come to expect and deserve".
@@ -107,6 +112,9 @@ Rated M (Mature 17+) in the US and PEGI 18 in the UK, it is not for children.
 ## Rockstar's patience looks wise, but players are paying for the wait
 
 There is a fair case for Rockstar. Delays frustrate people, but a studio that apologises and then ships a polished game usually earns trust back. A fixed pre-load date and a final trailer five weeks out suggest, on balance, that 19 November will hold. That is our reading, not a promise.
+
+![Lucia holding a pistol against Jason's chest on a Vice City waterfront in GTA 6, with a police boat and helicopter behind them](/images/posts/gta-6-launch-trailer-release-date/jason-lucia-waterfront.jpg)
+*Lucia and Jason, the two lead characters. Image: Rockstar Games*
 
 The costs are real too. US$79.99 is a lot for a standard edition, and Ultimate adds another US$20. PC players must wait with no official date. A disc-free box means a big download for everyone.
 
