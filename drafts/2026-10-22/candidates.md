@@ -1,0 +1,14 @@
+# News candidates, 22 October 2026
+
+## Run 05:10 UTC (22 Oct)
+
+Discovery: WebSearch (extended) only; Firecrawl out of credits, pages not opened. Runs were paused 17 to 22 Oct. Watchlist had no open events; Japan's MMX launch (listed in 17 Oct candidates) has finished and is not covered.
+
+1. **BREAKING: Tesla Q3 2026: revenue flat at about US$28.0 billion, net profit down 43% to US$787 million, R&D up 69% on Optimus and Cybercab; Optimus production started in Fremont** (business; results 21 Oct after US close, call 21:30 UTC). Official: https://www.sec.gov/Archives/edgar/data/0001318605/000162828026066738/exhibit9914.htm ; https://electrek.co/2026/10/21/tesla-tsla-q3-2026-financial-results/
+2. **BREAKING: Meta Q3 2026: revenue up 26% to US$64.6 billion, but a US$9.89 billion teen mental-health settlement cut operating profit 37%; new non-voting Class C shares to fund AI spending** (business; 21 Oct after US close). Official: https://www.sec.gov/Archives/edgar/data/0001326801/000162828026066700/meta-09302026xexhibit991.htm ; https://fortune.com/2026/10/21/meta-q3-earnings-mark-zuckerberg-capex-muse/
+3. **PHP2Shell: PHP ships emergency fixes for two critical flaws (CVE-2026-109618/109619, CVSS 9.2) that let attackers take over web servers; Cloudflare sees attack traffic. Update to 8.5.12 / 8.4.27 / 8.3.36 / 8.2.35** (apps-software; security; 21 Oct 13:30 UTC). Official: https://cert.europa.eu/publications/security-advisories/2026-018/ ; https://www.helpnetsecurity.com/2026/10/21/php2shell-php-vulnerabilities-patched-cve-2026-109618-cve-2026-109619/
+4. **OpenAI's frontier models (GPT-6 Astra, GPT-6.1 Sol, GPT-6 Luna) and Codex come to Google Cloud's Model Garden, private preview first** (ai; 21 Oct). Official: https://openai.com/index/openai-models-google-cloud/ ; https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers
+5. **Japan's MMX launches on H3 to bring back soil from Mars' moon Phobos (arrival Aug 2027, return 2031)** (science; launched 19 Oct 19:41 UTC; finished event, not yet covered). Official: https://global.jaxa.jp/press/2026/10/20261020-1_e.html ; https://www.nasaspaceflight.com/2026/10/mmx-launch/
+6. **Samsung and SK Hynix upgrade their China memory plants to more advanced NAND; shares up about 6%** (business; chips; 21 Oct; Reuters exclusive, no company statement yet, companies say it follows US rules). https://www.cnbc.com/2026/10/21/samsung-sk-hynix-upgrading-china-plants-to-make-more-advanced-chips-people-say-reuters.html ; https://www.thestreet.com/technology/samsung-sk-hynix-china-plant-upgrades-us-export-curbs
+
+Also seen (not ranked): Apple "Pro and tell" event set for 28 Oct (watchlist); Anthropic Claude Duet waitlist (skipped, Anthropic product); EA closes a long-running RPG studio; Bonn study turns an 80-year-old's blood cells into "young" neural stem cells; Nature: positron trapped for months for magnetic-moment measurement.
