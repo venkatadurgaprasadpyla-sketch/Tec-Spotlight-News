@@ -1,4 +1,4 @@
 {
   "_readme": "Switch for the live site (main). false = the live address shows only a private 'coming soon' page, hidden from Google. true = the full site is live. Previews always show the full site.",
-  "online": false
+  "online": true
 }
