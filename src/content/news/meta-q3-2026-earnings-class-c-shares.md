@@ -11,7 +11,7 @@ keywords:
   - "meta earnings settlement charge"
 date: 2026-10-22
 category: business
-draft: true
+draft: false
 image: "/images/posts/meta-q3-2026-earnings-class-c-shares/cover.jpg"
 imageAlt: "TechSpotlight title card: Meta Q3 2026 earnings: revenue up 26% as a teen settlement charge and new Class C shares arrive"
 imageCredit:

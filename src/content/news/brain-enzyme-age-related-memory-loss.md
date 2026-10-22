@@ -11,7 +11,7 @@ keywords:
   - "alzheimer's cognitive resilience"
 date: 2026-10-17
 category: science
-draft: true
+draft: false
 image: "/images/posts/brain-enzyme-age-related-memory-loss/cover.jpg"
 imageAlt: "TechSpotlight title card: A brain enzyme may help memory hold up in old age, mouse study suggests"
 imageCredit:

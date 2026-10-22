@@ -11,7 +11,7 @@ keywords:
   - "how to report an app on the app store"
 date: 2026-10-17
 category: apps-software
-draft: true
+draft: false
 image: "/images/posts/apple-app-store-nudify-ai-rules/cover.jpg"
 imageAlt: "TechSpotlight title card: Apple's new App Store rules take aim at AI nudify apps and hidden features"
 imageCredit:

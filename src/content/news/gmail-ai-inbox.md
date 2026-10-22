@@ -11,7 +11,7 @@ keywords:
   - "gmail live"
 date: 2026-10-17
 category: apps-software
-draft: true
+draft: false
 image: "/images/posts/gmail-ai-inbox/cover.jpg"
 imageAlt: "TechSpotlight title card: Gmail's AI Inbox reaches US Workspace accounts, with no admin off switch"
 imageCredit:
