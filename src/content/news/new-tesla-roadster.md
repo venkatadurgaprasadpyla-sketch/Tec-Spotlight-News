@@ -12,12 +12,12 @@ keywords:
 date: 2026-10-16
 category: launches
 draft: false
-image: "/images/posts/new-tesla-roadster/cover.jpg"
-imageAlt: "An empty road in low sun beside a long freight train (stock photo, not the new Tesla Roadster)"
+image: "/images/posts/new-tesla-roadster/roadster-doors-open.jpg"
+imageAlt: "The new white Tesla Roadster with both doors open and a large rear wing, in a dark studio"
 imageCredit:
-  name: "Ricardo Resende"
-  source: "Unsplash"
-  url: "https://unsplash.com/photos/the-sun-is-shining-down-on-the-empty-road-EuWQGebGINY"
+  name: "Tesla"
+  source: "Tesla"
+  url: "https://www.tesla.com/roadster"
 summary:
   - "Tesla revealed a new Roadster in three versions: Performance for the road, Thrust for the track, and Rocket, which Tesla says can fly."
   - "A remote-controlled car with nobody aboard flew off a ramp in the demo, and a timer showed 0 to 60 mph in 0.81 seconds. Neither was independently tested."
@@ -54,11 +54,18 @@ Tesla's Roadster page lists three versions. Performance is the two-seat road car
 
 The jets, called cold-gas thrusters, push the car by releasing stored high-pressure gas. Fans pull air from under the car to create suction that Tesla says can even hold it upside down.
 
+![The back of the new Tesla Roadster with its cold-gas thrusters firing and white gas clouds below](/images/posts/new-tesla-roadster/roadster-thrusters.jpg)
+*The cold-gas thrusters at the back of the Roadster. Image: Tesla*
+
 At the reveal, at SpaceX's test site near Waco, the demo timer showed 0 to 60 mph in 0.81 seconds, Road & Track and MotorTrend report. Nobody measured that run independently, so treat the Tesla Roadster 0-60 figure as Tesla's own claim. On stage, Tesla claimed a top speed of over 230 mph, and Musk said production would start in 2028.
+
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin:1.5rem 0;border-radius:8px"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" src="https://www.youtube-nocookie.com/embed/cvKIR-c1SsU" title="Tesla Roadster reveal video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
 ## Nobody was aboard the flying Roadster, and the road rules are unclear
 
 In the main stunt, the car clung upside down to a tall ramp, then left it and landed. Edmunds reports it was remote-controlled, with nobody inside, and that it bounced on landing. For now, the Tesla Roadster flying car is a demonstration, not something a person has flown.
+
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin:1.5rem 0;border-radius:8px"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" src="https://www.youtube-nocookie.com/embed/7p5LxFdc-Qg" title="Tesla Roadster flying demo video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
 Is it street legal? Musk said he was "not necessarily sure it's legal in all jurisdictions", but that someone will be able to own such a car, InsideEVs reports. Asked again by an audience member later, he replied: "Depends on your street." Tesla says the Rocket is not available in all regions.
 
