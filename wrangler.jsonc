@@ -8,9 +8,26 @@
   "build": {
     "command": "npm run build"
   },
+  // Newsletter: worker/index.js handles /api/subscribe and the 30-minute
+  // sending job. Static files are still served straight from ./dist.
+  "main": "worker/index.js",
   "assets": {
     "directory": "./dist",
+    "binding": "ASSETS",
     "not_found_handling": "404-page"
+  },
+  "kv_namespaces": [{ "binding": "NEWSLETTER", "id": "e70ad96e93794aa28f07d008f4ac5508" }],
+  "triggers": { "crons": ["*/30 * * * *"] },
+  // Sending stays off until NEWSLETTER_ENABLED is "true" (after Pyla approves).
+  // EMAIL_API_KEY is a secret set in the Cloudflare dashboard, never here.
+  "vars": {
+    "EMAIL_PROVIDER": "kit",
+    "KIT_FORM_ID": "10087263",
+    "KIT_TEST_TAG_ID": "24946895",
+    "SITE_URL": "https://tec-spotlight-news.techspotlightid-official.workers.dev",
+    "NEWSLETTER_ENABLED": "false",
+    "NEWSLETTER_LIVE": "false",
+    "TEST_EMAIL": "techspotlightid.official@gmail.com"
   },
   // Needed for preview links (`wrangler preview`). Empty because previews
   // use the same settings as the live site.
