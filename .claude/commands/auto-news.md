@@ -10,15 +10,16 @@ Before writing anything, make sure the site is healthy, and fix what you can:
 
 - `git pull origin claude/project-thread-t0ejfd`, then `npm run build`, `npm run check` and `npm run seo-check`. Every post must build and pass (GATE PASSED).
 - Check the latest Cloudflare preview build on PR #1 succeeded (the Cloudflare bot comment). If it failed, read the log, fix it and push before anything else.
-- Spot-check the source links of the newest drafts with Firecrawl; replace or flag dead ones.
+- Spot-check the source links of the newest drafts with curl (or Firecrawl); replace or flag dead ones. Also open the live site's home page and newest story and check they load.
 - Fix small problems yourself (broken build, failing check, dead link, oversized image). Anything that needs Pyla (money, publishing, deleting) goes in the message to Pyla instead.
 
 ## If Firecrawl is out of credits (Pyla's rule, 2026-10-17)
 
 Test one cheap Firecrawl search first. If it says the credits ran out, **don't stop**: use Claude's own web search (`WebSearch`, `mode: "extended"`) instead, everywhere this file says Firecrawl.
 
-- **Finding stories and facts:** WebSearch for the last few hours' news, the trending lists and each story's facts. Other sites can't be opened directly here, so every key fact (numbers, dates, names, quotes) must be confirmed by **two independent results**, one of them the official source. Anything only one result supports is cut or labelled.
-- **Gates:** the auditor, editor-in-chief and seo-cto all use WebSearch for their checks. Keyword ideas come from WebSearch (related and "people also ask" searches) when Google suggestions can't be read.
+- **Direct web access (Pyla opened it, 2026-10-23):** pages can now be read directly with `WebFetch` or `curl`: official sources, company newsrooms, Hacker News (`https://hacker-news.firebaseio.com/v0/topstories.json`), Google Trends (`https://trends.google.com/trending/rss?geo=US`), Google suggestions (`https://suggestqueries.google.com/complete/search?client=firefox&q=<phrase>`) and the live site itself. Use these before Firecrawl. Some news sites still refuse (for example Reuters); search results are enough for those.
+- **Finding stories and facts:** WebSearch for the last few hours' news, the trending lists and each story's facts, and open the official source directly to confirm. Every key fact (numbers, dates, names, quotes) must be confirmed by **two independent results**, one of them the official source. Anything only one result supports is cut or labelled.
+- **Gates:** the auditor, editor-in-chief and seo-cto all use WebSearch for their checks. Keyword ideas come from Google suggestions read directly, plus WebSearch (related and "people also ask" searches).
 - **Covers (Pyla's rule, 2026-10-23):** image sites can now be downloaded directly with curl. Pick the cover in this order:
   1. **Official press photo** from the company's or agency's own newsroom or media page, for a story about that company or agency (for example Apple Newsroom, Samsung Newsroom, Microsoft Source, NASA, ESA, the company's official Flickr). Use it only if the page offers it for press or public use. Never use photos credited to news agencies or photo libraries (Reuters, AP, AFP, Getty and similar), never embargoed images, and never images from news sites. Credit: `name: "<Company> Newsroom"` (or the photographer if the page names one), `source: "Press photo"` (`"Public domain"` for NASA), `url:` the page the photo came from.
   2. **Free stock photo** from Unsplash or Pexels (never Unsplash+), crediting the photographer.
@@ -35,7 +36,7 @@ Test one cheap Firecrawl search first. If it says the credits ran out, **don't s
 - **Priority:** a breaking story always takes the first slot, and two breaking stories take both. It still goes through every gate; speed never skips a check.
 - **Coming up:** when the researcher sees a big event announced for later (date and time), add it to `drafts/watchlist.md` with the time in UTC, so the first run after it ends covers it.
 
-Use the **researcher** agent (news mode). Cover all of these, using Firecrawl (direct web access is blocked here):
+Use the **researcher** agent (news mode). Cover all of these, using direct web access first and Firecrawl only if it has credits:
 
 - **Technology:** AI, apps and software, phones and gadgets, launches, security, chips, internet and platforms.
 - **Big companies:** news from major Fortune 500 and global tech companies (Apple, Microsoft, Alphabet/Google, Amazon, Meta, Nvidia, Tesla, Samsung, IBM, Intel, Oracle, Salesforce and others): launches, results, deals, layoffs, lawsuits, regulation.
