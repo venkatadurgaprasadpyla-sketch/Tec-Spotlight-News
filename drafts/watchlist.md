@@ -11,8 +11,7 @@ The researcher adds big tech, company and science events here when they are anno
 - 2026-11-02 21:30 UTC: Apple Q4 2026 results (call 22:00 UTC; US clocks change 1 Nov). https://www.macrumors.com/2026/10/06/apple-q4-2026-earnings-nov-2/
 - 2026-10-28 after US close (about 20:00 UTC): eBay Q3 2026 results (day after 9% layoff news). https://www.rte.ie/news/business/2026/1021/1596297-ebay-to-cut-over-1-000-global-jobs/
 - 2026-10-29 about 20:05 UTC: Intel Q3 2026 results (call 21:00 UTC, 2 p.m. PDT). https://www.intc.com/news-events/ir-calendar/detail/20261029-q3-2026-intel-corporation-earnings-conference-call
-
-- 2026-10-22 about 20:05 UTC: Western Digital fiscal Q1 2027 results (call 20:30 UTC). https://investor.wdc.com/
+- 2026-11-23: Arc mobile apps lose AI features and sign-in. 2026-12-22: Arc desktop shutdown (follow-up only if news).
 
 ## Done
 
@@ -20,3 +19,4 @@ The researcher adds big tech, company and science events here when they are anno
 - 2026-10-21 ~20:00 UTC: Tesla Q3 results. Covered: src/content/news/tesla-q3-2026-earnings.md (22 Oct).
 - 2026-10-21 ~20:00 UTC: Meta Q3 results. Covered: src/content/news/meta-q3-2026-earnings-class-c-shares.md (22 Oct).
 - 2026-10-19 19:41 UTC: Japan MMX launch. Covered: src/content/news/japan-mmx-phobos-launch.md (22 Oct, draft).
+- 2026-10-22 ~20:01 UTC: Western Digital Q1 FY27 results. Covered: src/content/news/western-digital-q1-fy27-earnings.md (23 Oct, draft).
