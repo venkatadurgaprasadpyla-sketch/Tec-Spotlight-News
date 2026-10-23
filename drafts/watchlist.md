@@ -14,6 +14,7 @@ The researcher adds big tech, company and science events here when they are anno
 - 2026-11-23: Arc mobile apps lose AI features and sign-in. 2026-12-22: Arc desktop shutdown (follow-up only if news).
 - About 28 Oct (reported, time unknown): SK hynix Q3 results.
 - About 29 Oct (reported, time unknown): Samsung Electronics Q3 results.
+- By 2026-11-04 (time unknown): Moonshot AI to publish Kimi K3.1 Pro open weights (follow-up only if news). https://www.kimi.ai/blog/kimi-k3-1-pro
 
 ## Done
 
