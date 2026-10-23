@@ -22,7 +22,8 @@
   // EMAIL_API_KEY is a secret set in the Cloudflare dashboard, never here.
   "vars": {
     "EMAIL_PROVIDER": "kit",
-    "KIT_FORM_ID": "",
+    "KIT_FORM_ID": "10087263",
+    "KIT_TEST_TAG_ID": "24946895",
     "SITE_URL": "https://tec-spotlight-news.techspotlightid-official.workers.dev",
     "NEWSLETTER_ENABLED": "false",
     "NEWSLETTER_LIVE": "false",

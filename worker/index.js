@@ -15,6 +15,7 @@
 //   EMAIL_PROVIDER   "kit" (default) or "brevo"
 //   EMAIL_API_KEY    secret key from the email service
 //   KIT_FORM_ID      Kit only: the sign-up form (double opt-in is set there)
+//   KIT_TEST_TAG_ID  Kit only: test sends go to subscribers with this tag
 //   BREVO_LIST_ID, BREVO_DOI_TEMPLATE_ID, SENDER_EMAIL   Brevo only
 //   SITE_URL         live site address, e.g. https://techspotlight.news
 //   NEWSLETTER_LIVE  "true" sends to all subscribers; anything else sends
@@ -157,8 +158,9 @@ function emailHtml(batch, env) {
     </td></tr>`
     )
     .join('');
-  return `<!doctype html><html><body style="margin:0;background:#f6f5fb">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="padding:24px 12px">
+  // Body only: Kit's Classic template wraps it and adds the unsubscribe link
+  // and postal address. Brevo wraps it in brevo().send below.
+  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="padding:24px 12px">
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;background:#fff;border-radius:12px;padding:24px">
     <tr><td style="font:700 18px monospace;color:#221c5a;padding:0 0 20px">&gt; tech_spotlight</td></tr>
     ${cards}
@@ -166,7 +168,7 @@ function emailHtml(batch, env) {
       You get this because you subscribed at ${esc(env.SITE_URL.replace('https://', ''))}.
       The unsubscribe link and our postal address are added below by our email service.
     </td></tr>
-  </table></td></tr></table></body></html>`;
+  </table></td></tr></table>`;
 }
 
 // ---------- Email services ----------
@@ -194,16 +196,14 @@ function kit(env) {
       await call(`/forms/${env.KIT_FORM_ID}/subscribers`, { email_address: email });
     },
     async send(subject, html) {
+      // Test mode sends only to subscribers with the "newsletter-test" tag.
       const live = env.NEWSLETTER_LIVE === 'true';
-      if (!live) {
-        console.log('test mode: Kit has no single-address send; logging instead', subject);
-        return;
-      }
       await call('/broadcasts', {
-        subject,
+        subject: live ? subject : `[TEST] ${subject}`,
         content: html,
         public: false,
         send_at: new Date().toISOString(),
+        ...(live ? {} : { subscriber_filter: [{ all: [{ type: 'tag', ids: [Number(env.KIT_TEST_TAG_ID)] }] }] }),
       });
     },
   };
@@ -228,7 +228,8 @@ function brevo(env) {
         redirectionUrl: `${env.SITE_URL}/newsletter/?confirmed=1`,
       });
     },
-    async send(subject, html) {
+    async send(subject, body) {
+      const html = `<!doctype html><html><body style="margin:0;background:#f6f5fb">${body}<p style="text-align:center;font:12px Arial,sans-serif;color:#5b5694"><a href="{{ unsubscribe }}">Unsubscribe</a></p></body></html>`;
       const sender = { name: 'TechSpotlight News', email: env.SENDER_EMAIL };
       if (env.NEWSLETTER_LIVE !== 'true') {
         await call('/smtp/email', { sender, to: [{ email: env.TEST_EMAIL }], subject: `[TEST] ${subject}`, htmlContent: html });
