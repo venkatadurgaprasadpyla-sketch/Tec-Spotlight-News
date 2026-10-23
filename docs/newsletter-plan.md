@@ -31,7 +31,7 @@ Nothing goes live until Pyla says "approved".
 
 | Service | Free plan (third-party reports, Oct 2026; to re-check on their site) | Fit |
 |---|---|---|
-| **Kit** (recommended) | Up to 10,000 subscribers, no cap on emails, Kit logo in emails | Best for growth if its free plan lets our job send by code (I'll confirm before building) |
+| **Kit** (Pyla's choice, 23 Oct) | Up to 10,000 subscribers, no cap on emails, Kit logo in emails | Best for growth if its free plan lets our job send by code (I'll confirm before building) |
 | Brevo | 300 emails a day | At up to 5 emails a day, that covers only about 60 subscribers |
 | MailerLite | Cut in 2026 to about 250 subscribers and 2,500 emails a month | Too small |
 
