@@ -12,6 +12,8 @@ The researcher adds big tech, company and science events here when they are anno
 - 2026-10-28 after US close (about 20:00 UTC): eBay Q3 2026 results (day after 9% layoff news). https://www.rte.ie/news/business/2026/1021/1596297-ebay-to-cut-over-1-000-global-jobs/
 - 2026-10-29 about 20:05 UTC: Intel Q3 2026 results (call 21:00 UTC, 2 p.m. PDT). https://www.intc.com/news-events/ir-calendar/detail/20261029-q3-2026-intel-corporation-earnings-conference-call
 - 2026-11-23: Arc mobile apps lose AI features and sign-in. 2026-12-22: Arc desktop shutdown (follow-up only if news).
+- About 28 Oct (reported, time unknown): SK hynix Q3 results.
+- About 29 Oct (reported, time unknown): Samsung Electronics Q3 results.
 
 ## Done
 

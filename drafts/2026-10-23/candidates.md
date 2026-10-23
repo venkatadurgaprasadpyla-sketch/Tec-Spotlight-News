@@ -10,3 +10,14 @@ Discovery: WebSearch (extended) only; Firecrawl out of credits. Breaking check: 
 4. **Microsoft: China-aligned Storm-0940 used AI agents to try ~2,250 cloud tenants via ConnectWise breach** (ai/security; 21 Oct; Microsoft blog URL still needed). https://therecord.media/china-cyber-connectwise-ai ; https://www.theregister.com/security/2026/10/22/microsoft-says-connectwise-breach-let-chinese-spies-loose-on-2250-cloud-tenants/5304687
 5. **Taiwan's first chip-industry strike: small Micron union walkout over AI-memory profit share** (business; 22 Oct). https://focustaiwan.tw/business/202610220016 ; https://www.france24.com/en/live-news/20261022-handful-of-micron-workers-strike-in-taiwan
 Alternates: DeepSeek US$15bn raise (reported); Nvidia 104-qubit quantum simulation (19 Oct).
+
+## Run 10:10 UTC (23 Oct)
+
+Discovery: WebSearch (extended) only. Breaking check: no watchlist event finished; two stories broke in the last 6 hours, so both take the slots (rule). Picked: SK hynix halts Solidigm IPO; iPhone Duo store sales begin (launch-day follow-up to iphone-duo-pre-order).
+
+1. **BREAKING: SK hynix halts plan to list US unit Solidigm (IPO reported at up to US$15bn)** (business; 23 Oct; PICKED). https://news.skhynix.com/en/fact-12/ ; https://www.cnbc.com/2026/10/23/sk-hynix-solidigm-ipo-.html ; https://www.koreaherald.com/article/10912278
+2. **BREAKING: iPhone Duo goes on sale in stores, US$1,999, little walk-in stock, online deliveries slip to January** (phones-gadgets; 23 Oct; PICKED). https://www.dawn.com/news/2039239/apple-launches-into-foldable-market-as-iphone-duo-sales-begin ; https://appleinsider.com/articles/26/10/21/there-will-be-extremely-limited-iphone-duo-stock-in-store-on-friday
+3. **Microsoft MAI-DxO in Science: 83% of 304 hard written cases vs 36% for generalist doctors** (ai/science; 22 Oct; official page needed). https://www.technology.org/2026/10/23/microsoft-mai-dxo-science-study-83-percent-diagnosis-doctors/ ; https://www.medicaleconomics.com/view/microsoft-says-its-ai-tool-outperforms-physicians-on-complex-diagnostic-challenges
+4. **1Password for Agents: AI assistants sign in without seeing passwords; waitlist** (apps-software; 22 Oct). https://www.morningstar.com/news/business-wire/20261022810032/1password-for-agents-launches-as-the-trust-layer-for-personal-ai-agents ; https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/
+5. **Nvidia Minerva: AI data-centre monitoring tool; IBM, Jio, Tesla to use it** (launches; 22 Oct). https://blogs.nvidia.com/gtc-berlin-2026-news/ ; https://thenextweb.com/news/nvidia-minerva-aiops-ai-factory-monitoring
+Alternates: OpenAI reported US$30bn raise at US$1.25tn (rumour, OpenAI declined comment).
