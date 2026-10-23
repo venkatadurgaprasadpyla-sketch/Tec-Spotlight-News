@@ -1,4 +1,5 @@
-// TechSpotlight newsletter worker (Phase A: written, NOT switched on yet).
+// TechSpotlight newsletter worker. Sign-up needs EMAIL_API_KEY; sending needs
+// NEWSLETTER_ENABLED="true". Both stay off until Pyla approves.
 //
 // It does two jobs next to the static site:
 //   1. POST /api/subscribe: adds a reader to the email service, which sends a
@@ -8,9 +9,7 @@
 //      leftover story is sent on its own, so every story goes out the day it
 //      is published. Drafts never reach the live feed, so they are never sent.
 //
-// To switch it on (Phase B, after Pyla says "approved"), see
-// docs/newsletter-plan.md: add `main`, the cron trigger and the KV binding to
-// wrangler.jsonc, and set the secrets in Cloudflare.
+// Settings live in wrangler.jsonc (vars, KV, cron) and Cloudflare secrets.
 //
 // Settings (Cloudflare variables and secrets):
 //   EMAIL_PROVIDER   "kit" (default) or "brevo"
@@ -22,6 +21,7 @@
 //                    only to TEST_EMAIL (Pyla's address) for checking
 //   TEST_EMAIL       where test sends go
 //   NEWSLETTER       KV namespace that remembers which stories were sent
+//   NEWSLETTER_ENABLED  "true" turns the 30-minute sending job on
 
 const MAX_EMAILS_PER_DAY = 6;
 const LEFTOVER_HOUR_UTC = 21;
@@ -38,6 +38,8 @@ export default {
   },
 
   async scheduled(_event, env, ctx) {
+    // Off until Pyla approves: set NEWSLETTER_ENABLED to "true" in Cloudflare.
+    if (env.NEWSLETTER_ENABLED !== 'true' || !env.EMAIL_API_KEY) return;
     ctx.waitUntil(sendNewStories(env));
   },
 };
@@ -49,6 +51,7 @@ async function subscribe(request, env) {
   const email = String(form.get('email') || '').trim().toLowerCase();
   // Bots fill the hidden "website" field; people don't see it.
   if (form.get('website')) return json({ ok: true });
+  if (!env.EMAIL_API_KEY) return json({ ok: false, error: 'Sign-up opens soon.' }, 503);
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email) || email.length > 254) {
     return json({ ok: false, error: 'Please enter a valid email address.' }, 400);
   }
