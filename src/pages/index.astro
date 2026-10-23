@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PostList from '../components/PostList.astro';
 import AdSlot from '../components/AdSlot.astro';
 import PromoCards from '../components/PromoCards.astro';
+import NewsletterSignup from '../components/NewsletterSignup.astro';
 import { pickPromos } from '../lib/promos.mjs';
 import { getNews, getGuides } from '../data/posts';
 import { SITE } from '../data/site';
@@ -56,6 +57,8 @@ const website = {
       <a href="/news/">All news</a>
     </div>
     <PostList items={news} empty="The first news briefs are on their way." />
+
+    <NewsletterSignup />
 
     <PromoCards items={promos} />
 

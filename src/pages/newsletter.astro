@@ -1,0 +1,22 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import NewsletterSignup from '../components/NewsletterSignup.astro';
+import { SITE } from '../data/site';
+import { SHOW_DRAFTS } from '../data/posts';
+const open = SITE.newsletterEnabled || SHOW_DRAFTS;
+---
+<PageLayout title="Newsletter" description="Get TechSpotlight's short, honest tech stories by email, two at a time, the day they are published.">
+  {open ? (
+    <>
+      <p>Get our short, honest tech stories in your inbox the day they are published. Each email carries two stories: the headline, a three-line summary and a link to the full story.</p>
+      <ul>
+        <li>Two stories per email, only stories that are published on the site.</li>
+        <li>No spam and no selling your address.</li>
+        <li>One click to unsubscribe, any time.</li>
+      </ul>
+      <NewsletterSignup heading="Subscribe" />
+    </>
+  ) : (
+    <p>The newsletter is coming soon. Meanwhile, you can follow new stories with our <a href="/rss.xml">RSS feed</a>.</p>
+  )}
+</PageLayout>

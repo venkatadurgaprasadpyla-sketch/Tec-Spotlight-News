@@ -5,6 +5,7 @@ import AffiliateButtons from '../components/AffiliateButtons.astro';
 import ShopButtons from '../components/ShopButtons.astro';
 import AdSlot from '../components/AdSlot.astro';
 import PromoCards from '../components/PromoCards.astro';
+import NewsletterSignup from '../components/NewsletterSignup.astro';
 import { pickPromos } from '../lib/promos.mjs';
 import { SITE } from '../data/site';
 import { formatDate } from '../data/posts';
@@ -129,6 +130,8 @@ const breadcrumbs = {
     </div>
 
     <AdSlot slot="article-end" />
+
+    <NewsletterSignup heading="Liked this? Get the next two stories by email" />
 
     {p.shop && <ShopButtons {...p.shop} />}
     <AffiliateButtons tools={p.tools} />

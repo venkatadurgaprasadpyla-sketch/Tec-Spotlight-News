@@ -11,6 +11,9 @@ export const SITE = {
   // Ads stay off until the AdSense application is approved.
   adsEnabled: false,
   adsenseClient: '',
+  // Newsletter sign-up boxes stay off on the live site until Pyla approves
+  // the newsletter and the email service is set up. Previews always show them.
+  newsletterEnabled: false,
 };
 
 export const NEWS_CATEGORIES = [

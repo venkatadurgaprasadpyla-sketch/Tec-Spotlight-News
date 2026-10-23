@@ -1,9 +1,11 @@
 ---
 import { SITE, NEWS_CATEGORIES, GUIDE_CATEGORIES } from '../data/site';
+import NewsletterSignup from './NewsletterSignup.astro';
 const year = new Date().getFullYear();
 ---
 <footer class="site-footer">
   <div class="container">
+    <NewsletterSignup variant="footer" />
     <div class="cols">
       <div class="brand">
         <img src="/brand/techspotlight-wordmark-on-dark.svg" alt="TechSpotlight News" width="200" height="29" loading="lazy" />

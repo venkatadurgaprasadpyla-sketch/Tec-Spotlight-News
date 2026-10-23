@@ -1,19 +1,29 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import { SITE } from '../data/site';
+import { SHOW_DRAFTS } from '../data/posts';
+// The newsletter wording shows only once the newsletter is switched on.
+const newsletter = SITE.newsletterEnabled || SHOW_DRAFTS;
 ---
 <PageLayout title="Privacy Policy" description="What information TechSpotlight News collects, why, and your choices." updated="14 October 2026">
   <p>This policy explains what happens to your information when you visit {SITE.url.replace('https://', '')}. The short version: I collect as little as possible, and I don't sell anything about you.</p>
 
   <h2>What I collect</h2>
   <ul>
-    <li><strong>No accounts, no sign-ups.</strong> You can read everything without giving me any personal details.</li>
+    {newsletter ? (
+      <li><strong>Newsletter (optional).</strong> If you subscribe, I keep your email address so I can send you new stories, two at a time. You confirm by email first, every newsletter has a one-click unsubscribe link, and your address is never sold or shared for anyone else's marketing. You can read everything without subscribing.</li>
+    ) : (
+      <li><strong>No accounts, no sign-ups.</strong> You can read everything without giving me any personal details.</li>
+    )}
     <li><strong>Messages you send.</strong> If you email me, I'll have your email address and message, and use them only to reply.</li>
   </ul>
 
   <h2>What other services see</h2>
   <ul>
     <li><strong>Hosting (Cloudflare).</strong> The site runs on Cloudflare, which processes basic technical data such as your IP address to deliver pages and protect the site from attacks. Cloudflare also tells the page which country you're in, so I can show the right shop links (for example Amazon.in in India, Amazon.ae in the UAE). This country check happens in your browser and isn't stored by me.</li>
+    {newsletter && (
+      <li><strong>Email service.</strong> Newsletter addresses are stored and emails are sent by my email service provider, which may record whether an email was opened or a link was clicked, so I can see what readers find useful.</li>
+    )}
     <li><strong>Affiliate partners.</strong> When you click an affiliate link, the partner (for example a software company, PartnerStack, Amazon or Flipkart) may set cookies to know you came from this site. Their own privacy policies apply once you're on their site.</li>
     <li><strong>Ads (future).</strong> If I turn on Google AdSense, Google may use cookies to show ads. I'll update this page and ask for consent where the law requires it before that happens.</li>
   </ul>

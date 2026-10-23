@@ -1,0 +1,111 @@
+---
+// Newsletter sign-up box. Shows on the live site only once
+// SITE.newsletterEnabled is switched on; preview links always show it.
+// The form posts to /api/subscribe (worker/index.js), which asks the email
+// service to send a "confirm your email" message (double opt-in).
+import { SITE } from '../data/site';
+import { SHOW_DRAFTS } from '../data/posts';
+interface Props {
+  variant?: 'box' | 'footer';
+  heading?: string;
+}
+const { variant = 'box', heading = 'Get the next two stories by email' } = Astro.props;
+const show = SITE.newsletterEnabled || SHOW_DRAFTS;
+---
+{show && (
+  <section class={`newsletter newsletter-${variant}`} aria-label="Newsletter sign-up">
+    <h2>{heading}</h2>
+    <p>Two honest tech stories at a time, the day they are published. No spam, leave any time.</p>
+    <form class="nl-form" action="/api/subscribe" method="post">
+      <label class="sr-only" for={`nl-email-${variant}`}>Email address</label>
+      <input id={`nl-email-${variant}`} type="email" name="email" required placeholder="you@example.com" autocomplete="email" />
+      <input class="nl-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <button class="btn" type="submit">Subscribe</button>
+    </form>
+    <p class="nl-msg" role="status" aria-live="polite"></p>
+    <p class="nl-small">We'll email you once to confirm. See our <a href="/privacy-policy/">privacy policy</a>.</p>
+  </section>
+)}
+
+<script>
+  for (const form of document.querySelectorAll<HTMLFormElement>('.nl-form')) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const msg = form.parentElement?.querySelector('.nl-msg');
+      const btn = form.querySelector('button');
+      if (btn) btn.disabled = true;
+      try {
+        const res = await fetch(form.action, { method: 'POST', body: new FormData(form) });
+        if (!res.ok) throw new Error(String(res.status));
+        if (msg) msg.textContent = 'Almost done: check your inbox and tap the link to confirm.';
+        form.reset();
+      } catch {
+        if (msg) msg.textContent = 'Sign-up opens soon. Please try again later.';
+      } finally {
+        if (btn) btn.disabled = false;
+      }
+    });
+  }
+</script>
+
+<style>
+  .newsletter {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+  .newsletter h2 {
+    margin: 0 0 0.4rem;
+    font-size: 1.25rem;
+    color: var(--heading);
+  }
+  .newsletter p {
+    margin: 0 0 0.8rem;
+  }
+  .newsletter-footer {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.15);
+    margin: 0 0 2rem;
+  }
+  .newsletter-footer h2 {
+    color: #fff;
+  }
+  .nl-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .nl-form input[type='email'] {
+    flex: 1 1 220px;
+    min-width: 0;
+    padding: 0.65rem 0.8rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font: inherit;
+  }
+  .nl-hp {
+    position: absolute;
+    left: -9999px;
+  }
+  .nl-msg:empty {
+    display: none;
+  }
+  .nl-msg {
+    margin-top: 0.6rem;
+    font-weight: 600;
+  }
+  .nl-small {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin: 0;
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+</style>
