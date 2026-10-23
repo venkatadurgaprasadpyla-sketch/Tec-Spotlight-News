@@ -36,7 +36,12 @@ const show = SITE.newsletterEnabled || SHOW_DRAFTS;
       if (btn) btn.disabled = true;
       try {
         const res = await fetch(form.action, { method: 'POST', body: new FormData(form) });
-        if (!res.ok) throw new Error(String(res.status));
+        if (!res.ok) {
+          // Show the server's own message (and code) so problems can be told apart.
+          const data = await res.json().catch(() => ({}));
+          if (msg) msg.textContent = `${data.error || 'Sign-up opens soon. Please try again later.'} (code ${res.status})`;
+          return;
+        }
         if (msg) msg.textContent = 'Almost done: check your inbox and tap the link to confirm.';
         form.reset();
       } catch {

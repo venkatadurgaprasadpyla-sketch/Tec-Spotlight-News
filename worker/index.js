@@ -61,7 +61,9 @@ async function subscribe(request, env) {
     return json({ ok: true });
   } catch (err) {
     console.log('subscribe failed', String(err));
-    return json({ ok: false, error: 'Sign-up failed. Please try again later.' }, 502);
+    // Include the email service's status code (e.g. "Kit 401") to help fixes.
+    const code = (String(err).match(/^Error: (\w+) \S+ (\d{3})/) || []).slice(1).join(' ');
+    return json({ ok: false, error: `Sign-up failed. Please try again later.${code ? ` [${code}]` : ''}` }, 502);
   }
 }
 
