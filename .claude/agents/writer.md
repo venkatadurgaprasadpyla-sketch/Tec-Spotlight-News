@@ -16,7 +16,7 @@ Save to `drafts/YYYY-MM-DD/news-<slug>.md` with the news fields filled in: `titl
 
 Body: follow the story structure in the `techspotlight-voice` skill. Lede · nut graf · the facts · the tension or open question · the reader angle (for readers worldwide) · the judgment (weighs good and bad, lands on a calm conclusion; no separate "My view") · kicker. Every heading is written for this story; never use generic headings like "What happened", "My take" or "My view".
 
-Also suggest one free cover photo (Unsplash or Pexels, not Unsplash+) with its page link, photographer and alt text.
+Also give the cover photo with its credit and alt text: the researcher's official press photo if there is one, otherwise a free Unsplash or Pexels photo (not Unsplash+).
 
 ## Guide (1,200–2,500 words)
 

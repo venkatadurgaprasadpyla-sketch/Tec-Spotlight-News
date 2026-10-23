@@ -19,7 +19,11 @@ Test one cheap Firecrawl search first. If it says the credits ran out, **don't s
 
 - **Finding stories and facts:** WebSearch for the last few hours' news, the trending lists and each story's facts. Other sites can't be opened directly here, so every key fact (numbers, dates, names, quotes) must be confirmed by **two independent results**, one of them the official source. Anything only one result supports is cut or labelled.
 - **Gates:** the auditor, editor-in-chief and seo-cto all use WebSearch for their checks. Keyword ideas come from WebSearch (related and "people also ask" searches) when Google suggestions can't be read.
-- **Covers:** stock photo sites can't be reached without Firecrawl, so make a branded title card (Pyla's choice, 2026-10-17): `python3 scripts/title-card.py <slug> "<headline>" "<section name>"`, look at the result, and set `imageCredit` to `name: "TechSpotlight News"`, `source: "Title card"`, `url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"`. Alt text describes the card ("TechSpotlight title card: <headline>"). A photo can be swapped in later.
+- **Covers (Pyla's rule, 2026-10-23):** image sites can now be downloaded directly with curl. Pick the cover in this order:
+  1. **Official press photo** from the company's or agency's own newsroom or media page, for a story about that company or agency (for example Apple Newsroom, Samsung Newsroom, Microsoft Source, NASA, ESA, the company's official Flickr). Use it only if the page offers it for press or public use. Never use photos credited to news agencies or photo libraries (Reuters, AP, AFP, Getty and similar), never embargoed images, and never images from news sites. Credit: `name: "<Company> Newsroom"` (or the photographer if the page names one), `source: "Press photo"` (`"Public domain"` for NASA), `url:` the page the photo came from.
+  2. **Free stock photo** from Unsplash or Pexels (never Unsplash+), crediting the photographer.
+  3. **Title card** only when neither fits: `python3 scripts/title-card.py <slug> "<headline>" "<section name>"`, with `imageCredit` `name: "TechSpotlight News"`, `source: "Title card"`, `url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"`, and alt text "TechSpotlight title card: <headline>".
+  If a download is blocked, use the next option and note the blocked site in the run report.
 - Tell Pyla once that the backup was used; don't repeat it every run.
 
 ## 1. Find what's new (since the last run, worldwide)
@@ -49,9 +53,9 @@ Pick the top two, preferably from different areas (for example one tech, one sci
 
 For each story:
 
-1. **researcher:** facts, sources, keyword plan (Semrush if it has API units; otherwise Google suggestions), and a free Unsplash or Pexels cover photo (not Unsplash+).
+1. **researcher:** facts, sources, keyword plan (Semrush if it has API units; otherwise Google suggestions), and a cover photo picked by the cover order above (official press photo first), with the page link and credit.
 2. **writer:** draft into `drafts/<today>/news-<slug>.md`, with the right `category` (`ai`, `apps-software`, `phones-gadgets`, `launches`, `deals`, `business` for big-company news, `science` for science and breakthroughs). Write the whole article in one chief tech journalist voice with a fair judgment section (no separate "My view"; see the `techspotlight-voice` skill), and link related TechSpotlight stories where natural. Never claim an experience Pyla didn't have.
-3. Get the cover yourself (the researcher has no shell). Image hosts are blocked here and Firecrawl won't screenshot a bare image file, so screenshot the photo's own Unsplash or Pexels page with Firecrawl (`formats: ["screenshot"]`, viewport 1920x1300, `waitFor: 2500`), download the screenshot link with curl, look at it, crop out just the photo and scale to 1200x630 with ffmpeg, keep it under 250 KB, save it to `public/images/posts/<slug>/cover.jpg`, and look at the result.
+3. Get the cover yourself (the researcher has no shell): download the full-size image with curl, look at it, crop and scale it to 1200x630 with ffmpeg, keep it under 250 KB, save it to `public/images/posts/<slug>/cover.jpg`, and look at the result. Write alt text that describes what the photo shows.
 4. Run the three gates in order, maximum 3 rounds each, applying each gate's exact fixes: **auditor**, then **editor-in-chief**, then **seo-cto**. No open items are allowed.
 
 ## 4. Save as drafts for Pyla

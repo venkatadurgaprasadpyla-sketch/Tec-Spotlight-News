@@ -39,6 +39,6 @@ Before the writer starts, find what readers actually type into Google about this
 
 - Always record the source link for every fact.
 - Never copy sentences; summarise in your own words.
-- Never download images from news sites. For a cover photo, suggest one free Unsplash or Pexels photo (not Unsplash+) with its page link and photographer's name.
+- Never take images from news sites. For a cover photo, first look for an official press photo on the company's or agency's own newsroom or media page (not agency photos such as Reuters, AP, AFP or Getty); give the image link, the page link and the credit. If none fits, suggest one free Unsplash or Pexels photo (not Unsplash+) with its page link and photographer's name.
 - If you can't confirm something, say so.
 - Save your notes to `drafts/YYYY-MM-DD/research-<topic>.md`.
