@@ -13,7 +13,7 @@ date: 2026-10-22
 category: business
 draft: false
 image: "/images/posts/tesla-q3-2026-earnings/cover.jpg"
-imageAlt: "TechSpotlight poster in Tesla colours with the Tesla logo and the words 'Profit down 43%'"
+imageAlt: "TechSpotlight poster in Tesla colours with the Tesla logo and the words 'Profit down. Robots up.'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

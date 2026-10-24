@@ -13,7 +13,7 @@ date: 2026-10-23
 category: business
 draft: false
 image: "/images/posts/sk-hynix-solidigm-ipo/cover.jpg"
-imageAlt: "TechSpotlight poster in SK hynix colours with the SK hynix logo and the words 'IPO on hold'"
+imageAlt: "TechSpotlight poster in SK hynix colours with the SK hynix logo and the words 'Why SK hynix hit pause'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

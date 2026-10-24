@@ -13,7 +13,7 @@ date: 2026-10-22
 category: business
 draft: false
 image: "/images/posts/spacex-q3-2026-earnings/cover.jpg"
-imageAlt: "TechSpotlight poster in SpaceX colours with the SpaceX logo and the words 'Profit hits $4.4B'"
+imageAlt: "TechSpotlight poster in SpaceX colours with the SpaceX logo and the words 'AI, not rockets, leads sales'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

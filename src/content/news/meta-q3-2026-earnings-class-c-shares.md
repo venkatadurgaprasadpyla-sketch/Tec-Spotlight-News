@@ -13,7 +13,7 @@ date: 2026-10-22
 category: business
 draft: false
 image: "/images/posts/meta-q3-2026-earnings-class-c-shares/cover.jpg"
-imageAlt: "TechSpotlight poster in Meta colours with the Meta logo and the words 'Revenue up 26%'"
+imageAlt: "TechSpotlight poster in Meta colours with the Meta logo and the words '+26% and a new kind of share'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

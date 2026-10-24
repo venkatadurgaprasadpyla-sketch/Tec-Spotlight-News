@@ -13,7 +13,7 @@ date: 2026-10-17
 category: ai
 draft: false
 image: "/images/posts/tamm-global-abu-dhabi-ai-government/cover.jpg"
-imageAlt: "TechSpotlight poster in TAMM colours with the name TAMM and the words 'Abu Dhabi's AI app goes global'"
+imageAlt: "TechSpotlight poster in TAMM colours with the name TAMM and the words 'Government in one app goes global'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

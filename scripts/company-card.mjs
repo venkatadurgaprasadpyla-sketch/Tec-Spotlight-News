@@ -73,7 +73,8 @@ const SPOTS = [[640, 40], [770, 95], [905, 28], [1040, 92], [1150, 30], [700, 23
 const pattern = icons.length
   ? SPOTS.map(([x, y], i) => `<div class="pd" style="left:${x}px;top:${y}px;transform:rotate(${((i * 37) % 50) - 25}deg)">${icons[i % icons.length]}</div>`).join('')
   : '';
-const hookHtml = esc(hook).replace(/\*([^*]+)\*/g, '<mark>$1</mark>');
+// Short highlights (like "7 days") never split across lines.
+const hookHtml = esc(hook).replace(/\*([^*]+)\*/g, (_, m) => `<mark>${m.length <= 8 ? m.replace(/ /g, '&nbsp;') : m}</mark>`);
 const font = dataUrl(resolve(ROOT, 'node_modules/@fontsource-variable/sora/files/sora-latin-wght-normal.woff2'), 'font/woff2');
 const brand = dataUrl(resolve(ROOT, 'public/brand/techspotlight-wordmark-on-dark@2x.png'), 'image/png');
 
@@ -95,8 +96,8 @@ body { width: 1200px; height: 630px; overflow: hidden; position: relative; font-
 .brand { height: 36px; width: auto; align-self: flex-start; }
 .tag { align-self: flex-start; margin-top: 36px; background: #fff; color: ${dark}; font-weight: 800; font-size: 21px; letter-spacing: .1em;
   text-transform: uppercase; padding: 8px 16px; border-radius: 6px; }
-h1 { max-width: 620px; margin-top: 20px; font-weight: 800; font-size: 104px; line-height: 1; letter-spacing: -.03em; text-shadow: 0 6px 30px #0006; }
-h1 mark { background: #FFD23F; color: #141233; padding: 0 14px; border-radius: 10px; box-decoration-break: clone; -webkit-box-decoration-break: clone; text-shadow: none; }
+h1 { max-width: 620px; margin-top: 20px; font-weight: 800; font-size: 104px; line-height: 1.08; letter-spacing: -.03em; text-shadow: 0 6px 30px #0006; }
+h1 mark { background: #FFD23F; color: #141233; padding: 0 12px; line-height: 1; border-radius: 10px; box-decoration-break: clone; -webkit-box-decoration-break: clone; text-shadow: none; }
 p { margin-top: auto; font-size: 27px; font-weight: 600; line-height: 1.3; opacity: .94; }
 </style></head><body>${pattern}${art}
 <div class="txt"><img class="brand" src="${brand}" alt=""><span class="tag">${esc(label)}</span>

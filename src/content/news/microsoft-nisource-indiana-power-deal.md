@@ -13,7 +13,7 @@ date: 2026-10-17
 category: business
 draft: false
 image: "/images/posts/microsoft-nisource-indiana-power-deal/cover.jpg"
-imageAlt: "TechSpotlight poster in Microsoft colours with the Microsoft logo and the words '20 years of power'"
+imageAlt: "TechSpotlight poster in Microsoft colours with the Microsoft logo and the words 'Microsoft will pay the bill'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

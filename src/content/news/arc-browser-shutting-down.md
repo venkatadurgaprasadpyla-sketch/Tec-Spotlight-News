@@ -13,7 +13,7 @@ date: 2026-10-23
 category: apps-software
 draft: false
 image: "/images/posts/arc-browser-shutting-down/cover.jpg"
-imageAlt: "TechSpotlight poster in Arc browser colours with the Arc browser logo and the words 'Arc closes on 22 Dec'"
+imageAlt: "TechSpotlight poster in Arc browser colours with the Arc browser logo and the words 'Arc user? Save your tabs'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

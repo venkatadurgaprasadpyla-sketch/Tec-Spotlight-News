@@ -13,7 +13,7 @@ date: 2026-10-22
 category: business
 draft: false
 image: "/images/posts/barclays-ai-job-cuts/cover.jpg"
-imageAlt: "TechSpotlight poster in Barclays colours with the Barclays logo and the words '5,000 jobs go'"
+imageAlt: "TechSpotlight poster in Barclays colours with the Barclays logo and the words '5,000 jobs. AI is part of why.'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

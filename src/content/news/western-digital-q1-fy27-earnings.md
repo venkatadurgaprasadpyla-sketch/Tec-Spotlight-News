@@ -13,7 +13,7 @@ date: 2026-10-23
 category: business
 draft: false
 image: "/images/posts/western-digital-q1-fy27-earnings/cover.jpg"
-imageAlt: "TechSpotlight poster in Western Digital colours with the Western Digital logo and the words 'Sales up 55%'"
+imageAlt: "TechSpotlight poster in Western Digital colours with the Western Digital logo and the words 'AI's hunger for storage'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

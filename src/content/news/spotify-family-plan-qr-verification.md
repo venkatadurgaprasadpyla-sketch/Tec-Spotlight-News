@@ -13,7 +13,7 @@ date: 2026-10-24
 category: apps-software
 draft: false
 image: "/images/posts/spotify-family-plan-qr-verification/cover.jpg"
-imageAlt: "TechSpotlight poster in Spotify colours with the Spotify logo and the words 'Family plan? Scan at home.'"
+imageAlt: "TechSpotlight poster in Spotify colours with the Spotify logo and the words 'Sharing Family? 7 days to scan'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

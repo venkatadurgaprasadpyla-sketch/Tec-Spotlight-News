@@ -13,7 +13,7 @@ date: 2026-10-24
 category: business
 draft: false
 image: "/images/posts/quest-diagnostics-data-breach-2026/cover.jpg"
-imageAlt: "TechSpotlight poster in Quest Diagnostics colours with the name Quest Diagnostics and the words 'Patient records accessed'"
+imageAlt: "TechSpotlight poster in Quest Diagnostics colours with the name Quest Diagnostics and the words 'Had a lab test? Read this.'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

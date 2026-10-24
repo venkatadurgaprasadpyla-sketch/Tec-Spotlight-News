@@ -13,7 +13,7 @@ date: 2026-10-17
 category: science
 draft: false
 image: "/images/posts/ice-cliffs-collapse-sea-level-study/cover.jpg"
-imageAlt: "TechSpotlight poster in Climate science colours with a climate science symbol and the words 'Ice cliffs fall faster'"
+imageAlt: "TechSpotlight poster in Climate science colours with a climate science symbol and the words 'Faster, then suddenly stop'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

@@ -13,7 +13,7 @@ date: 2026-10-23
 category: phones-gadgets
 draft: false
 image: "/images/posts/iphone-duo-on-sale/cover.jpg"
-imageAlt: "TechSpotlight poster in Apple colours with the Apple logo and the words 'iPhone Duo is here'"
+imageAlt: "TechSpotlight poster in Apple colours with the Apple logo and the words 'Want one? Get in line.'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"
