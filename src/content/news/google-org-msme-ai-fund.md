@@ -12,11 +12,11 @@ date: 2026-10-15
 category: apps-software
 draft: false
 image: "/images/posts/google-org-msme-ai-fund/cover.jpg"
-imageAlt: "A shopkeeper at a small drinks stall in Kolkata, the kind of MSME the new AI tools aim to help"
+imageAlt: "TechSpotlight poster in Google colours with the Google logo and the words '$15 million for small shops'"
 imageCredit:
-  name: "Laurentiu Morariu"
-  source: "Unsplash"
-  url: "https://unsplash.com/photos/man-standing-inside-store-0NTl61e9fTk"
+  name: "TechSpotlight News"
+  source: "Cover card"
+  url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "Google.org, Google's charity arm, is giving $15 million to The/Nudge to build AI tools for India's small businesses."
   - "The focus is on three old headaches: getting formal loans, handling compliance and finding new customers."

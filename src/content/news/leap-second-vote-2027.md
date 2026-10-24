@@ -13,11 +13,11 @@ date: 2026-10-16
 category: science
 draft: false
 image: "/images/posts/leap-second-vote-2027/cover.jpg"
-imageAlt: "Close-up of an antique clock face with Roman numerals, illustrating the leap second vote"
+imageAlt: "TechSpotlight poster in Timekeeping colours with a timekeeping symbol and the words 'Goodbye, leap seconds'"
 imageCredit:
-  name: "Amar Saleem"
-  source: "Pexels"
-  url: "https://www.pexels.com/photo/gray-roman-numeral-clock-69357/"
+  name: "TechSpotlight News"
+  source: "Cover card"
+  url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "On 15 October 2026 in Versailles, the world's measurement body voted by majority to stop adding leap seconds to world time from 20 May 2027."
   - "Clock time may now drift up to one hour from Earth's spin, a limit that should last at least several centuries. The aim is to protect networks."

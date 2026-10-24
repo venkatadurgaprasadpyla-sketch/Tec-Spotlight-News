@@ -13,11 +13,11 @@ date: 2026-10-23
 category: business
 draft: false
 image: "/images/posts/meta-825-billion-ai-commitments/cover.jpg"
-imageAlt: "Rows of black server racks along a data centre aisle, a stock photo of the kind of building Meta AI commitments pay for"
+imageAlt: "TechSpotlight poster in Meta colours with the Meta logo and the words '$825 billion on AI'"
 imageCredit:
-  name: "Brett Sayles"
-  source: "Pexels"
-  url: "https://www.pexels.com/photo/server-racks-on-data-center-4508751/"
+  name: "TechSpotlight News"
+  source: "Cover card"
+  url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "Meta's new quarterly filing lists US$454.5bn of contracts it can't cancel and US$355.7bn of data-centre and energy leases not yet started."
   - "Add up to US$14.7bn of possible cloud purchases and the total is about US$825bn, up from roughly US$643bn on the same items at the end of June."

@@ -13,11 +13,11 @@ date: 2026-10-16
 category: science
 draft: false
 image: "/images/posts/neanderthal-wooden-spear-shanidar/cover.jpg"
-imageAlt: "Looking out of a cave mouth at forest and sky (a cave in Romania, not Shanidar), for a story on a Neanderthal spear wound"
+imageAlt: "TechSpotlight poster in Human history colours with a human history symbol and the words 'Survived a split tooth, then a spear'"
 imageCredit:
-  name: "Vanessa Linzenbold"
-  source: "Unsplash"
-  url: "https://unsplash.com/photos/a-cave-entrance-with-trees-in-the-background-58pYIHfR6Jk"
+  name: "TechSpotlight News"
+  source: "Cover card"
+  url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "A Neanderthal buried about 75,000 years ago in Shanidar Cave, Iraqi Kurdistan, has a round 15 mm hole through the left shoulder blade."
   - "The team says the shape fits a wooden spear. Earlier, the person survived a split front tooth, likely with help from others."

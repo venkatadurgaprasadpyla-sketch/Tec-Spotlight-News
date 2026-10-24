@@ -13,11 +13,11 @@ date: 2026-10-16
 category: phones-gadgets
 draft: false
 image: "/images/posts/iphone-duo-pre-order/cover.jpg"
-imageAlt: "Two hands holding an ordinary smartphone sideways with a blank screen (stock photo, not the iPhone Duo)"
+imageAlt: "TechSpotlight poster in Apple colours with the Apple logo and the words 'Apple folds, from $1,999'"
 imageCredit:
-  name: "Tima Miroshnichenko"
-  source: "Pexels"
-  url: "https://www.pexels.com/photo/a-person-holding-smartphone-with-blank-screen-horizontally-6611934/"
+  name: "TechSpotlight News"
+  source: "Cover card"
+  url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "Pre-orders for the iPhone Duo, Apple's first foldable iPhone, open on 16 October at 5 a.m. PT (12:00 UTC) in more than 70 countries and regions."
   - "It starts at US$1,999, £1,999, ₹2,99,900 or AED 8,499, and reaches stores and doorsteps on 23 October."

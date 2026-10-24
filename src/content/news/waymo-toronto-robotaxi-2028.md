@@ -14,11 +14,11 @@ date: 2026-10-16
 category: business
 draft: false
 image: "/images/posts/waymo-toronto-robotaxi-2028/cover.jpg"
-imageAlt: "A wet downtown Toronto street at sunrise with streetcar tracks and melting snow, in the city Waymo plans to map"
+imageAlt: "TechSpotlight poster in Waymo colours with the name Waymo and the words 'Robotaxis for Toronto'"
 imageCredit:
-  name: "Mateusz Walendzik"
-  source: "Pexels"
-  url: "https://www.pexels.com/photo/traffic-on-city-street-in-downtown-at-dawn-15811217/"
+  name: "TechSpotlight News"
+  source: "Cover card"
+  url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "Alphabet's Waymo says it will start mapping Toronto streets in the coming days, with the goal of offering driverless rides there in 2028."
   - "People will drive the cars at first, under an Ontario test pilot that is due to end in October 2027."

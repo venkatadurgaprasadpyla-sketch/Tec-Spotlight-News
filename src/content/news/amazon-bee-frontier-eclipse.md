@@ -13,11 +13,11 @@ date: 2026-10-15
 category: phones-gadgets
 draft: false
 image: "/images/posts/amazon-bee-frontier-eclipse/cover.jpg"
-imageAlt: "A person stretching indoors with a fitness band on the wrist (stock photo, not the Amazon Bee Frontier)"
+imageAlt: "TechSpotlight poster in Amazon colours with the Amazon logo and the words 'An AI that listens, on your wrist'"
 imageCredit:
-  name: "Aditya Wardhana"
-  source: "Unsplash"
-  url: "https://unsplash.com/photos/bP8VG_dkmos"
+  name: "TechSpotlight News"
+  source: "Cover card"
+  url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 # relatedGuide: best-ai-note-taking-wearables (guide not written yet; needs Pyla's own testing)
 summary:
   - "Amazon's Bee has launched Bee Frontier, a US$74.99 wearable sold now on Amazon.com, and Bee Eclipse, a US$99.99 phone attachment due \"soon\"."

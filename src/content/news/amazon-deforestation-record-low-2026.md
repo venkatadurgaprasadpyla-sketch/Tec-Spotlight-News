@@ -13,11 +13,11 @@ date: 2026-10-16
 category: science
 draft: false
 image: "/images/posts/amazon-deforestation-record-low-2026/cover.jpg"
-imageAlt: "The Amazon River winds through rainforest under scattered clouds, seen from above, where deforestation is at a record low"
+imageAlt: "TechSpotlight poster in Amazon rainforest colours with a amazon rainforest symbol and the words 'Forest loss hits a record low'"
 imageCredit:
-  name: "Miguel Cuenca"
-  source: "Pexels"
-  url: "https://www.pexels.com/photo/aerial-view-of-amazon-river-in-brasil-38814719/"
+  name: "TechSpotlight News"
+  source: "Cover card"
+  url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "Brazil's satellite count shows 3,335 km² of Amazon cleared from August 2025 to July 2026, down 41.8% and the lowest since records began in 1988."
   - "Clearing in the Cerrado savanna also hit a record low. The Amazon figure is an estimate; the final number comes in the first half of 2027."

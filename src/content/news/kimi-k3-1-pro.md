@@ -13,11 +13,11 @@ date: 2026-10-23
 category: ai
 draft: false
 image: "/images/posts/kimi-k3-1-pro/cover.jpg"
-imageAlt: "A laptop in a dark room, its screen filled with green and purple code, for a story on Kimi K3.1 Pro"
+imageAlt: "TechSpotlight poster in Kimi colours with the name Kimi and the words 'Less hacking skill, on purpose'"
 imageCredit:
-  name: "Markus Spiske"
-  source: "Pexels"
-  url: "https://www.pexels.com/photo/193350/"
+  name: "TechSpotlight News"
+  source: "Cover card"
+  url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "Moonshot AI released Kimi K3.1 Pro on 23 October in Kimi's apps and API, with a 1-million-token context and full weights promised by 4 November."
   - "Moonshot says it removed hacking-related data from training, cutting its own exploit-test score from 90.5% to 81% before the open release."

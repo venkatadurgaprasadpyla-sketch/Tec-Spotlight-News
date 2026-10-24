@@ -13,11 +13,11 @@ date: 2026-10-16
 category: science
 draft: false
 image: "/images/posts/brown-fat-study-losartan/cover.jpg"
-imageAlt: "Empty hospital scanner room with a scanner bed and shelves, a stock photo for a story on a brown fat study"
+imageAlt: "TechSpotlight poster in Health research colours with a health research symbol and the words 'Brown fat, healthier heart?'"
 imageCredit:
-  name: "MART PRODUCTION"
-  source: "Pexels"
-  url: "https://www.pexels.com/photo/technology-hospital-medicine-indoors-7089625/"
+  name: "TechSpotlight News"
+  source: "Cover card"
+  url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "A Nature brown fat study drew on scans and records from 101,243 patients at one New York cancer centre; AI measured brown fat in about 8,700."
   - "People with brown fat had about 58% lower odds of type 2 diabetes and 47% lower odds of chronic coronary heart disease. It shows a link, not a cause."

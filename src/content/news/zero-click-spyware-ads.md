@@ -14,11 +14,11 @@ date: 2026-10-15
 category: apps-software
 draft: false
 image: "/images/posts/zero-click-spyware-ads/cover.jpg"
-imageAlt: "A hand holding a small brass padlock, a reminder that a zero-click attack needs no tap to get in"
+imageAlt: "TechSpotlight poster in Spyware research colours with a spyware research symbol and the words 'No click. Still at risk.'"
 imageCredit:
-  name: "Nathan Thomas"
-  source: "Pexels"
-  url: "https://www.pexels.com/photo/close-up-of-hand-holding-a-secure-padlock-36740854/"
+  name: "TechSpotlight News"
+  source: "Cover card"
+  url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "Citizen Lab says an Israel-based ad firm, Discover-Tech, bought online ads that could quietly deliver spyware to chosen people, with no click needed."
   - "At least 45 devices at Al Jazeera were targeted in 2024 and 2025, researchers say; the firm did not respond to requests for comment."

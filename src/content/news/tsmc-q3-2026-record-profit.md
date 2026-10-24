@@ -13,11 +13,11 @@ date: 2026-10-15
 category: business
 draft: false
 image: "/images/posts/tsmc-q3-2026-record-profit/cover.jpg"
-imageAlt: "Close-up of a silicon wafer covered in rows of tiny chips, the kind of product behind TSMC's Q3 earnings"
+imageAlt: "TechSpotlight poster in TSMC colours with the name TSMC and the words 'Record again. Careful next.'"
 imageCredit:
-  name: "Laura Ockel"
-  source: "Unsplash"
-  url: "https://unsplash.com/photos/green-and-black-checkered-textile-vWSqLGd_d6s"
+  name: "TechSpotlight News"
+  source: "Cover card"
+  url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "TSMC, which makes chips for Nvidia and Apple, earned US$46.72 billion in revenue from July to September 2026, up 41% on a year ago."
   - "AI and data-centre chips now bring in 68% of its revenue; smartphones fell to 21%."

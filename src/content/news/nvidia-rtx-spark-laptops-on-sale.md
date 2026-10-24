@@ -13,11 +13,11 @@ date: 2026-10-16
 category: phones-gadgets
 draft: false
 image: "/images/posts/nvidia-rtx-spark-laptops-on-sale/cover.jpg"
-imageAlt: "Close-up of a generic computer chip with gold pins (stock photo, not the chip inside RTX Spark laptops)"
+imageAlt: "TechSpotlight poster in Nvidia colours with the Nvidia logo and the words 'AI first, games second'"
 imageCredit:
-  name: "Jimmy Chan"
-  source: "Pexels"
-  url: "https://www.pexels.com/photo/chipset-computer-cyber-hardware-2105927/"
+  name: "TechSpotlight News"
+  source: "Cover card"
+  url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "The first Windows laptops built on Nvidia's RTX Spark chip go on sale on 16 October in the US, with the UK also confirmed."
   - "Prices start at about US$2,600 (£2,599 in the UK) and climb past US$5,800 for the model with the most memory."

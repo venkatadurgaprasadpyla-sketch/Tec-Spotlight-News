@@ -14,11 +14,11 @@ date: 2026-10-15
 category: ai
 draft: false
 image: "/images/posts/meta-muse-spark-open-mac-studio/cover.jpg"
-imageAlt: "A computer monitor showing code on a home desk (stock photo, not the Mac Studio setup for Muse Spark Open)"
+imageAlt: "TechSpotlight poster in Meta colours with the Meta logo and the words 'A big AI on two Macs'"
 imageCredit:
-  name: "Joy Real"
-  source: "Unsplash"
-  url: "https://unsplash.com/photos/computer-monitor-displaying-code-in-a-dimly-lit-room-EHn4lNPnsbA"
+  name: "TechSpotlight News"
+  source: "Cover card"
+  url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "Meta released Muse Spark Open, an 816-billion-parameter AI model whose weights anyone can download, built for coding and multi-step tasks."
   - "With Apple, Meta showed it running on two linked Mac Studio desktops with about a terabyte of memory between them, likely to cost tens of thousands of dollars."

@@ -13,11 +13,11 @@ date: 2026-10-16
 category: ai
 draft: false
 image: "/images/posts/china-ai-solar-tech-export-curbs/cover.jpg"
-imageAlt: "Aerial view of a large solar farm, as China's AI export controls draft also covers solar panel technology"
+imageAlt: "TechSpotlight poster in China colours with a china symbol and the words 'China may limit 40 technologies'"
 imageCredit:
-  name: "Kristaps Ungurs"
-  source: "Unsplash"
-  url: "https://unsplash.com/photos/aerial-view-of-a-large-solar-panel-farm-va8Ou1Sgljo"
+  name: "TechSpotlight News"
+  source: "Cover card"
+  url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "On 16 October 2026, China proposed adding 40 AI, solar and biomedicine technologies to its export catalogue: 14 would be banned and 26 would need a licence."
   - "The draft targets know-how such as large AI model files, chip designs and solar factory processes, not finished products, open-source code or app access."

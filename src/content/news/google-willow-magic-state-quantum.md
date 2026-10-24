@@ -13,11 +13,11 @@ date: 2026-10-15
 category: science
 draft: false
 image: "/images/posts/google-willow-magic-state-quantum/cover.jpg"
-imageAlt: "Gold quantum computer with silver wiring, illustrating magic state cultivation (a render, not Google's Willow chip)"
+imageAlt: "TechSpotlight poster in Google colours with the Google logo and the words 'Quantum gets 40× cleaner'"
 imageCredit:
-  name: "Planet Volumes"
-  source: "Unsplash"
-  url: "https://unsplash.com/photos/quantum-computer-with-gold-plates-7dRmpT3vxV8"
+  name: "TechSpotlight News"
+  source: "Cover card"
+  url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "Google's Willow chip used magic state cultivation to make key quantum ingredients about 40 times less error-prone; the work is now published in Science."
   - "The states reached about 99.99% fidelity, but the quality check throws away 92% of attempts, and the demo is small."

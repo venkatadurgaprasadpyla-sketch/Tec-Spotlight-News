@@ -13,11 +13,11 @@ date: 2026-10-15
 category: ai
 draft: false
 image: "/images/posts/dubai-gendubai-parents-ai/cover.jpg"
-imageAlt: "A mother and young daughter smiling at a laptop on a sofa, the kind of family moment an AI guide for parents is built for"
+imageAlt: "TechSpotlight poster in Dubai colours with the name Dubai and the words 'Parents, learn AI with your kids'"
 imageCredit:
-  name: "Vitaly Gariev"
-  source: "Unsplash"
-  url: "https://unsplash.com/photos/mother-and-daughter-looking-at-laptop-together-QIhcMKkrDAw"
+  name: "TechSpotlight News"
+  source: "Cover card"
+  url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "Dubai has launched GenDubAI, a platform to help parents guide how their children use AI."
   - "It's built for families with children aged 8 to 15, in Arabic and English, and works on phones."

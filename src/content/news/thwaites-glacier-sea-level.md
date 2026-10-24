@@ -12,11 +12,11 @@ date: 2026-10-15
 category: science
 draft: false
 image: "/images/posts/thwaites-glacier-sea-level/cover.jpg"
-imageAlt: "A wall of white ice meets a calm sea (stock photo, not Thwaites Glacier)"
+imageAlt: "TechSpotlight poster in Climate science colours with a climate science symbol and the words 'Sea-level estimate doubles'"
 imageCredit:
-  name: "Francesco Ungaro"
-  source: "Pexels"
-  url: "https://www.pexels.com/photo/majestic-antarctic-ice-shelf-panorama-30429897/"
+  name: "TechSpotlight News"
+  source: "Cover card"
+  url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "A new Nature Communications study says Thwaites Glacier alone could add up to 30 mm (about 1.2 inches) to global seas by 2100."
   - "That is about twice the average of earlier models. It assumes the 1996–2023 climate holds, which the authors call a lower-bound scenario."
