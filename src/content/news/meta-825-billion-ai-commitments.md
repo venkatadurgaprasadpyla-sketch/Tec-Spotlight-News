@@ -11,7 +11,7 @@ keywords:
   - "meta 10-q 2026"
 date: 2026-10-23
 category: business
-draft: true
+draft: false
 image: "/images/posts/meta-825-billion-ai-commitments/cover.jpg"
 imageAlt: "Rows of black server racks along a data centre aisle, a stock photo of the kind of building Meta AI commitments pay for"
 imageCredit:

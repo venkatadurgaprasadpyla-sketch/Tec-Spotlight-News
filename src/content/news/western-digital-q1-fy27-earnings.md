@@ -11,7 +11,7 @@ keywords:
   - "AI data center storage"
 date: 2026-10-23
 category: business
-draft: true
+draft: false
 image: "/images/posts/western-digital-q1-fy27-earnings/cover.jpg"
 imageAlt: "TechSpotlight title card: Western Digital earnings: AI cloud demand lifts sales 55%, but shares slip"
 imageCredit:

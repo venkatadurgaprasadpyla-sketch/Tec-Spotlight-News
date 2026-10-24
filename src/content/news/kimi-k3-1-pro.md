@@ -11,7 +11,7 @@ keywords:
   - "Kimi K3.1 Pro Highspeed"
 date: 2026-10-23
 category: ai
-draft: true
+draft: false
 image: "/images/posts/kimi-k3-1-pro/cover.jpg"
 imageAlt: "A laptop in a dark room, its screen filled with green and purple code, for a story on Kimi K3.1 Pro"
 imageCredit:

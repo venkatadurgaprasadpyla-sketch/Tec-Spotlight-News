@@ -11,7 +11,7 @@ keywords:
   - "is there a vaccine for melanoma"
 date: 2026-10-24
 category: science
-draft: true
+draft: false
 image: "/images/posts/moderna-merck-melanoma-mrna-vaccine-phase-3/cover.jpg"
 imageAlt: "TechSpotlight title card: A personalised melanoma vaccine cut the risk of cancer returning by 42% in a large trial"
 imageCredit:

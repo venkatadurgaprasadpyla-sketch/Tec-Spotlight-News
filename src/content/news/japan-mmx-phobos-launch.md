@@ -11,7 +11,7 @@ keywords:
   - "how did Mars get its moons"
 date: 2026-10-22
 category: science
-draft: true
+draft: false
 image: "/images/posts/japan-mmx-phobos-launch/cover.jpg"
 imageAlt: "TechSpotlight title card: MMX mission: Japan launches to bring back soil from Mars' moon Phobos"
 imageCredit:

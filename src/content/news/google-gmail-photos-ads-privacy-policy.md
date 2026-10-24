@@ -11,7 +11,7 @@ keywords:
   - "google gmail privacy policy"
 date: 2026-10-24
 category: apps-software
-draft: true
+draft: false
 image: "/images/posts/google-gmail-photos-ads-privacy-policy/cover.jpg"
 imageAlt: "TechSpotlight title card: Google's privacy policy now lets connected Gmail and Photos data shape ads"
 imageCredit:

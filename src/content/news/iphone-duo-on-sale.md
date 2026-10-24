@@ -11,7 +11,7 @@ keywords:
   - "iphone duo applecare"
 date: 2026-10-23
 category: phones-gadgets
-draft: true
+draft: false
 image: "/images/posts/iphone-duo-on-sale/cover.jpg"
 imageAlt: "TechSpotlight title card: iPhone Duo goes on sale: few phones in stores, January waits online, careful praise"
 imageCredit:

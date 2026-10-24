@@ -11,7 +11,7 @@ keywords:
   - "CVE-2026-109618"
 date: 2026-10-22
 category: apps-software
-draft: true
+draft: false
 image: "/images/posts/php2shell-nodejs-security-patches/cover.jpg"
 imageAlt: "TechSpotlight title card: PHP2Shell: PHP rushes out fixes for two critical server flaws as Node.js patches 10 bugs"
 imageCredit:

@@ -11,7 +11,7 @@ keywords:
   - "spacex ai revenue"
 date: 2026-10-22
 category: business
-draft: true
+draft: false
 image: "/images/posts/spacex-q3-2026-earnings/cover.jpg"
 imageAlt: "TechSpotlight title card: SpaceX Q3 2026 earnings: AI now leads sales as profit reaches US$4.4 billion"
 imageCredit:

@@ -11,7 +11,7 @@ keywords:
   - "what is dia browser"
 date: 2026-10-23
 category: apps-software
-draft: true
+draft: false
 image: "/images/posts/arc-browser-shutting-down/cover.jpg"
 imageAlt: "TechSpotlight title card: Arc browser is shutting down on 22 December: how to save your data and move on"
 imageCredit:

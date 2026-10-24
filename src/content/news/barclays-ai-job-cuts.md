@@ -11,7 +11,7 @@ keywords:
   - "bank jobs ai"
 date: 2026-10-22
 category: business
-draft: true
+draft: false
 image: "/images/posts/barclays-ai-job-cuts/cover.jpg"
 imageAlt: "TechSpotlight title card: Barclays job cuts: about 5,000 roles go in 2026 as AI starts to play a part"
 imageCredit:
