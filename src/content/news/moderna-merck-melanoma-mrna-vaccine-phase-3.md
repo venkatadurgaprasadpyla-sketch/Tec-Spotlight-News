@@ -13,7 +13,7 @@ date: 2026-10-24
 category: science
 draft: false
 image: "/images/posts/moderna-merck-melanoma-mrna-vaccine-phase-3/cover.jpg"
-imageAlt: "TechSpotlight cover card with the Moderna & Merck logos beside the headline: A personalised melanoma vaccine cut the risk of cancer returning by 42% in a large trial"
+imageAlt: "TechSpotlight poster in Moderna & Merck colours with the Moderna & Merck logos and the words 'Cancer return risk cut 42%'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

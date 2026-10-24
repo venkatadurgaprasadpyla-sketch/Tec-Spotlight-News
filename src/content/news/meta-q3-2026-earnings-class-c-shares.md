@@ -13,7 +13,7 @@ date: 2026-10-22
 category: business
 draft: false
 image: "/images/posts/meta-q3-2026-earnings-class-c-shares/cover.jpg"
-imageAlt: "TechSpotlight cover card with the Meta logo beside the headline: Meta Q3 2026 earnings: revenue up 26% as a teen settlement charge and new Class C shares arrive"
+imageAlt: "TechSpotlight poster in Meta colours with the Meta logo and the words 'Revenue up 26%'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

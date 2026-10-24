@@ -13,7 +13,7 @@ date: 2026-10-17
 category: apps-software
 draft: false
 image: "/images/posts/apple-app-store-nudify-ai-rules/cover.jpg"
-imageAlt: "TechSpotlight cover card with the Apple logo beside the headline: Apple's new App Store rules take aim at AI nudify apps and hidden features"
+imageAlt: "TechSpotlight poster in Apple colours with the Apple logo and the words 'Apple targets nudify apps'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

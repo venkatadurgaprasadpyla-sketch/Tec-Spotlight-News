@@ -13,7 +13,7 @@ date: 2026-10-24
 category: apps-software
 draft: false
 image: "/images/posts/google-gmail-photos-ads-privacy-policy/cover.jpg"
-imageAlt: "TechSpotlight cover card with the Google logo beside the headline: Google's privacy policy now lets connected Gmail and Photos data shape ads"
+imageAlt: "TechSpotlight poster in Google colours with the Google logo and the words 'Your Gmail can shape ads'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

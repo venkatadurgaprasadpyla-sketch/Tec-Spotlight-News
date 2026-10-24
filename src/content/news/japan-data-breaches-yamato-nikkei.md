@@ -13,7 +13,7 @@ date: 2026-10-17
 category: business
 draft: false
 image: "/images/posts/japan-data-breaches-yamato-nikkei/cover.jpg"
-imageAlt: "TechSpotlight cover card with the Yamato & Nikkei logos beside the headline: Japan's data breach wave grows as Yamato and Nikkei confirm customer records were taken"
+imageAlt: "TechSpotlight poster in Yamato & Nikkei colours with the name Yamato & Nikkei and the words 'Japan's breach wave grows'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

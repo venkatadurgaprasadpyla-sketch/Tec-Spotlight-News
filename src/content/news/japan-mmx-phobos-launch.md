@@ -13,7 +13,7 @@ date: 2026-10-22
 category: science
 draft: false
 image: "/images/posts/japan-mmx-phobos-launch/cover.jpg"
-imageAlt: "TechSpotlight cover card with the JAXA logo beside the headline: MMX mission: Japan launches to bring back soil from Mars' moon Phobos"
+imageAlt: "TechSpotlight poster in JAXA colours with the JAXA logo and the words 'Next stop: Phobos'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

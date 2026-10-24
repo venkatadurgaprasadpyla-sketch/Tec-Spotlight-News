@@ -13,7 +13,7 @@ date: 2026-10-17
 category: science
 draft: false
 image: "/images/posts/brain-enzyme-age-related-memory-loss/cover.jpg"
-imageAlt: "TechSpotlight cover card with a brain research symbol beside the headline: A brain enzyme may help memory hold up in old age, mouse study suggests"
+imageAlt: "TechSpotlight poster in Brain research colours with a brain research symbol and the words 'An enzyme that guards memory?'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

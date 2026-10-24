@@ -13,7 +13,7 @@ date: 2026-10-17
 category: ai
 draft: false
 image: "/images/posts/deepseek-v4-1-flash-open-weights/cover.jpg"
-imageAlt: "TechSpotlight cover card with the DeepSeek logo beside the headline: DeepSeek V4.1 Flash update ships open weights and a web search API for agents"
+imageAlt: "TechSpotlight poster in DeepSeek colours with the DeepSeek logo and the words 'DeepSeek goes open'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

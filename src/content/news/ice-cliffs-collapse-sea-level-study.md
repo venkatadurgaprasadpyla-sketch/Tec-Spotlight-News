@@ -13,7 +13,7 @@ date: 2026-10-17
 category: science
 draft: false
 image: "/images/posts/ice-cliffs-collapse-sea-level-study/cover.jpg"
-imageAlt: "TechSpotlight cover card with a climate science symbol beside the headline: Ice cliffs break off faster than models assumed, then stop, sea-level study finds"
+imageAlt: "TechSpotlight poster in Climate science colours with a climate science symbol and the words 'Ice cliffs fall faster'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

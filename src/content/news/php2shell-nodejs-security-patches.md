@@ -13,7 +13,7 @@ date: 2026-10-22
 category: apps-software
 draft: false
 image: "/images/posts/php2shell-nodejs-security-patches/cover.jpg"
-imageAlt: "TechSpotlight cover card with the PHP & Node.js logos beside the headline: PHP2Shell: PHP rushes out fixes for two critical server flaws as Node.js patches 10 bugs"
+imageAlt: "TechSpotlight poster in PHP & Node.js colours with the PHP & Node.js logos and the words 'Two critical PHP flaws'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

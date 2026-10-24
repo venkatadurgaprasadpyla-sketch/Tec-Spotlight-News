@@ -55,7 +55,7 @@ Empathy first, short clear sentences, calm and humble, no hype words ("insane", 
 
 ## Images
 
-Only official press kits, the owner's own screenshots, their Canva graphics, or free stock photos from Unsplash or Pexels (never Unsplash+). Every post gets a cover photo at the top (`image`, `imageAlt`, `imageCredit`); stock photos always credit the photographer. Cover order (Pyla, 2026-10-23): official press photo from the company's own newsroom first, then Unsplash or Pexels, then a company card with the company's name and logo (`scripts/company-card.mjs`, logos in `assets/logos/`; Pyla, 2026-10-24). Never copy images from news sites or other websites. Every image needs alt text. Images go in `public/images/posts/<slug>/`.
+Only official press kits, the owner's own screenshots, their Canva graphics, or free stock photos from Unsplash or Pexels (never Unsplash+). Every post gets a cover photo at the top (`image`, `imageAlt`, `imageCredit`); stock photos always credit the photographer. Cover order (Pyla, 2026-10-23): official press photo from the company's own newsroom first, then Unsplash or Pexels, then a bold poster cover in the company's colours with its logo and a short hook (`scripts/company-card.mjs`, logos in `assets/logos/`; Pyla, 2026-10-24). Never copy images from news sites or other websites. Every image needs alt text. Images go in `public/images/posts/<slug>/`.
 
 ## Changes from the old CLAUDE.md
 

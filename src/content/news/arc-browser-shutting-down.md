@@ -13,7 +13,7 @@ date: 2026-10-23
 category: apps-software
 draft: false
 image: "/images/posts/arc-browser-shutting-down/cover.jpg"
-imageAlt: "TechSpotlight cover card with the Arc browser logo beside the headline: Arc browser is shutting down on 22 December: how to save your data and move on"
+imageAlt: "TechSpotlight poster in Arc browser colours with the Arc browser logo and the words 'Arc closes on 22 Dec'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

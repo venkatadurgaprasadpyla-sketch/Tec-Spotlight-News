@@ -13,7 +13,7 @@ date: 2026-10-17
 category: apps-software
 draft: false
 image: "/images/posts/gmail-ai-inbox/cover.jpg"
-imageAlt: "TechSpotlight cover card with the Gmail logo beside the headline: Gmail's AI Inbox reaches US Workspace accounts, with no admin off switch"
+imageAlt: "TechSpotlight poster in Gmail colours with the Gmail logo and the words 'AI Inbox: no admin off switch'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

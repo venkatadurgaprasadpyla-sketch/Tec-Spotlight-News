@@ -13,7 +13,7 @@ date: 2026-10-23
 category: business
 draft: false
 image: "/images/posts/sk-hynix-solidigm-ipo/cover.jpg"
-imageAlt: "TechSpotlight cover card with the SK hynix logo beside the headline: SK hynix halts its Solidigm IPO plan, and its shares rise 4.4%"
+imageAlt: "TechSpotlight poster in SK hynix colours with the SK hynix logo and the words 'IPO on hold'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

@@ -13,7 +13,7 @@ date: 2026-10-23
 category: phones-gadgets
 draft: false
 image: "/images/posts/iphone-duo-on-sale/cover.jpg"
-imageAlt: "TechSpotlight cover card with the Apple logo beside the headline: iPhone Duo goes on sale: few phones in stores, January waits online, careful praise"
+imageAlt: "TechSpotlight poster in Apple colours with the Apple logo and the words 'iPhone Duo is here'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

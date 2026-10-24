@@ -13,7 +13,7 @@ date: 2026-10-24
 category: apps-software
 draft: false
 image: "/images/posts/spotify-family-plan-qr-verification/cover.jpg"
-imageAlt: "TechSpotlight cover card with the Spotify logo beside the headline: Spotify Family plan QR code check: what the 7-day rule means for your family"
+imageAlt: "TechSpotlight poster in Spotify colours with the Spotify logo and the words 'Family plan? Scan at home.'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

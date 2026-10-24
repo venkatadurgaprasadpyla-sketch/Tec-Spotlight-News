@@ -13,7 +13,7 @@ date: 2026-10-22
 category: business
 draft: false
 image: "/images/posts/barclays-ai-job-cuts/cover.jpg"
-imageAlt: "TechSpotlight cover card with the Barclays logo beside the headline: Barclays job cuts: about 5,000 roles go in 2026 as AI starts to play a part"
+imageAlt: "TechSpotlight poster in Barclays colours with the Barclays logo and the words '5,000 jobs go'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

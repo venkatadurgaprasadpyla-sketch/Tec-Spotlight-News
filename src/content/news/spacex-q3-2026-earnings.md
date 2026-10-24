@@ -13,7 +13,7 @@ date: 2026-10-22
 category: business
 draft: false
 image: "/images/posts/spacex-q3-2026-earnings/cover.jpg"
-imageAlt: "TechSpotlight cover card with the SpaceX logo beside the headline: SpaceX Q3 2026 earnings: AI now leads sales as profit reaches US$4.4 billion"
+imageAlt: "TechSpotlight poster in SpaceX colours with the SpaceX logo and the words 'Profit hits $4.4B'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

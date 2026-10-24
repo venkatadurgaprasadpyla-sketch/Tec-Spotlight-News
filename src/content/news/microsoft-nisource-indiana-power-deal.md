@@ -13,7 +13,7 @@ date: 2026-10-17
 category: business
 draft: false
 image: "/images/posts/microsoft-nisource-indiana-power-deal/cover.jpg"
-imageAlt: "TechSpotlight cover card with the Microsoft logo beside the headline: Microsoft signs 20-year power deal for its Indiana AI campus, and says it will pay the bill"
+imageAlt: "TechSpotlight poster in Microsoft colours with the Microsoft logo and the words '20 years of power'"
 imageCredit:
   name: "TechSpotlight News"
   source: "Cover card"

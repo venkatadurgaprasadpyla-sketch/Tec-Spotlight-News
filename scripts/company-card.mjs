@@ -1,16 +1,16 @@
-// Make an eye-catching "company card" cover (1200x630 JPEG) when no photo is available.
-// Shows the company's logo on a bright tile, the company name, the section and the headline.
-// Pyla's rule (2026-10-24): every story gets a picture; if there is no photo, use the company name and symbol.
+// Make a bold "poster" cover (1200x630 JPEG) when no photo is available (style A, Pyla's choice 2026-10-24).
+// The company's colour fills the picture, its logo is shown big, and a short hook of 3-6 words grabs attention;
+// faint story doodles sit behind the logo, like a Google Doodle. The full headline is shown under the picture
+// on the site, so the picture never repeats it.
 //
 // Usage:
-//   node scripts/company-card.mjs <slug> "<headline>" "<section>" "<company name>" <logo>[,<logo2>] [#brandcolour]
-//     [--doodles icon1,icon2,icon3] [--stat "-43%"]
-// --doodles: 2-4 story-themed doodle stickers drawn around the logo, like a Google Doodle (Pyla, 2026-10-24).
-//   Names are Lucide icons (https://lucide.dev/icons, ISC licence), e.g. qr-code, house, bot, trending-down, lock-open.
-//   They are downloaded once into assets/logos/doodles/.
-// --stat: one short number from the story (e.g. "-43%", "US$4.4B") shown as a starburst badge.
-// <logo> is a file name in assets/logos/ (official logo files; "icon-*.svg" are topic symbols for stories
-// without a company). Use "-" for no logo (the company name is then shown as a large wordmark).
+//   node scripts/company-card.mjs <slug> "<hook>" "<sub line>" "<label>" "<company>" <logo>[,<logo2>] "#colour"
+//     [--doodles icon1,icon2,icon3] [--keep-colours]
+// <hook>: 3-6 words, facts from the story only; wrap one word or number in *stars* to highlight it.
+// <sub line>: one short line under the hook. <label>: e.g. "Tesla · Earnings".
+// <logo>: a file in assets/logos/ (official logo files or Simple Icons marks; "-" shows the company name instead).
+// Logos are shown in white unless --keep-colours is given (for logos whose colours are the mark, like Microsoft).
+// --doodles: Lucide icon names (https://lucide.dev/icons, ISC licence), downloaded once into assets/logos/doodles/.
 // Writes public/images/posts/<slug>/cover.jpg (under 250 KB).
 import { readFileSync, mkdirSync, writeFileSync, existsSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
@@ -19,50 +19,40 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
-const flag = (name) => {
+const flag = (name, takesValue = true) => {
   const i = args.indexOf(name);
-  return i === -1 ? '' : args.splice(i, 2)[1] || '';
+  if (i === -1) return takesValue ? '' : false;
+  return takesValue ? args.splice(i, 2)[1] || '' : !!args.splice(i, 1);
 };
 const doodleArg = flag('--doodles');
-const stat = flag('--stat');
-const [slug, headline, section, company, logoArg = '-', colour = '#FFAE1A'] = args;
-if (!slug || !headline || !section || !company) {
-  console.error('Usage: node scripts/company-card.mjs <slug> "<headline>" "<section>" "<company>" <logo>[,<logo2>] [#colour]');
+const keepColours = flag('--keep-colours', false);
+const [slug, hook, sub, label, company, logoArg = '-', colour = '#2f2580'] = args;
+if (!slug || !hook || !sub || !label || !company) {
+  console.error('Usage: node scripts/company-card.mjs <slug> "<hook>" "<sub line>" "<label>" "<company>" <logo> "#colour" [--doodles a,b,c] [--keep-colours]');
   process.exit(1);
 }
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-const dataUrl = (file) => {
-  const buf = readFileSync(file);
-  const type = extname(file) === '.svg' ? 'image/svg+xml' : 'image/png';
-  return `data:${type};base64,${buf.toString('base64')}`;
-};
+const dataUrl = (file, type) => `data:${type};base64,${readFileSync(file).toString('base64')}`;
+const cleanSvg = (file) => readFileSync(file, 'utf8').replace(/<\?xml[^>]*>|<!DOCTYPE[^>]*>|<!--[\s\S]*?-->/g, '').trim();
 
-// Single-colour logos (Simple Icons, topic icons, pinned-tab marks) get the brand colour.
+// Dark version of the brand colour for the edges of the poster.
+const mix = (hex, t) => {
+  const n = parseInt(hex.slice(1), 16);
+  return '#' + [16, 8, 0].map((s) => Math.round(((n >> s) & 255) * t).toString(16).padStart(2, '0')).join('');
+};
+const dark = mix(colour, 0.22);
+const mid = mix(colour, 0.75);
+
 function logoHtml(name) {
   const file = resolve(ROOT, 'assets/logos', name);
   if (!existsSync(file)) throw new Error(`Logo not found: assets/logos/${name}`);
-  if (extname(file) === '.svg') {
-    let svg = readFileSync(file, 'utf8').replace(/<\?xml[^>]*>|<!DOCTYPE[^>]*>|<!--[\s\S]*?-->/g, '').trim();
-    const mono = !/fill="#|fill:#|<image|<pattern|stroke="#/i.test(svg);
-    if (mono) {
-      const icon = /stroke="currentColor"/.test(svg);
-      svg = svg.replace('<svg', `<svg style="color:${colour}${icon ? '' : `;fill:${colour}`}"`);
-    }
-    return `<div class="logo">${svg}</div>`;
-  }
-  return `<div class="logo"><img src="${dataUrl(file)}" alt=""></div>`;
+  const inner = extname(file) === '.svg'
+    ? cleanSvg(file).replace('<svg', /stroke="currentColor"/.test(cleanSvg(file)) ? '<svg style="color:#fff"' : '<svg style="fill:#fff;color:#fff"')
+    : `<img src="${dataUrl(file, 'image/png')}" alt="">`;
+  return `<div class="logo${keepColours ? '' : ' white'}">${inner}</div>`;
 }
 
-const logos = logoArg === '-' ? [] : logoArg.split(',');
-const tile = logos.length
-  ? logos.map(logoHtml).join('<div class="plus">+</div>')
-  : `<div class="wordmark">${esc(company)}</div>`;
-// Story doodles: white line drawings on bright, slightly tilted stickers around the logo tile.
-const STICKER_COLOURS = ['#FFAE1A', colour, '#FF6B9A', '#2DD4BF', '#A78BFA'];
-const SPOTS = stat
-  ? [[805, 150, -10], [790, 492, 8], [1140, 500, -6]]
-  : [[805, 150, -10], [1140, 140, 9], [790, 492, 8], [1140, 500, -6]];
 function doodleSvg(name) {
   const dir = resolve(ROOT, 'assets/logos/doodles');
   const file = resolve(dir, `${name}.svg`);
@@ -70,63 +60,63 @@ function doodleSvg(name) {
     mkdirSync(dir, { recursive: true });
     execFileSync('curl', ['-sfL', '-o', file, `https://cdn.jsdelivr.net/npm/lucide-static@0.460.0/icons/${name}.svg`]);
   }
-  return readFileSync(file, 'utf8').replace(/<!--[\s\S]*?-->/g, '').replace(/stroke-width="[^"]*"/, 'stroke-width="2.1"');
+  return cleanSvg(file).replace(/stroke-width="[^"]*"/, 'stroke-width="1.6"');
 }
-const doodles = (doodleArg ? doodleArg.split(',') : []).slice(0, SPOTS.length).map((name, i) => {
-  const [x, y, r] = SPOTS[i];
-  const bg = STICKER_COLOURS[i % STICKER_COLOURS.length];
-  return `<div class="sticker" style="left:${x - 52}px;top:${y - 52}px;background:${bg};transform:rotate(${r}deg)">${doodleSvg(name.trim())}</div>`;
-}).join('');
-const statHtml = stat ? `<div class="stat"><span>${esc(stat)}</span></div>` : '';
-const squiggles = doodles ? `<svg class="squiggle" viewBox="0 0 1200 630"><path d="M745 250 C 700 330, 760 400, 720 440" /><path d="M1175 260 C 1195 320, 1150 360, 1180 410" /><path d="M880 560 q 20 -18 40 0 t 40 0 t 40 0 t 40 0" /><circle cx="1060" cy="95" r="6" /><circle cx="742" cy="335" r="4" /><path d="M900 85 l 8 -16 l 8 16 l -16 -10 h 16 z" /></svg>` : '';
-const font = dataUrl(resolve(ROOT, 'node_modules/@fontsource-variable/sora/files/sora-latin-wght-normal.woff2')).replace('image/png', 'font/woff2');
-const brand = dataUrl(resolve(ROOT, 'public/brand/techspotlight-wordmark-on-dark@2x.png'));
-const size = headline.length > 85 ? 46 : headline.length > 60 ? 52 : 58;
+
+const logos = logoArg === '-' ? [] : logoArg.split(',');
+const art = logos.length
+  ? `<div class="art${logos.length > 1 ? ' two' : ''}">${logos.map(logoHtml).join('')}</div>`
+  : `<div class="art word">${esc(company)}</div>`;
+const icons = doodleArg ? doodleArg.split(',').map((d) => doodleSvg(d.trim())) : [];
+const SPOTS = [[640, 40], [770, 95], [905, 28], [1040, 92], [1150, 30], [700, 235], [1165, 220], [640, 430], [765, 500],
+  [905, 545], [1040, 505], [1160, 450], [690, 330], [1130, 345]];
+const pattern = icons.length
+  ? SPOTS.map(([x, y], i) => `<div class="pd" style="left:${x}px;top:${y}px;transform:rotate(${((i * 37) % 50) - 25}deg)">${icons[i % icons.length]}</div>`).join('')
+  : '';
+const hookHtml = esc(hook).replace(/\*([^*]+)\*/g, '<mark>$1</mark>');
+const font = dataUrl(resolve(ROOT, 'node_modules/@fontsource-variable/sora/files/sora-latin-wght-normal.woff2'), 'font/woff2');
+const brand = dataUrl(resolve(ROOT, 'public/brand/techspotlight-wordmark-on-dark@2x.png'), 'image/png');
 
 const html = `<!doctype html><html><head><meta charset="utf-8"><style>
 @font-face { font-family: Sora; src: url(${font}) format('woff2'); font-weight: 100 800; }
 * { margin: 0; box-sizing: border-box; }
-body { width: 1200px; height: 630px; overflow: hidden; font-family: Sora, sans-serif; color: #fff;
-  background: radial-gradient(circle at 86% 46%, ${colour}66 0, ${colour}22 26%, transparent 52%),
-    radial-gradient(circle at 0% 100%, #2f2580 0, transparent 50%), linear-gradient(135deg, #141233, #1d1850 60%, #141233); }
-.dots { position: absolute; inset: 0; background-image: radial-gradient(#ffffff14 1.5px, transparent 1.5px); background-size: 26px 26px;
-  mask-image: linear-gradient(90deg, transparent 30%, #000 75%); }
-.left { position: absolute; left: 64px; top: 56px; bottom: 56px; width: ${doodles ? 640 : 660}px; display: flex; flex-direction: column; }
-.brand { height: 40px; width: auto; align-self: flex-start; }
-.chips { margin-top: 44px; display: flex; flex-wrap: wrap; gap: 10px 12px; align-items: center; }
-.chip, .who { white-space: nowrap; }
-.chip { background: #FFAE1A; color: #141233; font-weight: 700; font-size: 20px; letter-spacing: .08em; text-transform: uppercase; padding: 8px 16px; border-radius: 999px; }
-.who { font-weight: 700; font-size: 22px; letter-spacing: .06em; text-transform: uppercase; color: #FFAE1A; }
-h1 { margin-top: 22px; font-weight: 750; font-size: ${size}px; line-height: 1.14; letter-spacing: -.01em;
-  display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
-.bar { margin-top: auto; width: 96px; height: 6px; border-radius: 3px; background: linear-gradient(90deg, #FFAE1A, ${colour}); }
-.tile { position: absolute; right: 70px; top: 50%; transform: translateY(-50%) rotate(-3deg); width: 340px; height: 340px; border-radius: 44px;
-  background: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; padding: 44px;
-  box-shadow: 0 30px 80px #0009, 0 0 0 10px #ffffff1f, 0 0 90px ${colour}88; }
-.logo { display: flex; align-items: center; justify-content: center; width: 100%; flex: 1; min-height: 0; }
-.logo svg, .logo img { max-width: 100%; max-height: 100%; width: 100%; height: 100%; object-fit: contain; }
-.plus { font-size: 30px; font-weight: 700; color: #141233aa; line-height: 1; }
-.wordmark { font-weight: 800; font-size: ${company.length > 10 ? 40 : 54}px; color: ${colour}; text-align: center; line-height: 1.1; }
-.squiggle { position: absolute; inset: 0; width: 1200px; height: 630px; fill: none; stroke: #ffffff55; stroke-width: 4; stroke-linecap: round; stroke-dasharray: 2 12; }
-.squiggle circle { fill: #FFAE1A; stroke: none; } .squiggle path:last-child { fill: #ffffff66; stroke: none; }
-.sticker { position: absolute; width: 104px; height: 104px; border-radius: 30px; display: flex; align-items: center; justify-content: center;
-  border: 4px solid #fff; box-shadow: 5px 6px 0 #0b0a22, 0 12px 30px #0007; z-index: 2; }
-.sticker svg { width: 58px; height: 58px; color: #fff; filter: drop-shadow(1px 2px 0 #0003); }
-.stat { position: absolute; left: 1022px; top: 66px; width: 170px; height: 170px; z-index: 3; transform: rotate(10deg);
-  display: flex; align-items: center; justify-content: center; background: #FFAE1A; filter: drop-shadow(5px 6px 0 #0b0a22);
-  clip-path: polygon(50% 0%, 61% 13%, 78% 7%, 81% 24%, 98% 28%, 91% 44%, 100% 58%, 86% 67%, 88% 85%, 70% 85%, 60% 100%, 47% 89%, 32% 98%, 26% 82%, 9% 80%, 13% 63%, 0% 52%, 11% 39%, 4% 22%, 21% 19%, 25% 3%, 40% 11%); }
-.stat span { font-weight: 800; font-size: ${stat.length > 6 ? 26 : 34}px; color: #141233; letter-spacing: -.02em; text-align: center; line-height: 1; padding: 0 20px; }
-</style></head><body><div class="dots"></div>${squiggles}
-<div class="left"><img class="brand" src="${brand}" alt="">
-<div class="chips"><span class="chip">${esc(section)}</span><span class="who">${esc(company)}</span></div>
-<h1>${esc(headline)}</h1><div class="bar"></div></div>
-<div class="tile">${tile}</div>${doodles}${statHtml}</body></html>`;
+body { width: 1200px; height: 630px; overflow: hidden; position: relative; font-family: Sora, sans-serif; color: #fff;
+  background: radial-gradient(circle at 82% 50%, ${colour} 0, ${mid} 30%, ${dark} 78%); }
+.pd { position: absolute; width: 66px; height: 66px; opacity: .2; }
+.pd svg { width: 100%; height: 100%; color: #fff; }
+.art { position: absolute; right: 28px; top: 50%; transform: translateY(-50%); width: 430px; height: 430px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; filter: drop-shadow(0 18px 36px #0009); }
+.art.two .logo { height: 170px; }
+.logo { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+.logo svg, .logo img { width: 100%; height: 100%; object-fit: contain; }
+.logo.white img, .logo.white svg { filter: brightness(0) invert(1); }
+.art.word { font-weight: 800; font-size: ${company.length > 10 ? 64 : 100}px; line-height: 1; text-align: center; letter-spacing: -.03em; }
+.txt { position: absolute; left: 64px; top: 58px; bottom: 58px; width: 640px; display: flex; flex-direction: column; }
+.brand { height: 36px; width: auto; align-self: flex-start; }
+.tag { align-self: flex-start; margin-top: 36px; background: #fff; color: ${dark}; font-weight: 800; font-size: 21px; letter-spacing: .1em;
+  text-transform: uppercase; padding: 8px 16px; border-radius: 6px; }
+h1 { max-width: 620px; margin-top: 20px; font-weight: 800; font-size: 104px; line-height: 1; letter-spacing: -.03em; text-shadow: 0 6px 30px #0006; }
+h1 mark { background: #FFD23F; color: #141233; padding: 0 14px; border-radius: 10px; box-decoration-break: clone; -webkit-box-decoration-break: clone; text-shadow: none; }
+p { margin-top: auto; font-size: 27px; font-weight: 600; line-height: 1.3; opacity: .94; }
+</style></head><body>${pattern}${art}
+<div class="txt"><img class="brand" src="${brand}" alt=""><span class="tag">${esc(label)}</span>
+<h1>${hookHtml}</h1><p>${esc(sub)}</p></div></body></html>`;
 
 const { chromium } = await import(resolve(execFileSync('npm', ['root', '-g']).toString().trim(), 'playwright/index.mjs'));
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1200, height: 630 } });
 await page.setContent(html, { waitUntil: 'load' });
-await page.evaluate(() => document.fonts.ready);
+await page.evaluate(async () => {
+  await document.fonts.ready;
+  // Shrink the hook until the hook and the sub line fit without touching.
+  const h1 = document.querySelector('h1');
+  const p = document.querySelector('p');
+  let size = 104;
+  while (size > 56 && h1.getBoundingClientRect().bottom > p.getBoundingClientRect().top - 18) {
+    size -= 4;
+    h1.style.fontSize = `${size}px`;
+  }
+});
 const outDir = resolve(ROOT, 'public/images/posts', slug);
 mkdirSync(outDir, { recursive: true });
 const png = resolve(outDir, 'cover.png');
