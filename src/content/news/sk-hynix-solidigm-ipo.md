@@ -13,10 +13,10 @@ date: 2026-10-23
 category: business
 draft: false
 image: "/images/posts/sk-hynix-solidigm-ipo/cover.jpg"
-imageAlt: "TechSpotlight title card: SK hynix halts its Solidigm IPO plan, and its shares rise 4.4%"
+imageAlt: "TechSpotlight cover card with the SK hynix logo beside the headline: SK hynix halts its Solidigm IPO plan, and its shares rise 4.4%"
 imageCredit:
   name: "TechSpotlight News"
-  source: "Title card"
+  source: "Cover card"
   url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "SK hynix's US storage unit Solidigm has halted its review of a US stock market listing, citing market conditions and share-price trends."

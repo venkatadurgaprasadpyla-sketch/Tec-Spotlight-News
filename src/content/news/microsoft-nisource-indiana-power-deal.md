@@ -13,10 +13,10 @@ date: 2026-10-17
 category: business
 draft: false
 image: "/images/posts/microsoft-nisource-indiana-power-deal/cover.jpg"
-imageAlt: "TechSpotlight title card: Microsoft signs 20-year power deal with NiSource for its Indiana AI data centre campus"
+imageAlt: "TechSpotlight cover card with the Microsoft logo beside the headline: Microsoft signs 20-year power deal for its Indiana AI campus, and says it will pay the bill"
 imageCredit:
   name: "TechSpotlight News"
-  source: "Title card"
+  source: "Cover card"
   url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "Utility owner NiSource says Microsoft will take power for its northwest Indiana campus from 2028 under a 20-year deal for about 1,100 MW of new generation."

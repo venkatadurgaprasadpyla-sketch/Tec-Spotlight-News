@@ -13,10 +13,10 @@ date: 2026-10-22
 category: business
 draft: false
 image: "/images/posts/spacex-q3-2026-earnings/cover.jpg"
-imageAlt: "TechSpotlight title card: SpaceX Q3 2026 earnings: AI now leads sales as profit reaches US$4.4 billion"
+imageAlt: "TechSpotlight cover card with the SpaceX logo beside the headline: SpaceX Q3 2026 earnings: AI now leads sales as profit reaches US$4.4 billion"
 imageCredit:
   name: "TechSpotlight News"
-  source: "Title card"
+  source: "Cover card"
   url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "SpaceX's July to September revenue rose 161% to US$14.6 billion, and it made a US$4.4 billion profit, its first as a public company."

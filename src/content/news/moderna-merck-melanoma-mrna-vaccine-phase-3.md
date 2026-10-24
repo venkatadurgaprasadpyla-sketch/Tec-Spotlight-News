@@ -13,10 +13,10 @@ date: 2026-10-24
 category: science
 draft: false
 image: "/images/posts/moderna-merck-melanoma-mrna-vaccine-phase-3/cover.jpg"
-imageAlt: "TechSpotlight title card: A personalised melanoma vaccine cut the risk of cancer returning by 42% in a large trial"
+imageAlt: "TechSpotlight cover card with the Moderna & Merck logos beside the headline: A personalised melanoma vaccine cut the risk of cancer returning by 42% in a large trial"
 imageCredit:
   name: "TechSpotlight News"
-  source: "Title card"
+  source: "Cover card"
   url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "In a Phase 3 trial of 1,137 people, a personalised mRNA vaccine plus Keytruda cut the risk of melanoma returning, or death, by 42% vs Keytruda alone."

@@ -13,10 +13,10 @@ date: 2026-10-24
 category: apps-software
 draft: false
 image: "/images/posts/spotify-family-plan-qr-verification/cover.jpg"
-imageAlt: "TechSpotlight title card: Spotify Family plan QR code check: what the 7-day rule means for your family"
+imageAlt: "TechSpotlight cover card with the Spotify logo beside the headline: Spotify Family plan QR code check: what the 7-day rule means for your family"
 imageCredit:
   name: "TechSpotlight News"
-  source: "Title card"
+  source: "Cover card"
   url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "Spotify may ask some Premium Family members to scan a live QR code on the plan manager's phone, in person, to prove they share a home."

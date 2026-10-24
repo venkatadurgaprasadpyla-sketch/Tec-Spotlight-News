@@ -13,10 +13,10 @@ date: 2026-10-17
 category: ai
 draft: false
 image: "/images/posts/deepseek-v4-1-flash-open-weights/cover.jpg"
-imageAlt: "TechSpotlight title card: DeepSeek V4.1 Flash update ships open weights and a web search API for agents"
+imageAlt: "TechSpotlight cover card with the DeepSeek logo beside the headline: DeepSeek V4.1 Flash update ships open weights and a web search API for agents"
 imageCredit:
   name: "TechSpotlight News"
-  source: "Title card"
+  source: "Cover card"
   url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "DeepSeek released V4.1-Flash-1017 on 17 October, with weights anyone can download under the MIT licence and no change to API prices."

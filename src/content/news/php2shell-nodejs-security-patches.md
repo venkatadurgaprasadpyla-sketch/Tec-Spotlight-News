@@ -13,10 +13,10 @@ date: 2026-10-22
 category: apps-software
 draft: false
 image: "/images/posts/php2shell-nodejs-security-patches/cover.jpg"
-imageAlt: "TechSpotlight title card: PHP2Shell: PHP rushes out fixes for two critical server flaws as Node.js patches 10 bugs"
+imageAlt: "TechSpotlight cover card with the PHP & Node.js logos beside the headline: PHP2Shell: PHP rushes out fixes for two critical server flaws as Node.js patches 10 bugs"
 imageCredit:
   name: "TechSpotlight News"
-  source: "Title card"
+  source: "Cover card"
   url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "PHP released emergency fixes on 21 October for two critical flaws nicknamed PHP2Shell, which could let an attacker run code on a web server without logging in."

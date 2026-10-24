@@ -13,10 +13,10 @@ date: 2026-10-17
 category: apps-software
 draft: false
 image: "/images/posts/apple-app-store-nudify-ai-rules/cover.jpg"
-imageAlt: "TechSpotlight title card: Apple's new App Store rules take aim at AI nudify apps and hidden features"
+imageAlt: "TechSpotlight cover card with the Apple logo beside the headline: Apple's new App Store rules take aim at AI nudify apps and hidden features"
 imageCredit:
   name: "TechSpotlight News"
-  source: "Title card"
+  source: "Cover card"
   url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "Apple's 16 October update names nonconsensual intimate images, including AI-made ones, as a risk that content and AI apps must prevent and remove."

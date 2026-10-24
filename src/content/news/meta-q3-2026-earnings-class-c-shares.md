@@ -13,10 +13,10 @@ date: 2026-10-22
 category: business
 draft: false
 image: "/images/posts/meta-q3-2026-earnings-class-c-shares/cover.jpg"
-imageAlt: "TechSpotlight title card: Meta Q3 2026 earnings: revenue up 26% as a teen settlement charge and new Class C shares arrive"
+imageAlt: "TechSpotlight cover card with the Meta logo beside the headline: Meta Q3 2026 earnings: revenue up 26% as a teen settlement charge and new Class C shares arrive"
 imageCredit:
   name: "TechSpotlight News"
-  source: "Title card"
+  source: "Cover card"
   url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "Meta's revenue rose 26% to US$64.6 billion in the July to September quarter, helped by more ads and higher prices per ad."

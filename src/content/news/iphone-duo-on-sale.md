@@ -13,10 +13,10 @@ date: 2026-10-23
 category: phones-gadgets
 draft: false
 image: "/images/posts/iphone-duo-on-sale/cover.jpg"
-imageAlt: "TechSpotlight title card: iPhone Duo goes on sale: few phones in stores, January waits online, careful praise"
+imageAlt: "TechSpotlight cover card with the Apple logo beside the headline: iPhone Duo goes on sale: few phones in stores, January waits online, careful praise"
 imageCredit:
   name: "TechSpotlight News"
-  source: "Title card"
+  source: "Cover card"
   url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "Apple's first foldable, the iPhone Duo, went on sale on 23 October, but Apple warned that stores have very few phones for walk-in buyers."

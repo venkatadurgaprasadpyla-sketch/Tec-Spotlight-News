@@ -13,10 +13,10 @@ date: 2026-10-24
 category: apps-software
 draft: false
 image: "/images/posts/google-gmail-photos-ads-privacy-policy/cover.jpg"
-imageAlt: "TechSpotlight title card: Google's privacy policy now lets connected Gmail and Photos data shape ads"
+imageAlt: "TechSpotlight cover card with the Google logo beside the headline: Google's privacy policy now lets connected Gmail and Photos data shape ads"
 imageCredit:
   name: "TechSpotlight News"
-  source: "Title card"
+  source: "Cover card"
   url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "Since 16 October, Google's privacy policy says Gmail, Drive and Photos content can shape ads if you connect those apps to Google services such as Search."

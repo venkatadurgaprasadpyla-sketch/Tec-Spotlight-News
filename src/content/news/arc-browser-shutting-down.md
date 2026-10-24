@@ -13,10 +13,10 @@ date: 2026-10-23
 category: apps-software
 draft: false
 image: "/images/posts/arc-browser-shutting-down/cover.jpg"
-imageAlt: "TechSpotlight title card: Arc browser is shutting down on 22 December: how to save your data and move on"
+imageAlt: "TechSpotlight cover card with the Arc browser logo beside the headline: Arc browser is shutting down on 22 December: how to save your data and move on"
 imageCredit:
   name: "TechSpotlight News"
-  source: "Title card"
+  source: "Cover card"
   url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "The Browser Company says Arc will stop working on Mac and Windows on 22 December 2026, and all Arc accounts will be closed that day."

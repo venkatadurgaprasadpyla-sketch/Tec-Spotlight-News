@@ -13,10 +13,10 @@ date: 2026-10-22
 category: business
 draft: false
 image: "/images/posts/tesla-q3-2026-earnings/cover.jpg"
-imageAlt: "TechSpotlight title card: Tesla Q3 2026 earnings: profit falls 43% as Optimus robot production begins"
+imageAlt: "TechSpotlight cover card with the Tesla logo beside the headline: Tesla Q3 2026 earnings: profit falls 43% as Optimus robot production begins"
 imageCredit:
   name: "TechSpotlight News"
-  source: "Title card"
+  source: "Cover card"
   url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "Tesla's July to September revenue was flat at US$28.05 billion, while net profit fell 43% to US$787 million as research spending rose 69%."

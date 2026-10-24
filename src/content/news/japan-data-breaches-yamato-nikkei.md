@@ -13,10 +13,10 @@ date: 2026-10-17
 category: business
 draft: false
 image: "/images/posts/japan-data-breaches-yamato-nikkei/cover.jpg"
-imageAlt: "TechSpotlight title card: Japan data breach wave grows as Yamato and Nikkei confirm customer records were taken"
+imageAlt: "TechSpotlight cover card with the Yamato & Nikkei logos beside the headline: Japan's data breach wave grows as Yamato and Nikkei confirm customer records were taken"
 imageCredit:
   name: "TechSpotlight News"
-  source: "Title card"
+  source: "Cover card"
   url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "Yamato Transport says about 5.31 million records from its pay-later service were taken; Nikkei reports about 1.83 million records, most of them ID numbers only."

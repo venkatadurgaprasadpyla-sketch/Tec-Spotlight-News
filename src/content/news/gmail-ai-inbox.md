@@ -13,10 +13,10 @@ date: 2026-10-17
 category: apps-software
 draft: false
 image: "/images/posts/gmail-ai-inbox/cover.jpg"
-imageAlt: "TechSpotlight title card: Gmail's AI Inbox reaches US Workspace accounts, with no admin off switch"
+imageAlt: "TechSpotlight cover card with the Gmail logo beside the headline: Gmail's AI Inbox reaches US Workspace accounts, with no admin off switch"
 imageCredit:
   name: "TechSpotlight News"
-  source: "Title card"
+  source: "Cover card"
   url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "Google is rolling out AI Inbox, a Gmail view with AI to-dos and thread summaries, to paid Workspace work and school accounts."

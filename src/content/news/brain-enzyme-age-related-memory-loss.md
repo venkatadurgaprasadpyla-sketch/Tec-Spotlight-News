@@ -13,10 +13,10 @@ date: 2026-10-17
 category: science
 draft: false
 image: "/images/posts/brain-enzyme-age-related-memory-loss/cover.jpg"
-imageAlt: "TechSpotlight title card: A brain enzyme may help memory hold up in old age, mouse study suggests"
+imageAlt: "TechSpotlight cover card with a brain research symbol beside the headline: A brain enzyme may help memory hold up in old age, mouse study suggests"
 imageCredit:
   name: "TechSpotlight News"
-  source: "Title card"
+  source: "Cover card"
   url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "A Nature Neuroscience study from Mass General Brigham finds an enzyme called Pla2g2f helps protect memory in aging mice."

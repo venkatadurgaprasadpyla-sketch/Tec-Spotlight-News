@@ -13,10 +13,10 @@ date: 2026-10-22
 category: business
 draft: false
 image: "/images/posts/barclays-ai-job-cuts/cover.jpg"
-imageAlt: "TechSpotlight title card: Barclays job cuts: about 5,000 roles go in 2026 as AI starts to play a part"
+imageAlt: "TechSpotlight cover card with the Barclays logo beside the headline: Barclays job cuts: about 5,000 roles go in 2026 as AI starts to play a part"
 imageCredit:
   name: "TechSpotlight News"
-  source: "Title card"
+  source: "Cover card"
   url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "Barclays plans to cut about 5,000 jobs in 2026, about 5% of its staff. About 1,000 have already gone; the rest go by the end of the year."

@@ -13,10 +13,10 @@ date: 2026-10-22
 category: science
 draft: false
 image: "/images/posts/japan-mmx-phobos-launch/cover.jpg"
-imageAlt: "TechSpotlight title card: MMX mission: Japan launches to bring back soil from Mars' moon Phobos"
+imageAlt: "TechSpotlight cover card with the JAXA logo beside the headline: MMX mission: Japan launches to bring back soil from Mars' moon Phobos"
 imageCredit:
   name: "TechSpotlight News"
-  source: "Title card"
+  source: "Cover card"
   url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "JAXA launched its MMX spacecraft on an H3 rocket from Tanegashima on 20 October (Japan time), and it reached its planned orbit."

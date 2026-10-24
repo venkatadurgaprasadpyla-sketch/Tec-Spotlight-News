@@ -13,10 +13,10 @@ date: 2026-10-17
 category: science
 draft: false
 image: "/images/posts/ice-cliffs-collapse-sea-level-study/cover.jpg"
-imageAlt: "TechSpotlight title card: Ice cliffs break off faster than models assumed, then stop, sea-level study finds"
+imageAlt: "TechSpotlight cover card with a climate science symbol beside the headline: Ice cliffs break off faster than models assumed, then stop, sea-level study finds"
 imageCredit:
   name: "TechSpotlight News"
-  source: "Title card"
+  source: "Cover card"
   url: "https://tec-spotlight-news.techspotlightid-official.workers.dev/"
 summary:
   - "A Science study of more than 15,000 laser measurements of ice cliffs in Greenland and Antarctica finds tall cliffs break off faster than models assume."
