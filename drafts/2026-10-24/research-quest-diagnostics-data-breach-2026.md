@@ -93,4 +93,7 @@ Slug: `quest-diagnostics-data-breach-2026` · Category: `business` (security ang
 
 ## Cover
 
-Quest newsroom media page: check for press images offered for media use; otherwise Unsplash/Pexels lab image (no hacker clichés); else title card.
+- Quest newsroom "Digital Assets" page loads empty (no images offered for press use found), so no official photo.
+- Unsplash search and photo pages blocked (bot check); Pexels pages 403, but images.pexels.com downloads work.
+- Used Pexels photo 8442441 (lab analyser with sample tubes, no hacker cliché): https://www.pexels.com/photo/8442441/ . Photographer name "Mazko Vadim" taken from the file's own creator metadata (XMP dc:creator); the Pexels page itself could not be opened to confirm the display name. Pyla/auditor: confirm on the Pexels page.
+- Saved 1200x630, 64 KB: public/images/posts/quest-diagnostics-data-breach-2026/cover.jpg
