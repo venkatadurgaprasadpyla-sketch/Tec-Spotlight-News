@@ -63,8 +63,12 @@ For each story:
 
 Copy each passed draft to `src/content/news/<slug>.md` with `draft: true`. Run `npm run build`, `npm run check` and `npm run seo-check`. Commit and push to the preview branch (`claude/project-thread-t0ejfd`). **Never push to `main`, never set `draft: false`.**
 
+## 4b. Make a 60-second video for each story (Pyla approved 2026-10-24)
+
+For each story that passed all gates, make a 60-second vertical video by following `/mnt/project-files/videos/HOW-TO.md` (free open-source hyperframes CLI; reusable source in `/mnt/project-files/videos/2026-10-24/source/`). The script uses only facts from the passed story. Save it to `/mnt/project-files/videos/<today>/<slug>-60s.mp4`. If the video step fails, still deliver the stories and say the video is missing. **Never post a video anywhere without Pyla saying "publish".**
+
 ## 5. Tell Pyla (one short message per run)
 
-In plain English: each headline, why it was picked, the gate results and SEO score, the article's conclusion in one sentence (Pyla can change it), and any site-health problem found or fixed. Keep it short; skip the health part when all is well. If a story didn't pass after 3 rounds, say so and leave it out of the preview. Nothing goes live until Pyla says "publish".
+In plain English: each headline, why it was picked, the gate results and SEO score, the article's conclusion in one sentence (Pyla can change it), a link to each story's video, and any site-health problem found or fixed. Keep it short; skip the health part when all is well. If a story didn't pass after 3 rounds, say so and leave it out of the preview. Nothing goes live until Pyla says "publish".
 
 If something blocks the run (no strong new story, a build error you can't fix), save what you have, don't push a broken build, and tell Pyla plainly what happened.
