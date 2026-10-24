@@ -4,6 +4,7 @@ The researcher adds big tech, company and science events here when they are anno
 
 ## Coming up
 
+- 2026-10-24 14:30 UTC: ESMO presentation of Merck/Moderna melanoma vaccine (INTerpath-001). Follow-up: update the live story src/content/news/moderna-merck-melanoma-mrna-vaccine-phase-3.md (it says the talk is still to come) with anything new, on the preview for Pyla's "publish".
 - 2026-10-28 17:00 UTC: Apple "Pro and tell" event, Los Angeles (10:00 PT). Rumoured Macs and iPad mini; nothing confirmed. https://9to5mac.com/2026/10/19/apple-announces-special-event-for-october-28/
 - 2026-10-28 about 20:00 UTC: Alphabet Q3 2026 results (call 20:30 UTC). https://abc.xyz/investor/news/news-details/2026/Alphabet-Announces-Date-of-Third-Quarter-2026-Financial-Results-Conference-Call-2026-8tpGZsLS6v/default.aspx
 - 2026-10-28 about 20:00 UTC: Microsoft fiscal 2027 Q1 results (call 21:30 UTC). https://news.microsoft.com/source/2026/10/07/microsoft-announces-quarterly-earnings-release-date-69/
