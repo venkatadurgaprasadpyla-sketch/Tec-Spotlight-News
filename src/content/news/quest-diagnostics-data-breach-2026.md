@@ -11,7 +11,7 @@ keywords:
   - "did quest diagnostics have a data breach"
 date: 2026-10-24
 category: business
-draft: true
+draft: false
 image: "/images/posts/quest-diagnostics-data-breach-2026/cover.jpg"
 imageAlt: "TechSpotlight title card: Quest Diagnostics data breach: patient records accessed, and the count is still unknown"
 imageCredit:

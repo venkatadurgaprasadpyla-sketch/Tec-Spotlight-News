@@ -11,7 +11,7 @@ keywords:
   - "does spotify track your location"
 date: 2026-10-24
 category: apps-software
-draft: true
+draft: false
 image: "/images/posts/spotify-family-plan-qr-verification/cover.jpg"
 imageAlt: "TechSpotlight title card: Spotify Family plan QR code check: what the 7-day rule means for your family"
 imageCredit:
