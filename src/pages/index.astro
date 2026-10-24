@@ -5,13 +5,31 @@ import AdSlot from '../components/AdSlot.astro';
 import PromoCards from '../components/PromoCards.astro';
 import NewsletterSignup from '../components/NewsletterSignup.astro';
 import { pickPromos } from '../lib/promos.mjs';
-import { getNews, getGuides } from '../data/posts';
-import { SITE } from '../data/site';
+import { getNews, getGuides, readingTime } from '../data/posts';
+import { SITE, NEWS_CATEGORIES } from '../data/site';
 
-const news = (await getNews()).slice(0, 6);
+const allNews = await getNews();
 const allGuides = await getGuides();
 const featured = allGuides.filter((g) => g.data.featured);
 const guides = (featured.length ? featured : allGuides).slice(0, 3);
+
+// Morning Briefing layout (Pyla's pick, 24 Oct 2026): the newest story leads,
+// the next five form "Top 5 right now", then a row of recent stories per section.
+const lead = allNews[0];
+const top5 = allNews.slice(1, 6);
+const shown = new Set([lead, ...top5].filter(Boolean).map((p) => p.id));
+const catName = (slug: string) => NEWS_CATEGORIES.find((c) => c.slug === slug)?.name ?? slug;
+const SECTION_ORDER = ['ai', 'business', 'science', 'phones-gadgets', 'apps-software', 'launches', 'deals'];
+const sections = SECTION_ORDER.map((slug) => ({
+  slug,
+  name: catName(slug),
+  posts: allNews.filter((p) => p.data.category === slug && !shown.has(p.id)).slice(0, 3),
+})).filter((s) => s.posts.length > 0);
+
+// Video of the day: the first YouTube video in the newest story that has one.
+const ytId = (body = '') => body.match(/youtube(?:-nocookie)?\.com\/embed\/([\w-]{11})/)?.[1];
+const videoPost = allNews.find((p) => ytId(p.body));
+const video = videoPost && { id: ytId(videoPost.body)!, post: videoPost };
 
 // Three tool cards on the home page (only tools whose affiliate link is added).
 const promos = pickPromos({ slug: 'home', count: 3 });
@@ -37,26 +55,75 @@ const website = {
 };
 ---
 <BaseLayout title={SITE.name} schema={[website, organization]}>
-  <section class="hero">
-    <div class="container">
-      <p class="kicker">Tech news from around the world</p>
-      <h1>What matters in tech, <span>explained for you.</span></h1>
-      <p class="sub">Short news briefs you can read in a few minutes, and honest guides to the apps and AI tools worth your time and money.</p>
-      <div class="cta">
-        <a class="btn" href="/news/">Read today's news</a>
-        <a class="btn btn-ghost" href="/guides/">Browse guides</a>
-      </div>
-    </div>
-  </section>
+  <div class="container briefing">
+    <h1 class="visually-hidden">{SITE.name}: tech news from around the world</h1>
+    {lead ? (
+      <section class="top">
+        <article class="lead">
+          <a href={`/news/${lead.id}/`} class="lead-img">
+            {lead.data.image && <img src={lead.data.image} alt={lead.data.imageAlt ?? ''} width="1200" height="630" />}
+          </a>
+          <p class="tag">
+            <a href={`/news/category/${lead.data.category}/`}>{catName(lead.data.category)}</a>
+            <span>· {readingTime(lead.body ?? '')} min read</span>
+            {lead.data.draft && <span class="draft">Draft</span>}
+          </p>
+          <h2><a href={`/news/${lead.id}/`}>{lead.data.title}</a></h2>
+          <p class="lead-sub">{lead.data.description}</p>
+        </article>
+        {top5.length > 0 && (
+          <aside class="top5" aria-label="Top stories">
+            <h2>Top 5 right now</h2>
+            <ol>
+              {top5.map((p) => (
+                <li>
+                  <a href={`/news/${p.id}/`}>{p.data.title}</a>
+                  <span>{catName(p.data.category)}</span>
+                </li>
+              ))}
+            </ol>
+          </aside>
+        )}
+      </section>
+    ) : (
+      <p class="muted">The first news briefs are on their way.</p>
+    )}
 
-  <div class="container">
+    {video && (
+      <section class="video" aria-label="Video of the day">
+        <button class="yt" type="button" data-id={video.id} aria-label={`Play video: ${video.post.data.title}`}>
+          <img src={`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`} alt="" loading="lazy" width="480" height="360" />
+          <span class="play" aria-hidden="true">▶</span>
+        </button>
+        <div>
+          <p class="tag on-dark">Video of the day</p>
+          <h2><a href={`/news/${video.post.id}/`}>{video.post.data.title}</a></h2>
+          <p class="video-sub">Official video, played from YouTube. <a href={`/news/${video.post.id}/`}>Read our story</a></p>
+        </div>
+      </section>
+    )}
+
     <AdSlot slot="home-top" />
 
-    <div class="section-title">
-      <h2>Latest news</h2>
-      <a href="/news/">All news</a>
-    </div>
-    <PostList items={news} empty="The first news briefs are on their way." />
+    {sections.map((s) => (
+      <section class="row">
+        <div class="section-title">
+          <h2>{s.name}</h2>
+          <a href={`/news/category/${s.slug}/`}>See all</a>
+        </div>
+        <div class="row3">
+          {s.posts.map((p) => (
+            <article class="mini">
+              <a href={`/news/${p.id}/`}>
+                {p.data.image && <img src={p.data.image} alt={p.data.imageAlt ?? ''} loading="lazy" width="1200" height="630" />}
+              </a>
+              <h3><a href={`/news/${p.id}/`}>{p.data.title}</a></h3>
+              {p.data.draft && <span class="draft">Draft</span>}
+            </article>
+          ))}
+        </div>
+      </section>
+    ))}
 
     <NewsletterSignup />
 
@@ -72,37 +139,60 @@ const website = {
   </div>
 </BaseLayout>
 
+<script>
+  // Load the YouTube player only when the reader taps play.
+  for (const btn of document.querySelectorAll<HTMLButtonElement>('.yt')) {
+    btn.addEventListener('click', () => {
+      const f = document.createElement('iframe');
+      f.src = `https://www.youtube-nocookie.com/embed/${btn.dataset.id}?autoplay=1`;
+      f.title = btn.getAttribute('aria-label') ?? 'Video';
+      f.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
+      f.allowFullscreen = true;
+      f.referrerPolicy = 'strict-origin-when-cross-origin';
+      btn.replaceWith(f);
+    }, { once: true });
+  }
+</script>
+
 <style>
-  .hero {
-    background:
-      radial-gradient(ellipse 60% 90% at 85% 0%, rgba(255, 174, 26, 0.22), transparent 70%),
-      var(--bg-soft);
-    border-bottom: 1px solid var(--border);
-    padding: 3rem 0 2.5rem;
+  .briefing { padding-top: 1.5rem; }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .top { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: 24px; align-items: start; }
+  .lead-img img { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; border-radius: var(--radius); }
+  .tag { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 12px 0 6px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); }
+  .tag a { color: inherit; text-decoration: none; }
+  .tag span { font-weight: 500; letter-spacing: 0; text-transform: none; }
+  .lead h2 { font-size: clamp(1.4rem, 3.2vw, 2rem); line-height: 1.2; margin: 0; text-wrap: balance; }
+  .lead h2 a, .top5 a, .mini h3 a, .video h2 a { color: var(--heading); text-decoration: none; }
+  .lead h2 a:hover, .top5 a:hover, .mini h3 a:hover, .video h2 a:hover { text-decoration: underline; }
+  .lead-sub { margin: 8px 0 0; color: var(--text); max-width: 60ch; }
+  .top5 { background: var(--accent-soft); border-radius: var(--radius); padding: 18px 20px; }
+  .top5 h2 { font-size: 1rem; margin: 0 0 12px; }
+  .top5 ol { list-style: none; margin: 0; padding: 0; counter-reset: n; display: grid; gap: 14px; }
+  .top5 li { counter-increment: n; display: grid; grid-template-columns: 30px 1fr; column-gap: 8px; }
+  .top5 li::before { content: counter(n); grid-row: span 2; font-weight: 800; font-size: 1.4rem; line-height: 1.1; color: var(--accent); }
+  .top5 li a { font-weight: 600; font-size: 0.95rem; line-height: 1.35; }
+  .top5 li span { font-size: 0.75rem; color: var(--text-muted); margin-top: 2px; }
+  .video { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 20px; align-items: center; margin: 28px 0 8px; padding: 14px; border-radius: var(--radius); background: var(--ink); color: #fff; }
+  .video h2 { font-size: 1.15rem; line-height: 1.3; margin: 0; }
+  .video h2 a { color: #fff; }
+  .tag.on-dark { color: var(--glow); margin-top: 0; }
+  .video-sub { margin: 6px 0 0; font-size: 0.85rem; color: #d6d3f0; }
+  .video-sub a { color: var(--glow); }
+  .yt, .video iframe { position: relative; display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; padding: 0; border-radius: 10px; overflow: hidden; background: #000; cursor: pointer; }
+  .yt img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .yt .play { position: absolute; inset: 0; margin: auto; width: 56px; height: 56px; border-radius: 50%; background: var(--accent); color: var(--ink); display: grid; place-items: center; font-size: 1.3rem; padding-left: 4px; }
+  .yt:focus-visible { outline: 3px solid var(--glow); outline-offset: 3px; }
+  .row { margin-top: 2rem; }
+  .row3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .mini img { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; border-radius: 10px; }
+  .mini h3 { font-size: 1rem; line-height: 1.35; margin: 8px 0 0; }
+  .draft { font-size: 0.7rem; font-weight: 700; color: var(--ink); background: var(--glow); border-radius: 99px; padding: 1px 8px; letter-spacing: 0; text-transform: none; }
+  @media (max-width: 760px) {
+    .top, .video { grid-template-columns: 1fr; }
+    .row3 { grid-template-columns: 1fr 1fr; }
   }
-  .kicker {
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    margin: 0 0 0.5rem;
-  }
-  h1 {
-    max-width: 18ch;
-    font-size: clamp(2rem, 6vw, 3.2rem);
-  }
-  h1 span {
-    background: linear-gradient(transparent 62%, rgba(255, 174, 26, 0.55) 62%);
-  }
-  .sub {
-    max-width: 52ch;
-    font-size: 1.1rem;
-    margin: 0 0 1.5rem;
-  }
-  .cta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+  @media (max-width: 460px) {
+    .row3 { grid-template-columns: 1fr; }
   }
 </style>
