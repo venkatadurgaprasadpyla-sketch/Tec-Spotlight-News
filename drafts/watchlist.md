@@ -17,6 +17,7 @@ The researcher adds big tech, company and science events here when they are anno
 - By 2026-11-04 (time unknown): Moonshot AI to publish Kimi K3.1 Pro open weights (follow-up only if news). https://www.kimi.ai/blog/kimi-k3-1-pro
 - 2026-10-24 (ESMO Congress 2026, Presidential Symposium I, time unknown): Merck/Moderna INTerpath-001 melanoma vaccine presentation (LBA1) and NEJM paper (follow-up only if new data). https://www.merck.com/news/merck-and-moderna-will-present-results-from-landmark-phase-3-interpath-001-trial-for-intismeran-autogene-plus-keytruda-pembrolizumab-at-esmo-2026-presidential-symposium/
 - About 30 Oct (reported, time unknown): OpenAI aims to sign its up-to-US$30bn round at US$1.25tn (rumour until announced). https://techstartups.com/2026/10/22/openai-nears-30-billion-funding-round-at-1-25-trillion-valuation-ahead-of-ipo/
+- About 2026-10-28 (tentative, Indian market open 03:45 UTC): Jio Platforms IPO lists on BSE and NSE (India's largest IPO, 22.19x subscribed; allotment 26 Oct). https://upstox.com/news/market-news/ipo/jio-platforms-ipo-day-3-check-subscription-status-allotment-date-and-steps/article-202265/
 
 ## Done
 
